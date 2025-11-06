@@ -1,0 +1,2217 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pengenalan Sistem Komputasi</title>
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./public/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./public/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./public/favicon-16x16.png"
+        />
+        <link rel="icon" href="./public/favicon.ico" sizes="any" />
+        <link rel="manifest" href="./site.webmanifest" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ["Inter", "ui-sans-serif", "system-ui"],
+                        },
+                        colors: {
+                            brand: {
+                                50: "#eef2ff",
+                                100: "#e0e7ff",
+                                200: "#c7d2fe",
+                                300: "#a5b4fc",
+                                400: "#818cf8",
+                                500: "#6366f1",
+                                600: "#4f46e5",
+                                700: "#4338ca",
+                                800: "#3730a3",
+                                900: "#312e81",
+                            },
+                        },
+                        boxShadow: {
+                            glow: "0 10px 40px rgba(99, 102, 241, 0.35)",
+                        },
+                    },
+                },
+                darkMode: "class",
+            };
+        </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+        />
+        <link rel="stylesheet" href="public/canvas.css" />
+        <style>
+            .bg-grid {
+                background-image: radial-gradient(
+                    rgba(99, 102, 241, 0.18) 1px,
+                    transparent 1px
+                );
+                background-size: 14px 14px;
+            }
+            .glass {
+                backdrop-filter: saturate(140%) blur(10px);
+                -webkit-backdrop-filter: saturate(140%) blur(10px);
+            }
+        </style>
+    </head>
+    <body
+        class="min-h-screen bg-gradient-to-b from-brand-50 via-white to-brand-50/40 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900 text-slate-800 dark:text-slate-100"
+    >
+        <!-- Judul & Pembuka -->
+        <div class="slide active p-8 md:p-16">
+            <div class="theme-panel lg:flex lg:items-center lg:justify-between p-10 rounded-3xl gap-10 shadow-glow">
+                <div class="space-y-6 max-w-2xl">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Judul &amp; Pembuka</strong>
+                    </h2>
+                    <div class="rounded-full inline-flex items-center gap-3 bg-brand-500/10 px-6 py-2 text-brand-700 dark:text-brand-200 font-semibold">
+                        Pengantar Sistem Komputasi
+                    </div>
+                    <p class="text-lg leading-relaxed">
+                        Sistem komputasi adalah fondasi utama dari dunia digital modern. Hampir semua aktivitas manusia saat ini melibatkan proses komputasi, mulai dari mengirim pesan, mengedit foto, menonton video, hingga mengelola data di perusahaan.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Komputer bukan hanya sekadar mesin, melainkan <strong>sebuah sistem yang terdiri dari tiga elemen utama</strong>: <strong>Hardware (perangkat keras)</strong>, <strong>Software (perangkat lunak)</strong>, dan <strong>Brainware (manusia/pengguna)</strong>. Ketiganya bekerja secara <strong>terintegrasi</strong> untuk mengolah data menjadi informasi yang berguna bagi manusia.
+                    </p>
+                </div>
+                <figure class="flex-1 flex justify-center lg:justify-end mt-10 lg:mt-0">
+                    <div class="glass rounded-[32px] overflow-hidden border border-white/30 shadow-2xl">
+                        <img
+                            src="assets/images/gambar_komputer_modern_dengan_label_hardware_software_brainware.jpg"
+                            alt="Ilustrasi komputer modern dengan label tiga komponen utama."
+                            class="w-full max-w-xl"
+                        />
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Pengertian Sistem Komputasi -->
+        <div class="slide p-8 md:p-16">
+            <div class="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 items-center">
+                <figure class="order-last lg:order-first flex justify-center">
+                    <div class="relative">
+                        <div class="absolute -inset-6 rounded-3xl bg-brand-400/20 blur-2xl"></div>
+                        <img
+                            src="assets/images/gambar_ilustrasi_interaksi_hardware_software_brainware.jpg"
+                            alt="Ilustrasi interaksi antara pengguna, software, dan hardware."
+                            class="relative rounded-3xl shadow-2xl border border-white/20"
+                        />
+                    </div>
+                </figure>
+                <div class="theme-panel-soft p-10 rounded-3xl space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Pengertian Sistem Komputasi</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Sistem Komputasi adalah <strong>gabungan antara perangkat keras, perangkat lunak, dan manusia (brainware)</strong> yang saling berinteraksi untuk melakukan <strong>pengolahan data menjadi informasi</strong>.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Artinya, komputer bukan hanya soal mesin yang pintar, tetapi juga tentang bagaimana manusia mengendalikan dan memanfaatkannya untuk menyelesaikan masalah.
+                    </p>
+                    <p class="text-lg leading-relaxed">Contohnya:</p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 text-lg leading-relaxed">
+                        <li>
+                            Saat kamu mengetik tugas di laptop, <strong>hardware</strong> seperti keyboard dan layar digunakan.
+                        </li>
+                        <li>
+                            Program <strong>software</strong> seperti Microsoft Word membantu menulis dan menyimpan hasilnya.
+                        </li>
+                        <li>
+                            Dan kamu sebagai <strong>brainware</strong> mengatur semua proses itu agar menghasilkan dokumen yang rapi.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Komponen dalam Sistem Komputasi -->
+        <div class="slide p-8 md:p-16">
+            <div class="space-y-10">
+                <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+                    <div>
+                        <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                            <strong>Komponen dalam Sistem Komputasi</strong>
+                        </h2>
+                        <p class="mt-4 text-lg leading-relaxed max-w-3xl">
+                            Tiga komponen utama dalam sistem komputasi memiliki peran berbeda namun saling melengkapi:
+                        </p>
+                    </div>
+                    <figure class="lg:max-w-sm">
+                        <img
+                            src="assets/images/gambar_diagram_tiga_elemen_sistem_komputasi.jpg"
+                            alt="Diagram tiga elemen sistem komputasi."
+                            class="rounded-3xl shadow-2xl border border-white/20"
+                        />
+                    </figure>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="theme-panel-soft p-6 rounded-2xl space-y-3">
+                        <h3 class="text-2xl font-semibold">
+                            <strong>Hardware (Perangkat Keras)</strong>
+                        </h3>
+                        <p class="text-lg leading-relaxed">
+                            Semua bagian fisik komputer yang dapat disentuh, seperti CPU, RAM, monitor, dan keyboard.
+                        </p>
+                    </div>
+                    <div class="theme-panel-soft p-6 rounded-2xl space-y-3">
+                        <h3 class="text-2xl font-semibold">
+                            <strong>Software (Perangkat Lunak)</strong>
+                        </h3>
+                        <p class="text-lg leading-relaxed">
+                            Program atau instruksi yang membuat komputer bisa menjalankan tugas tertentu.
+                        </p>
+                    </div>
+                    <div class="theme-panel-soft p-6 rounded-2xl space-y-3">
+                        <h3 class="text-2xl font-semibold">
+                            <strong>Brainware (Manusia/Pengguna)</strong>
+                        </h3>
+                        <p class="text-lg leading-relaxed">
+                            Orang yang menggunakan, mengatur, dan memanfaatkan komputer agar dapat menghasilkan output sesuai kebutuhan.
+                        </p>
+                    </div>
+                </div>
+                <div class="theme-panel p-6 rounded-2xl text-lg leading-relaxed">
+                    Ketiga unsur ini harus <strong>bekerja bersama</strong>. Jika salah satunya tidak ada, maka sistem komputasi tidak akan berjalan dengan baik.
+                </div>
+            </div>
+        </div>
+
+        <!-- Contoh Penerapan Sistem Komputasi -->
+        <div class="slide p-8 md:p-16">
+            <div class="relative overflow-hidden rounded-[40px] shadow-glow">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-500/20 via-brand-400/10 to-cyan-300/20"></div>
+                <div class="relative grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 p-10 md:p-16">
+                    <div class="space-y-6">
+                        <h2 class="text-4xl md:text-5xl font-extrabold">
+                            <strong>Contoh Penerapan Sistem Komputasi dalam Kehidupan</strong>
+                        </h2>
+                        <p class="text-lg leading-relaxed">
+                            Sistem komputasi hadir dalam hampir semua aspek kehidupan sehari-hari. Berikut contoh penerapannya di berbagai situasi:
+                        </p>
+                        <ul class="list-disc list-outside pl-6 space-y-6 text-lg leading-relaxed">
+                            <li>
+                                <p class="font-semibold">Sekolah:</p>
+                                <p>Guru menggunakan laptop dan software Word untuk membuat soal ujian. Siswa menggunakan smartphone untuk mengerjakan tugas di Google Classroom.</p>
+                            </li>
+                            <li>
+                                <p class="font-semibold">Perdagangan:</p>
+                                <p>Kasir di minimarket menggunakan komputer kasir dengan software penjualan untuk mencatat transaksi.</p>
+                            </li>
+                            <li>
+                                <p class="font-semibold">Kesehatan:</p>
+                                <p>Rumah sakit menggunakan sistem komputer untuk menyimpan data pasien dan jadwal dokter.</p>
+                            </li>
+                            <li>
+                                <p class="font-semibold">Rumah tangga:</p>
+                                <p>Smart TV, speaker pintar, atau CCTV online adalah bentuk sistem komputasi modern.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <figure class="flex justify-center">
+                        <div class="glass rounded-[32px] overflow-hidden border border-white/30 shadow-2xl">
+                            <img
+                                src="assets/images/gambar_smart_device_dan_komputer_dalam_kehidupan_sehari_hari.jpg"
+                                alt="Contoh penerapan sistem komputasi di kehidupan modern."
+                                class="w-full max-w-xl"
+                            />
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sejarah Singkat Perkembangan Komputer -->
+        <div class="slide p-8 md:p-16">
+            <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Sejarah Singkat Perkembangan Komputer</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Komputer yang kita gunakan hari ini adalah hasil dari perjalanan panjang inovasi manusia selama puluhan tahun.
+                        Dari mesin berukuran ruangan penuh kabel hingga laptop tipis yang bisa dibawa ke mana-mana, semuanya berawal dari kebutuhan manusia untuk <strong>menghitung dan memproses informasi dengan cepat dan akurat</strong>.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Mari kita pelajari bagaimana komputer berkembang dari generasi ke generasi.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <div class="glass rounded-[32px] overflow-hidden border border-white/30 shadow-2xl">
+                        <img
+                            src="assets/images/gambar_evolusi_komputer_dari_tahun_1940_hingga_sekarang.jpg"
+                            alt="Garis waktu evolusi komputer."
+                            class="w-full max-w-xl"
+                        />
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Generasi Pertama (1940–1956) -->
+        <div class="slide p-8 md:p-16">
+            <div class="grid grid-cols-1 xl:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
+                <div class="theme-panel-soft p-10 rounded-3xl space-y-8">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Generasi Pertama (1940–1956)</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Generasi pertama komputer menggunakan <strong>tabung vakum (vacuum tube)</strong> sebagai komponen utama.
+                        Tabung ini berfungsi untuk memperkuat sinyal listrik dan memproses data, namun menghasilkan panas yang luar biasa dan sering rusak.
+                    </p>
+                    <p class="text-lg leading-relaxed">Ciri-cirinya:</p>
+                    <ul class="list-disc list-outside pl-6 space-y-3 text-lg leading-relaxed">
+                        <li>Ukuran <strong>sangat besar</strong> (bisa memenuhi satu ruangan).</li>
+                        <li>Menggunakan <strong>bahasa mesin (biner: 0 dan 1)</strong>.</li>
+                        <li>Konsumsi listrik tinggi.</li>
+                        <li>Kecepatan sangat terbatas.</li>
+                    </ul>
+                    <p class="text-lg leading-relaxed">
+                        Contoh komputer: <strong>ENIAC</strong>, <strong>UNIVAC</strong>.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_komputer_ENIAC_dengan_tabung_vakum.jpg"
+                        alt="Komputer ENIAC dengan tabung vakum."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Visualisasi Generasi Pertama -->
+        <div class="slide p-8 md:p-16">
+            <div class="theme-panel p-8 md:p-12 rounded-[40px] space-y-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                    <strong>Visualisasi Generasi Pertama</strong>
+                </h2>
+                <p class="text-lg leading-relaxed max-w-4xl mx-auto">
+                    Gambar berikut menunjukkan bentuk fisik komputer generasi pertama.
+                    Perhatikan seberapa besar ukurannya dibanding manusia di sampingnya.
+                    Mesin ini hanya digunakan oleh lembaga riset atau militer karena harganya sangat mahal.
+                </p>
+                <figure class="flex justify-center">
+                    <div class="relative">
+                        <div class="absolute inset-0 rounded-[36px] bg-brand-500/20 blur-2xl"></div>
+                        <img
+                            src="assets/images/gambar_ruangan_penuh_tabung_vakum_komputer_generasi_pertama.jpg"
+                            alt="Ruangan penuh tabung vakum komputer generasi pertama."
+                            class="relative rounded-[32px] shadow-2xl border border-white/20 w-full max-w-3xl"
+                        />
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Generasi Kedua (1956–1963) -->
+        <div class="slide p-8 md:p-16">
+            <div class="relative grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 items-center">
+                <figure class="flex justify-center">
+                    <div class="glass rounded-[32px] overflow-hidden border border-white/30 shadow-2xl">
+                        <img
+                            src="assets/images/gambar_transistor_dan_komputer_generasi_kedua.jpg"
+                            alt="Transistor dan komputer generasi kedua."
+                            class="w-full max-w-xl"
+                        />
+                    </div>
+                </figure>
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Generasi Kedua (1956–1963)</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Generasi ini menandai lompatan besar dengan penggunaan <strong>transistor</strong> menggantikan tabung vakum.
+                        Transistor jauh lebih kecil, tidak cepat panas, dan lebih hemat energi.
+                    </p>
+                    <p class="text-lg leading-relaxed">Ciri-cirinya:</p>
+                    <ul class="list-disc list-outside pl-6 space-y-3 text-lg leading-relaxed">
+                        <li>Ukuran lebih kecil dan lebih cepat.</li>
+                        <li>Mulai digunakan <strong>bahasa pemrograman tingkat tinggi</strong>, seperti <strong>COBOL</strong> dan <strong>FORTRAN</strong>.</li>
+                        <li>Komputer mulai digunakan di universitas dan perusahaan besar.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Generasi Ketiga (1964–1971) -->
+        <div class="slide p-8 md:p-16">
+            <div class="theme-panel-soft p-10 rounded-[40px] grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Generasi Ketiga (1964–1971)</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Komputer generasi ketiga menggunakan <strong>IC (Integrated Circuit)</strong>, yaitu gabungan banyak transistor di dalam satu chip kecil.
+                        Teknologi ini membuat komputer menjadi lebih efisien dan terjangkau.
+                    </p>
+                    <p class="text-lg leading-relaxed">Ciri-cirinya:</p>
+                    <ul class="list-disc list-outside pl-6 space-y-3 text-lg leading-relaxed">
+                        <li>Ukuran semakin kecil, daya lebih hemat.</li>
+                        <li>Muncul sistem operasi sederhana.</li>
+                        <li>Komputer mulai masuk ke sektor pendidikan dan bisnis.</li>
+                    </ul>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_ic_integrated_circuit_pada_papan_sirkuit.jpg"
+                        alt="IC pada papan sirkuit."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Generasi Keempat (1971–1980-an) -->
+        <div class="slide p-8 md:p-16">
+            <div class="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Generasi Keempat (1971–1980-an)</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Inilah era kelahiran <strong>mikroprosesor</strong>—sebuah chip kecil yang berisi jutaan transistor.
+                        Mikroprosesor menjadi “otak” komputer modern.
+                    </p>
+                    <p class="text-lg leading-relaxed">Ciri-cirinya:</p>
+                    <ul class="list-disc list-outside pl-6 space-y-3 text-lg leading-relaxed">
+                        <li>Komputer menjadi <strong>lebih kecil, murah, dan cepat</strong>.</li>
+                        <li>Muncul <strong>Personal Computer (PC)</strong> yang bisa digunakan di rumah.</li>
+                        <li>Perusahaan seperti <strong>Intel</strong>, <strong>IBM</strong>, dan <strong>Apple</strong> mulai memproduksi komputer massal.</li>
+                    </ul>
+                    <p class="text-lg leading-relaxed">
+                        Contoh: <strong>IBM PC</strong>, <strong>Apple II</strong>.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <div class="relative">
+                        <div class="absolute -inset-4 rounded-[32px] bg-brand-500/20 blur-2xl"></div>
+                        <img
+                            src="assets/images/gambar_mikroprosesor_dan_pc_generasi_keempat.jpg"
+                            alt="Mikroprosesor dan PC generasi keempat."
+                            class="relative rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                        />
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Visualisasi Komputer Generasi Keempat -->
+        <div class="slide p-8 md:p-16">
+            <div class="theme-panel p-10 rounded-[40px] space-y-6">
+                <h2 class="text-4xl md:text-5xl font-extrabold theme-accent text-center">
+                    <strong>Visualisasi Komputer Generasi Keempat</strong>
+                </h2>
+                <p class="text-lg leading-relaxed max-w-4xl mx-auto text-center">
+                    Pada generasi ini komputer sudah menyerupai bentuk modern.
+                    Keyboard, monitor, dan CPU terpisah mulai digunakan.
+                    Ini adalah awal mula komputer yang mirip dengan PC yang kita kenal sekarang.
+                </p>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_ibm_pc_dan_apple_ii_tahun_1980an.jpg"
+                        alt="IBM PC dan Apple II tahun 1980-an."
+                        class="rounded-[32px] shadow-2xl border border-white/20 w-full max-w-3xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Generasi Kelima (1980-an–Sekarang) -->
+        <div class="slide p-8 md:p-16">
+            <div class="grid grid-cols-1 xl:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div class="theme-panel-soft p-10 rounded-3xl space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Generasi Kelima (1980-an–Sekarang)</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Generasi kelima ditandai dengan munculnya <strong>komputer cerdas (Artificial Intelligence)</strong> dan konektivitas internet.
+                    </p>
+                    <p class="text-lg leading-relaxed">Ciri-cirinya:</p>
+                    <ul class="list-disc list-outside pl-6 space-y-3 text-lg leading-relaxed">
+                        <li>Penggunaan <strong>AI</strong>, <strong>neural network</strong>, dan <strong>cloud computing</strong>.</li>
+                        <li>Perangkat komputasi mencakup <strong>smartphone, laptop, smartwatch, smart home</strong>, dan lainnya.</li>
+                        <li>Komputer dapat memahami bahasa manusia dan belajar dari data.</li>
+                    </ul>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_ai_cloud_smart_device_generasi_kelima.jpg"
+                        alt="AI, cloud, dan perangkat pintar generasi kelima."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Visualisasi Komputer Generasi Kelima -->
+        <div class="slide p-8 md:p-16">
+            <div class="relative overflow-hidden rounded-[40px] shadow-glow">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-500/20 via-brand-400/10 to-cyan-300/20"></div>
+                <div class="relative grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 p-10 md:p-16">
+                    <div class="space-y-6">
+                        <h2 class="text-4xl md:text-5xl font-extrabold">
+                            <strong>Visualisasi Komputer Generasi Kelima</strong>
+                        </h2>
+                        <p class="text-lg leading-relaxed">
+                            Perangkat di sekitar kita—smartphone, tablet, dan laptop tipis—adalah hasil perkembangan generasi kelima.
+                            Komputer kini tidak lagi hanya alat kerja, tetapi bagian dari gaya hidup.
+                        </p>
+                    </div>
+                    <figure class="flex justify-center">
+                        <img
+                            src="assets/images/gambar_smartphone_laptop_dan_iot_modern.jpg"
+                            alt="Smartphone, laptop, dan perangkat IoT modern."
+                            class="rounded-[32px] shadow-2xl border border-white/20 w-full max-w-xl"
+                        />
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <!-- Generasi Keenam (Era 2020–Sekarang) -->
+        <div class="slide p-8 md:p-16">
+            <div class="theme-panel-soft p-10 rounded-[40px] grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Generasi Keenam (Era 2020–Sekarang)</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Generasi keenam difokuskan pada <strong>komputasi cerdas dan efisiensi energi</strong>.
+                        Teknologi seperti <strong>komputer kuantum (quantum computing)</strong> dan <strong>komputasi awan (cloud computing)</strong> menjadi pusat perhatian.
+                    </p>
+                    <p class="text-lg leading-relaxed">Ciri-cirinya:</p>
+                    <ul class="list-disc list-outside pl-6 space-y-3 text-lg leading-relaxed">
+                        <li>Perhitungan jutaan kali lebih cepat dari komputer biasa.</li>
+                        <li>Digunakan untuk <strong>AI, Big Data, IoT, dan robotika</strong>.</li>
+                        <li>Menjadi dasar kemajuan di bidang <strong>otomasi industri dan penelitian ilmiah</strong>.</li>
+                    </ul>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_quantum_computer_dan_data_center_modern.jpg"
+                        alt="Komputer kuantum dan data center modern."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Perbandingan Antar Generasi -->
+        <div class="slide p-8 md:p-16">
+            <div class="theme-panel p-8 md:p-12 rounded-[40px] space-y-6">
+                <h2 class="text-4xl md:text-5xl font-extrabold theme-accent text-center">
+                    <strong>Perbandingan Antar Generasi</strong>
+                </h2>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full border-collapse text-left text-lg leading-relaxed">
+                        <thead class="uppercase text-sm tracking-wide">
+                            <tr>
+                                <th class="border-b border-white/20 px-4 py-3">Generasi</th>
+                                <th class="border-b border-white/20 px-4 py-3">Komponen Utama</th>
+                                <th class="border-b border-white/20 px-4 py-3">Bahasa</th>
+                                <th class="border-b border-white/20 px-4 py-3">Ciri Utama</th>
+                                <th class="border-b border-white/20 px-4 py-3">Contoh</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/10">
+                            <tr>
+                                <td class="px-4 py-3">I</td>
+                                <td class="px-4 py-3">Tabung vakum</td>
+                                <td class="px-4 py-3">Bahasa mesin</td>
+                                <td class="px-4 py-3">Besar, panas, lambat</td>
+                                <td class="px-4 py-3">ENIAC</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">II</td>
+                                <td class="px-4 py-3">Transistor</td>
+                                <td class="px-4 py-3">COBOL, FORTRAN</td>
+                                <td class="px-4 py-3">Lebih cepat &amp; kecil</td>
+                                <td class="px-4 py-3">IBM 1401</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">III</td>
+                                <td class="px-4 py-3">IC</td>
+                                <td class="px-4 py-3">Assembler</td>
+                                <td class="px-4 py-3">Stabil, efisien</td>
+                                <td class="px-4 py-3">PDP-8</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">IV</td>
+                                <td class="px-4 py-3">Mikroprosesor</td>
+                                <td class="px-4 py-3">BASIC, C</td>
+                                <td class="px-4 py-3">PC mulai populer</td>
+                                <td class="px-4 py-3">Apple II</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">V</td>
+                                <td class="px-4 py-3">AI, Cloud</td>
+                                <td class="px-4 py-3">Beragam OS</td>
+                                <td class="px-4 py-3">Pintar &amp; terhubung</td>
+                                <td class="px-4 py-3">Laptop, Smartphone</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">VI</td>
+                                <td class="px-4 py-3">Quantum, AI lanjutan</td>
+                                <td class="px-4 py-3">Machine Learning</td>
+                                <td class="px-4 py-3">Super cepat &amp; efisien energi</td>
+                                <td class="px-4 py-3">Quantum Computer</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_tabel_perbandingan_generasi_komputer.jpg"
+                        alt="Tabel perbandingan enam generasi komputer."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-3xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Kesimpulan Sejarah Komputer -->
+        <div class="slide p-8 md:p-16">
+            <div class="relative overflow-hidden rounded-[40px] shadow-glow">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-500/20 via-brand-400/10 to-cyan-300/20"></div>
+                <div class="relative p-10 md:p-16 space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold">
+                        <strong>Kesimpulan Sejarah Komputer</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Perkembangan komputer menunjukkan bahwa <strong>teknologi selalu berevolusi</strong> mengikuti kebutuhan manusia.
+                        Dari menghitung angka menjadi alat komunikasi global, komputer terus berkembang menuju masa depan yang lebih <strong>cerdas, cepat, dan hemat energi</strong>.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Setiap generasi membawa lompatan besar yang mengubah cara kita bekerja, belajar, dan hidup.
+                    </p>
+                    <figure class="flex justify-center">
+                        <img
+                            src="assets/images/gambar_ilustrasi_evolusi_teknologi_menuju_ai_dan_quantum.jpg"
+                            alt="Ilustrasi evolusi teknologi menuju AI dan quantum."
+                            class="rounded-[32px] shadow-2xl border border-white/20 w-full max-w-3xl"
+                        />
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hardware (Perangkat Keras) -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Hardware (Perangkat Keras)</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Hardware adalah bagian fisik dari komputer yang bisa kita <strong>lihat dan sentuh langsung</strong>.
+                        Semua komponen ini bekerja sama menjalankan perintah yang diberikan oleh pengguna melalui software.
+                        Tanpa hardware, komputer hanyalah konsep yang tidak bisa diwujudkan.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <div class="glass rounded-[32px] overflow-hidden border border-white/30 shadow-2xl">
+                        <img
+                            src="assets/images/gambar_komponen_komputer_dari_luar_dan_dalam.jpg"
+                            alt="Tampilan komputer dari luar dan dalam."
+                            class="w-full max-w-xl"
+                        />
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Pengertian Hardware -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel-soft p-10 rounded-[40px] grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Pengertian Hardware</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        <strong>Hardware</strong> adalah seluruh perangkat fisik komputer yang berfungsi untuk menerima input, memproses data, menyimpan informasi, dan menampilkan hasil (output).
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Contoh sederhana:
+                    </p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 text-lg leading-relaxed">
+                        <li><strong>Keyboard</strong> digunakan untuk mengetik (input),</li>
+                        <li><strong>Prosesor</strong> mengolah perintah (process),</li>
+                        <li><strong>Monitor</strong> menampilkan hasilnya (output).</li>
+                    </ul>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_ilustrasi_proses_input_proses_output.jpg"
+                        alt="Ilustrasi proses input dan output."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Fungsi Utama Hardware -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel p-10 rounded-[40px] space-y-6">
+                <h2 class="text-4xl md:text-5xl font-extrabold theme-accent text-center">
+                    <strong>Fungsi Utama Hardware</strong>
+                </h2>
+                <p class="text-lg leading-relaxed max-w-4xl mx-auto text-center">
+                    Hardware memiliki empat fungsi utama yang membentuk siklus kerja komputer:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+                    <div class="theme-panel-soft p-6 rounded-2xl space-y-3">
+                        <h3 class="text-2xl font-semibold"><strong>Input</strong></h3>
+                        <p class="text-lg leading-relaxed">Menerima data dari pengguna.</p>
+                    </div>
+                    <div class="theme-panel-soft p-6 rounded-2xl space-y-3">
+                        <h3 class="text-2xl font-semibold"><strong>Processing</strong></h3>
+                        <p class="text-lg leading-relaxed">Mengolah data menjadi informasi.</p>
+                    </div>
+                    <div class="theme-panel-soft p-6 rounded-2xl space-y-3">
+                        <h3 class="text-2xl font-semibold"><strong>Storage</strong></h3>
+                        <p class="text-lg leading-relaxed">Menyimpan data sementara atau permanen.</p>
+                    </div>
+                    <div class="theme-panel-soft p-6 rounded-2xl space-y-3">
+                        <h3 class="text-2xl font-semibold"><strong>Output</strong></h3>
+                        <p class="text-lg leading-relaxed">Menampilkan hasil pengolahan data.</p>
+                    </div>
+                </div>
+                <p class="text-lg leading-relaxed max-w-4xl mx-auto text-center">
+                    Semua fungsi ini saling terhubung dalam satu siklus kerja komputer.
+                </p>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_siklus_kerja_komputer_input_proses_output_storage.jpg"
+                        alt="Siklus kerja komputer."
+                        class="rounded-[32px] shadow-2xl border border-white/20 w-full max-w-3xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Jenis-Jenis Hardware -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full grid grid-cols-1 xl:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Jenis-Jenis Hardware</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Secara umum, hardware dibagi menjadi beberapa kelompok:
+                    </p>
+                    <ol class="list-decimal list-outside pl-6 space-y-3 text-lg leading-relaxed">
+                        <li><strong>Perangkat Input (Masukan)</strong></li>
+                        <li><strong>Perangkat Proses (Pengolah)</strong></li>
+                        <li><strong>Perangkat Output (Keluaran)</strong></li>
+                        <li><strong>Perangkat Penyimpanan (Storage)</strong></li>
+                        <li><strong>Perangkat Jaringan (Networking)</strong></li>
+                    </ol>
+                    <p class="text-lg leading-relaxed">
+                        Bagian berikut menjelaskan fungsi dan contoh dari masing-masing kelompok.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <div class="glass rounded-[32px] overflow-hidden border border-white/30 shadow-2xl">
+                        <img
+                            src="assets/images/gambar_kelompok_perangkat_keras_komputer.jpg"
+                            alt="Kelompok perangkat keras komputer."
+                            class="w-full max-w-xl"
+                        />
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Perangkat Input (Masukan) -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel-soft p-10 rounded-[40px] grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Perangkat Input (Masukan)</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Perangkat input berfungsi untuk <strong>memasukkan data atau perintah</strong> ke dalam komputer.
+                        Tanpa input, komputer tidak akan tahu apa yang harus dikerjakan.
+                    </p>
+                    <p class="text-lg leading-relaxed">Contoh umum:</p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 text-lg leading-relaxed">
+                        <li><strong>Keyboard</strong> → mengetik huruf dan angka.</li>
+                        <li><strong>Mouse</strong> → menggerakkan kursor dan memilih menu.</li>
+                        <li><strong>Scanner</strong> → memindai dokumen ke format digital.</li>
+                        <li><strong>Microphone</strong> → merekam suara.</li>
+                        <li><strong>Webcam</strong> → mengambil gambar/video langsung.</li>
+                        <li><strong>Touchscreen</strong> → sentuhan langsung di layar.</li>
+                    </ul>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_keyboard_mouse_scanner_webcam.jpg"
+                        alt="Perangkat input seperti keyboard, mouse, dan scanner."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Input Khusus -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full grid grid-cols-1 xl:grid-cols-[0.95fr_1.05fr] gap-12 items-center">
+                <figure class="flex justify-center order-last xl:order-first">
+                    <div class="glass rounded-[32px] overflow-hidden border border-white/30 shadow-2xl">
+                        <img
+                            src="assets/images/gambar_joystick_barcode_scanner_fingerprint_stylus.jpg"
+                            alt="Perangkat input khusus."
+                            class="w-full max-w-xl"
+                        />
+                    </div>
+                </figure>
+                <div class="theme-panel p-10 rounded-[40px] space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Input Khusus</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Beberapa perangkat input didesain untuk keperluan tertentu:
+                    </p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 text-lg leading-relaxed">
+                        <li><strong>Joystick/Game Controller</strong> untuk bermain game.</li>
+                        <li><strong>Barcode Scanner</strong> untuk membaca kode produk di toko.</li>
+                        <li><strong>Fingerprint Sensor</strong> untuk keamanan.</li>
+                        <li><strong>Stylus Pen</strong> untuk menggambar di tablet.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Perangkat Proses (Pengolah) -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full grid grid-cols-1 xl:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Perangkat Proses (Pengolah)</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Perangkat proses berfungsi <strong>mengolah data</strong> dari input menjadi informasi yang siap ditampilkan.
+                        Bagian terpenting di sini adalah <strong>CPU (Central Processing Unit)</strong>.
+                    </p>
+                    <p class="text-lg leading-relaxed">CPU terdiri dari:</p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 text-lg leading-relaxed">
+                        <li><strong>ALU (Arithmetic Logic Unit)</strong> → melakukan perhitungan matematika dan logika.</li>
+                        <li><strong>CU (Control Unit)</strong> → mengatur jalannya instruksi.</li>
+                        <li><strong>Register</strong> → tempat penyimpanan data sementara.</li>
+                    </ul>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_diagram_komponen_cpu_alu_cu_register.jpg"
+                        alt="Diagram komponen CPU."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Motherboard -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel p-10 rounded-[40px] space-y-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                    <strong>Motherboard</strong>
+                </h2>
+                <p class="text-lg leading-relaxed max-w-4xl mx-auto">
+                    <strong>Motherboard</strong> adalah papan utama tempat semua komponen komputer terhubung.
+                    Di sinilah CPU, RAM, kartu grafis, dan komponen lain berkomunikasi melalui jalur data.
+                </p>
+                <p class="text-lg leading-relaxed max-w-4xl mx-auto">
+                    Tanpa motherboard, komputer tidak bisa berfungsi karena setiap komponen bekerja secara terpisah.
+                </p>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_motherboard_tahun_1999_dilihat_dari_atas.jpg"
+                        alt="Motherboard dilihat dari atas."
+                        class="rounded-[32px] shadow-2xl border border-white/20 w-full max-w-3xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- RAM dan ROM -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full grid grid-cols-1 xl:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="theme-panel-soft p-10 rounded-[40px] space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>RAM dan ROM</strong>
+                    </h2>
+                    <div class="space-y-4 text-lg leading-relaxed">
+                        <div>
+                            <p><strong>RAM (Random Access Memory)</strong></p>
+                            <p>Menyimpan data sementara saat komputer sedang digunakan. Data akan hilang saat komputer dimatikan. Semakin besar kapasitas RAM, semakin cepat kinerja komputer.</p>
+                        </div>
+                        <div>
+                            <p><strong>ROM (Read Only Memory)</strong></p>
+                            <p>Menyimpan instruksi dasar sistem (seperti BIOS) yang tidak bisa diubah pengguna.</p>
+                        </div>
+                    </div>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_ram_dan_rom_di_papan_motherboard.jpg"
+                        alt="RAM dan ROM di papan motherboard."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Kartu Ekspansi -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel p-10 rounded-[40px] grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Kartu Ekspansi</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Kartu ekspansi digunakan untuk menambah kemampuan komputer, seperti:
+                    </p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 text-lg leading-relaxed">
+                        <li><strong>VGA Card (GPU)</strong> → mengolah grafis untuk game atau desain.</li>
+                        <li><strong>Sound Card</strong> → menghasilkan suara berkualitas tinggi.</li>
+                        <li><strong>Network Card</strong> → menghubungkan komputer ke jaringan internet.</li>
+                    </ul>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_vga_card_sound_card_network_card.jpg"
+                        alt="Contoh kartu ekspansi."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Perangkat Output (Keluaran) -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full grid grid-cols-1 xl:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Perangkat Output (Keluaran)</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Perangkat output berfungsi menampilkan hasil dari proses komputer, bisa berupa gambar, suara, atau cetakan.
+                    </p>
+                    <p class="text-lg leading-relaxed">Contoh:</p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 text-lg leading-relaxed">
+                        <li><strong>Monitor</strong> → menampilkan gambar.</li>
+                        <li><strong>Printer</strong> → mencetak hasil di kertas.</li>
+                        <li><strong>Speaker / Headphone</strong> → menghasilkan suara.</li>
+                        <li><strong>Proyektor</strong> → menampilkan gambar ke layar besar.</li>
+                    </ul>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_monitor_printer_speaker_proyektor.jpg"
+                        alt="Berbagai perangkat output."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Jenis Monitor -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel-soft p-10 rounded-[40px] grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Jenis Monitor</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Monitor modern memiliki berbagai jenis teknologi tampilan:
+                    </p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 text-lg leading-relaxed">
+                        <li><strong>LCD (Liquid Crystal Display)</strong> – hemat energi dan ringan.</li>
+                        <li><strong>LED (Light Emitting Diode)</strong> – lebih terang dan tajam.</li>
+                        <li><strong>OLED (Organic LED)</strong> – warna lebih hidup dan kontras tinggi.</li>
+                    </ul>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_perbandingan_lcd_led_oled_monitor.jpg"
+                        alt="Perbandingan monitor LCD, LED, dan OLED."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Perangkat Penyimpanan (Storage) -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full grid grid-cols-1 xl:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="theme-panel p-10 rounded-[40px] space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Perangkat Penyimpanan (Storage)</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Perangkat penyimpanan digunakan untuk menyimpan data dan program.
+                    </p>
+                    <div class="space-y-4 text-lg leading-relaxed">
+                        <div>
+                            <p><strong>Penyimpanan utama (Primary Storage)</strong></p>
+                            <p>RAM, Cache → bekerja cepat tapi bersifat sementara.</p>
+                        </div>
+                        <div>
+                            <p><strong>Penyimpanan sekunder (Secondary Storage)</strong></p>
+                            <p>Hard Disk, SSD, Flashdisk, CD/DVD, Cloud Storage → menyimpan data jangka panjang.</p>
+                        </div>
+                    </div>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_harddisk_ssd_flashdisk_cloud_storage.jpg"
+                        alt="Beragam perangkat penyimpanan."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Penyimpanan Modern -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel-soft p-10 rounded-[40px] grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-12 items-center">
+                <figure class="flex justify-center order-last lg:order-first">
+                    <div class="glass rounded-[32px] overflow-hidden border border-white/30 shadow-2xl">
+                        <img
+                            src="assets/images/gambar_ilustrasi_cloud_storage_dengan_ikon_filenya.jpg"
+                            alt="Ilustrasi penyimpanan cloud."
+                            class="w-full max-w-xl"
+                        />
+                    </div>
+                </figure>
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Penyimpanan Modern</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Saat ini, banyak orang menyimpan data di <strong>cloud</strong> seperti Google Drive atau OneDrive.
+                    </p>
+                    <p class="text-lg leading-relaxed">Kelebihannya:</p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 text-lg leading-relaxed">
+                        <li>Bisa diakses dari mana saja.</li>
+                        <li>Aman dari kerusakan perangkat.</li>
+                        <li>Mudah dibagikan ke orang lain.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Perangkat Jaringan -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel p-10 rounded-[40px] grid grid-cols-1 xl:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Perangkat Jaringan</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Perangkat jaringan berfungsi untuk <strong>menghubungkan komputer dengan perangkat lain</strong> melalui kabel atau nirkabel.
+                    </p>
+                    <p class="text-lg leading-relaxed">Contoh:</p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 text-lg leading-relaxed">
+                        <li><strong>LAN Card</strong> – menghubungkan komputer ke jaringan lokal.</li>
+                        <li><strong>Modem</strong> – mengubah sinyal digital menjadi analog dan sebaliknya.</li>
+                        <li><strong>Router</strong> – mengatur lalu lintas data antar perangkat.</li>
+                        <li><strong>Switch</strong> – menghubungkan banyak komputer dalam satu jaringan.</li>
+                        <li><strong>Access Point</strong> – menyebarkan sinyal Wi-Fi.</li>
+                    </ul>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_router_modem_switch_access_point.jpg"
+                        alt="Perangkat jaringan seperti router dan modem."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Hubungan Antar Komponen Hardware -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel-soft p-10 rounded-[40px] space-y-6">
+                <h2 class="text-4xl md:text-5xl font-extrabold theme-accent text-center">
+                    <strong>Hubungan Antar Komponen Hardware</strong>
+                </h2>
+                <p class="text-lg leading-relaxed max-w-4xl mx-auto text-center">
+                    Semua perangkat keras bekerja dalam satu sistem:
+                </p>
+                <ol class="list-decimal list-outside pl-6 space-y-3 text-lg leading-relaxed max-w-3xl mx-auto">
+                    <li>Data dimasukkan melalui <strong>input device</strong>.</li>
+                    <li>Diolah oleh <strong>CPU</strong> dan komponen proses.</li>
+                    <li>Disimpan di <strong>storage</strong>.</li>
+                    <li>Ditampilkan lewat <strong>output device</strong>.</li>
+                </ol>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_bagan_alur_kerja_hardware_dalam_komputer.jpg"
+                        alt="Bagan alur kerja hardware dalam komputer."
+                        class="rounded-[32px] shadow-2xl border border-white/20 w-full max-w-3xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Contoh Hardware dalam Kehidupan Nyata -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full grid grid-cols-1 xl:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="theme-panel p-10 rounded-[40px] space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Contoh Hardware dalam Kehidupan Nyata</strong>
+                    </h2>
+                    <ul class="list-disc list-outside pl-6 space-y-2 text-lg leading-relaxed">
+                        <li>Laptop untuk mengetik dan belajar.</li>
+                        <li>Smartphone untuk komunikasi dan hiburan.</li>
+                        <li>Mesin kasir untuk transaksi.</li>
+                        <li>CCTV dan server jaringan untuk keamanan.</li>
+                    </ul>
+                    <p class="text-lg leading-relaxed">
+                        Semua contoh ini menunjukkan bahwa hardware tidak hanya terbatas pada komputer, tetapi juga digunakan di banyak bidang kehidupan.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_hardware_dalam_berbagai_bidang_pekerjaan.jpg"
+                        alt="Hardware di berbagai bidang pekerjaan."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Kesimpulan Hardware -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full relative overflow-hidden rounded-[40px] shadow-glow">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-500/20 via-brand-400/10 to-cyan-300/20"></div>
+                <div class="relative p-10 md:p-16 space-y-6 text-center">
+                    <h2 class="text-4xl md:text-5xl font-extrabold">
+                        <strong>Kesimpulan Hardware</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed max-w-4xl mx-auto">
+                        Hardware adalah <strong>pondasi fisik dari sistem komputasi</strong>.
+                        Tanpa hardware, software tidak bisa dijalankan, dan brainware tidak dapat mengoperasikan sistem.
+                    </p>
+                    <p class="text-lg leading-relaxed max-w-4xl mx-auto">
+                        Setiap komponen memiliki peran penting dan saling bergantung agar komputer berfungsi dengan baik.
+                    </p>
+                    <figure class="flex justify-center">
+                        <img
+                            src="assets/images/gambar_keseluruhan_komponen_hardware_komputer.jpg"
+                            alt="Keseluruhan komponen hardware komputer."
+                            class="rounded-[32px] shadow-2xl border border-white/20 w-full max-w-3xl"
+                        />
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <!-- Software (Perangkat Lunak) -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Software (Perangkat Lunak)</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Jika hardware adalah tubuh dari komputer, maka software adalah <strong>otaknya</strong>.
+                        Software berisi <strong>instruksi atau program</strong> yang memberi tahu hardware apa yang harus dilakukan.
+                        Tanpa software, komputer hanyalah kumpulan komponen tanpa fungsi.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <div class="glass rounded-[32px] overflow-hidden border border-white/30 shadow-2xl">
+                        <img
+                            src="assets/images/gambar_software_dan_hardware_diibaratkan_otak_dan_tubuh.jpg"
+                            alt="Software diibaratkan otak dan hardware sebagai tubuh."
+                            class="w-full max-w-xl"
+                        />
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Pengertian Software -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel-soft p-10 rounded-[40px] grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Pengertian Software</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        <strong>Software</strong> adalah sekumpulan <strong>program, instruksi, atau data</strong> yang digunakan komputer untuk menjalankan tugas tertentu.
+                        Berbeda dengan hardware yang bisa disentuh, software bersifat <strong>abstrak (tidak berwujud fisik)</strong>.
+                    </p>
+                    <p class="text-lg leading-relaxed">Contohnya:</p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 text-lg leading-relaxed">
+                        <li>Aplikasi seperti Word dan Excel.</li>
+                        <li>Sistem operasi seperti Windows atau Android.</li>
+                        <li>Game, browser, dan aplikasi kamera di ponsel.</li>
+                    </ul>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_ilustrasi_lapisan_software_dalam_komputer.jpg"
+                        alt="Ilustrasi lapisan software dalam komputer."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Fungsi Software -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel p-10 rounded-[40px] space-y-6">
+                <h2 class="text-4xl md:text-5xl font-extrabold theme-accent text-center">
+                    <strong>Fungsi Software</strong>
+                </h2>
+                <p class="text-lg leading-relaxed max-w-4xl mx-auto text-center">
+                    Software memiliki peran penting agar komputer bisa bekerja sesuai keinginan pengguna:
+                </p>
+                <ol class="list-decimal list-outside pl-6 space-y-4 text-lg leading-relaxed max-w-4xl mx-auto">
+                    <li><strong>Mengatur kerja hardware</strong> — software menjadi penghubung antara manusia dan mesin.</li>
+                    <li><strong>Menjalankan perintah pengguna</strong> — seperti membuka dokumen, memutar musik, atau menyalakan kamera.</li>
+                    <li><strong>Mengelola sistem komputer</strong> — memastikan semua komponen berjalan efisien dan tidak bentrok.</li>
+                </ol>
+                <p class="text-lg leading-relaxed max-w-4xl mx-auto text-center">
+                    Tanpa software, hardware tidak akan tahu harus melakukan apa.
+                </p>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_interaksi_hardware_software_user.jpg"
+                        alt="Interaksi hardware, software, dan pengguna."
+                        class="rounded-[32px] shadow-2xl border border-white/20 w-full max-w-3xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Jenis-Jenis Software -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full grid grid-cols-1 xl:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div class="theme-panel-soft p-10 rounded-[40px] space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Jenis-Jenis Software</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Software dibagi menjadi tiga kelompok besar:
+                    </p>
+                    <ol class="list-decimal list-outside pl-6 space-y-3 text-lg leading-relaxed">
+                        <li><strong>System Software (Perangkat Lunak Sistem)</strong></li>
+                        <li><strong>Application Software (Perangkat Lunak Aplikasi)</strong></li>
+                        <li><strong>Programming Software (Perangkat Lunak Pemrograman)</strong></li>
+                    </ol>
+                    <p class="text-lg leading-relaxed">
+                        Masing-masing memiliki fungsi dan contoh berbeda, yang akan dijelaskan berikutnya.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_diagram_tiga_jenis_perangkat_lunak.jpg"
+                        alt="Diagram tiga jenis perangkat lunak."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- System Software -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>System Software (Perangkat Lunak Sistem)</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Software jenis ini mengatur dan mengendalikan seluruh kerja komputer.
+                        Tanpa system software, komputer tidak bisa menyala dan beroperasi.
+                    </p>
+                    <div class="space-y-4 text-lg leading-relaxed">
+                        <div>
+                            <p><strong>Sistem Operasi (Operating System)</strong></p>
+                            <p>Contoh: Windows 11, macOS, Linux, Android, iOS. Fungsinya: mengatur komunikasi antara pengguna, aplikasi, dan hardware.</p>
+                        </div>
+                        <div>
+                            <p><strong>Utility Program</strong></p>
+                            <p>Contoh: Antivirus, Disk Cleanup, Driver Installer. Fungsinya: membantu pemeliharaan dan perawatan sistem.</p>
+                        </div>
+                    </div>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_tampilan_operating_system_modern.jpg"
+                        alt="Tampilan operating system modern."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Contoh Sistem Operasi -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel p-10 rounded-[40px] space-y-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                    <strong>Contoh Sistem Operasi</strong>
+                </h2>
+                <p class="text-lg leading-relaxed max-w-4xl mx-auto">
+                    Sistem operasi adalah software paling penting di komputer. Tanpanya, pengguna tidak bisa menjalankan aplikasi apa pun.
+                </p>
+                <ul class="list-disc list-outside pl-6 space-y-2 text-lg leading-relaxed text-left mx-auto max-w-3xl">
+                    <li><strong>Windows</strong> → banyak digunakan di PC.</li>
+                    <li><strong>macOS</strong> → digunakan di komputer Apple.</li>
+                    <li><strong>Linux</strong> → populer di server dan kalangan developer.</li>
+                    <li><strong>Android &amp; iOS</strong> → digunakan di smartphone.</li>
+                </ul>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_perbandingan_windows_macos_linux_android_ios.jpg"
+                        alt="Perbandingan sistem operasi populer."
+                        class="rounded-[32px] shadow-2xl border border-white/20 w-full max-w-3xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Application Software -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full grid grid-cols-1 xl:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Application Software (Perangkat Lunak Aplikasi)</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Application software digunakan untuk <strong>melakukan pekerjaan tertentu</strong> sesuai kebutuhan pengguna.
+                    </p>
+                    <p class="text-lg leading-relaxed">Contoh umum:</p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 text-lg leading-relaxed">
+                        <li><strong>Microsoft Word</strong> → membuat dan mengedit dokumen.</li>
+                        <li><strong>Excel</strong> → menghitung dan menganalisis data.</li>
+                        <li><strong>PowerPoint</strong> → membuat presentasi.</li>
+                        <li><strong>Photoshop</strong> → desain gambar.</li>
+                        <li><strong>Browser (Chrome, Edge, Firefox)</strong> → menjelajah internet.</li>
+                    </ul>
+                    <p class="text-lg leading-relaxed">
+                        Setiap aplikasi dibuat untuk fungsi spesifik yang membantu pengguna dalam aktivitas sehari-hari.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_aplikasi_word_excel_powerpoint_photoshop_browser.jpg"
+                        alt="Berbagai aplikasi populer."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Programming Software -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel-soft p-10 rounded-[40px] grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Programming Software</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Software jenis ini digunakan oleh <strong>programmer</strong> untuk membuat aplikasi dan sistem baru.
+                        Tujuannya adalah memberikan alat agar pengembang bisa menulis, menguji, dan memperbaiki kode.
+                    </p>
+                    <p class="text-lg leading-relaxed">Contoh:</p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 text-lg leading-relaxed">
+                        <li><strong>Visual Studio Code</strong></li>
+                        <li><strong>Python</strong></li>
+                        <li><strong>C++ / Java Compiler</strong></li>
+                        <li><strong>HTML Editor</strong></li>
+                    </ul>
+                    <p class="text-lg leading-relaxed">
+                        Tanpa programming software, tidak akan ada aplikasi lain yang bisa digunakan.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_visual_studio_code_dan_editor_kode_lain.jpg"
+                        alt="Visual Studio Code dan editor kode lain."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Hubungan Software dengan Hardware dan Brainware -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel p-10 rounded-[40px] grid grid-cols-1 xl:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Hubungan Software dengan Hardware dan Brainware</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Software tidak bisa berdiri sendiri. Ia berfungsi sebagai <strong>penghubung</strong> antara <strong>brainware (manusia)</strong> dan <strong>hardware (mesin)</strong>.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Contoh sederhana:
+                    </p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 text-lg leading-relaxed">
+                        <li>Brainware (kamu) mengetik di keyboard.</li>
+                        <li>Software (Word) menerjemahkan input menjadi teks.</li>
+                        <li>Hardware (monitor) menampilkan hasilnya.</li>
+                    </ul>
+                    <p class="text-lg leading-relaxed">
+                        Ketiganya membentuk <strong>sistem komputasi yang utuh</strong>.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_hubungan_hardware_software_brainware.jpg"
+                        alt="Hubungan hardware, software, dan brainware."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Kesimpulan Software -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full relative overflow-hidden rounded-[40px] shadow-glow">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-500/20 via-brand-400/10 to-cyan-300/20"></div>
+                <div class="relative p-10 md:p-16 space-y-6 text-center">
+                    <h2 class="text-4xl md:text-5xl font-extrabold">
+                        <strong>Kesimpulan Software</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed max-w-4xl mx-auto">
+                        Software adalah <strong>jiwa dari komputer</strong>.
+                        Tanpa software, hardware tidak bisa berfungsi, dan manusia tidak dapat memanfaatkan kekuatan teknologi.
+                    </p>
+                    <p class="text-lg leading-relaxed max-w-4xl mx-auto">
+                        Mulai dari sistem operasi hingga aplikasi favorit, semuanya adalah bentuk software yang membantu pekerjaan dan kehidupan sehari-hari.
+                    </p>
+                    <figure class="flex justify-center">
+                        <img
+                            src="assets/images/gambar_ilustrasi_software_sebagai_otak_komputer.jpg"
+                            alt="Software sebagai otak komputer."
+                            class="rounded-[32px] shadow-2xl border border-white/20 w-full max-w-3xl"
+                        />
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <!-- Brainware (Pengguna Komputer) -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Brainware (Pengguna Komputer)</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Selain hardware dan software, ada satu elemen penting yang membuat komputer bisa digunakan secara efektif, yaitu <strong>Brainware</strong>.
+                        Tanpa manusia yang mengoperasikan, mengatur, dan mengendalikan komputer, semua perangkat keras dan lunak tidak akan berguna.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Brainware adalah <strong>otak penggerak</strong> seluruh sistem komputasi.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <div class="glass rounded-[32px] overflow-hidden border border-white/30 shadow-2xl">
+                        <img
+                            src="assets/images/gambar_ilustrasi_manusia_mengendalikan_komputer_dengan_software_dan_hardware.jpg"
+                            alt="Ilustrasi manusia mengendalikan komputer dengan software dan hardware."
+                            class="w-full max-w-xl"
+                        />
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Pengertian Brainware -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel-soft p-10 rounded-[40px] grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Pengertian Brainware</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        <strong>Brainware</strong> adalah <strong>manusia yang mengoperasikan dan memanfaatkan sistem komputer</strong> untuk menjalankan berbagai aktivitas.
+                        Mereka berperan dalam mengatur, menggunakan, memperbaiki, dan mengembangkan sistem agar komputer bisa memberikan hasil yang bermanfaat.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Contoh sederhana:
+                    </p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 text-lg leading-relaxed">
+                        <li>Ketika kamu menggunakan laptop untuk mengetik tugas, kamu adalah brainware.</li>
+                        <li>Guru yang membuat soal di komputer juga termasuk brainware.</li>
+                        <li>Teknisi yang memperbaiki komputer rusak pun disebut brainware.</li>
+                    </ul>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_pengguna_komputer_dari_siswa_guru_teknisi.jpg"
+                        alt="Pengguna komputer seperti siswa, guru, dan teknisi."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Jenis-Jenis Brainware -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel p-10 rounded-[40px] grid grid-cols-1 xl:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Jenis-Jenis Brainware</strong>
+                    </h2>
+                    <ol class="list-decimal list-outside pl-6 space-y-4 text-lg leading-relaxed">
+                        <li>
+                            <strong>Programmer</strong><br />
+                            Orang yang membuat software atau aplikasi agar komputer bisa melakukan tugas tertentu.
+                            Contoh: developer aplikasi mobile, web, atau game.
+                        </li>
+                        <li>
+                            <strong>System Analyst</strong><br />
+                            Merancang sistem agar sesuai dengan kebutuhan pengguna dan berjalan efisien.
+                            Biasanya bekerja sama dengan programmer.
+                        </li>
+                        <li>
+                            <strong>Network Engineer</strong><br />
+                            Bertanggung jawab atas jaringan komputer dan koneksi internet agar sistem tetap online.
+                        </li>
+                        <li>
+                            <strong>Technician</strong><br />
+                            Memperbaiki, merawat, dan memastikan semua perangkat keras berfungsi baik.
+                        </li>
+                        <li>
+                            <strong>End User (Pengguna Akhir)</strong><br />
+                            Orang yang menggunakan komputer atau aplikasi untuk tujuan tertentu seperti belajar, bekerja, atau bermain.
+                        </li>
+                    </ol>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_programmer_network_engineer_technician_end_user.jpg"
+                        alt="Programmer, network engineer, technician, dan end user."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Peran Brainware dalam Sistem Komputasi -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Peran Brainware dalam Sistem Komputasi</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Brainware adalah <strong>pengendali utama</strong> yang mengatur hubungan antara hardware dan software.
+                        Tanpa manusia, komputer tidak bisa berpikir atau mengambil keputusan sendiri.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Peran utama brainware:
+                    </p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 text-lg leading-relaxed">
+                        <li><strong>Mengoperasikan</strong> komputer sesuai kebutuhan.</li>
+                        <li><strong>Mengembangkan</strong> software dan sistem baru.</li>
+                        <li><strong>Mengawasi dan memelihara</strong> perangkat agar tetap berfungsi optimal.</li>
+                        <li><strong>Mengambil keputusan</strong> berdasarkan data yang dihasilkan komputer.</li>
+                    </ul>
+                </div>
+                <figure class="flex justify-center">
+                    <div class="glass rounded-[32px] overflow-hidden border border-white/30 shadow-2xl">
+                        <img
+                            src="assets/images/gambar_diagram_interaksi_brainware_hardware_software.jpg"
+                            alt="Diagram interaksi brainware, hardware, dan software."
+                            class="w-full max-w-xl"
+                        />
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Contoh Penerapan Brainware di Kehidupan Nyata -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel-soft p-10 rounded-[40px] grid grid-cols-1 xl:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Contoh Penerapan Brainware di Kehidupan Nyata</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Beberapa contoh nyata brainware di sekitar kita:
+                    </p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 text-lg leading-relaxed">
+                        <li><strong>Guru</strong> menggunakan laptop dan Microsoft Word untuk membuat soal.</li>
+                        <li><strong>Siswa</strong> menggunakan smartphone untuk belajar online.</li>
+                        <li><strong>Teknisi jaringan sekolah</strong> memastikan koneksi internet tetap lancar.</li>
+                        <li><strong>Pegawai administrasi</strong> menggunakan Excel untuk mengelola data keuangan.</li>
+                        <li><strong>Desainer grafis</strong> menggunakan Photoshop untuk membuat poster dan logo.</li>
+                    </ul>
+                    <p class="text-lg leading-relaxed">
+                        Semua contoh di atas menunjukkan bahwa <strong>brainware adalah kunci utama dalam penggunaan teknologi komputer</strong>.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_guru_siswa_dan_teknisi_menggunakan_komputer.jpg"
+                        alt="Guru, siswa, dan teknisi menggunakan komputer."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Kesimpulan Brainware -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full relative overflow-hidden rounded-[40px] shadow-glow">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-500/20 via-brand-400/10 to-cyan-300/20"></div>
+                <div class="relative p-10 md:p-16 space-y-6 text-center">
+                    <h2 class="text-4xl md:text-5xl font-extrabold">
+                        <strong>Kesimpulan Brainware</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed max-w-4xl mx-auto">
+                        Brainware adalah <strong>manusia sebagai pengendali, pemikir, dan pelaksana utama</strong> dari seluruh sistem komputer.
+                        Mereka memastikan hardware dan software bisa bekerja sesuai tujuan.
+                    </p>
+                    <p class="text-lg leading-relaxed max-w-4xl mx-auto">
+                        Tanpa brainware, komputer hanyalah benda mati tanpa fungsi.
+                        Namun dengan brainware yang cerdas dan terampil, teknologi bisa berkembang pesat dan bermanfaat bagi semua bidang kehidupan.
+                    </p>
+                    <figure class="flex justify-center">
+                        <img
+                            src="assets/images/gambar_ilustrasi_brainware_mengendalikan_teknologi_modern.jpg"
+                            alt="Ilustrasi brainware mengendalikan teknologi modern."
+                            class="rounded-[32px] shadow-2xl border border-white/20 w-full max-w-3xl"
+                        />
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <!-- Keterkaitan Hardware, Software, dan Brainware -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Keterkaitan Hardware, Software, dan Brainware</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Tiga komponen utama dalam sistem komputasi—<strong>Hardware</strong>, <strong>Software</strong>, dan <strong>Brainware</strong>—tidak dapat dipisahkan satu sama lain.
+                        Mereka bekerja secara <strong>terpadu dan saling bergantung</strong>, membentuk satu sistem yang memungkinkan komputer menjalankan fungsi dengan sempurna.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Tanpa salah satunya, komputer tidak akan dapat bekerja.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <div class="glass rounded-[32px] overflow-hidden border border-white/30 shadow-2xl">
+                        <img
+                            src="assets/images/gambar_tiga_elemen_sistem_komputasi_terhubung_dalam_satu_siklus.jpg"
+                            alt="Tiga elemen sistem komputasi terhubung dalam satu siklus."
+                            class="w-full max-w-xl"
+                        />
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Konsep Hubungan Tiga Komponen -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel-soft p-10 rounded-[40px] grid grid-cols-1 xl:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Konsep Hubungan Tiga Komponen</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Bayangkan sistem komputer seperti sebuah orkestra:
+                    </p>
+                    <ul class="list-disc list-outside pl-6 space-y-3 text-lg leading-relaxed">
+                        <li><strong>Hardware</strong> adalah alat musiknya,</li>
+                        <li><strong>Software</strong> adalah notasi atau partitur lagu,</li>
+                        <li><strong>Brainware</strong> adalah dirigen yang memimpin pertunjukan.</li>
+                    </ul>
+                    <p class="text-lg leading-relaxed">
+                        Jika salah satu tidak ada, musik tidak akan bisa dimainkan dengan baik. Begitu pula komputer, tidak bisa berfungsi jika satu komponen hilang.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_ilustrasi_orchestra_hardware_software_brainware.jpg"
+                        alt="Analogi orkestra untuk hardware, software, dan brainware."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Tabel Keterkaitan Antara Ketiganya -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel p-10 rounded-[40px] space-y-6">
+                <h2 class="text-4xl md:text-5xl font-extrabold theme-accent text-center">
+                    <strong>Tabel Keterkaitan Antara Ketiganya</strong>
+                </h2>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full border-collapse text-left text-lg leading-relaxed">
+                        <thead class="uppercase text-sm tracking-wide">
+                            <tr>
+                                <th class="border-b border-white/20 px-4 py-3">Komponen</th>
+                                <th class="border-b border-white/20 px-4 py-3">Fungsi Utama</th>
+                                <th class="border-b border-white/20 px-4 py-3">Contoh</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/10">
+                            <tr>
+                                <td class="px-4 py-3"><strong>Hardware</strong></td>
+                                <td class="px-4 py-3">Menjalankan instruksi dari software dan menghasilkan output</td>
+                                <td class="px-4 py-3">Laptop, CPU, Printer</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3"><strong>Software</strong></td>
+                                <td class="px-4 py-3">Memberikan perintah dan mengatur kerja hardware</td>
+                                <td class="px-4 py-3">Windows, Word, Excel</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3"><strong>Brainware</strong></td>
+                                <td class="px-4 py-3">Mengoperasikan dan mengontrol sistem komputer</td>
+                                <td class="px-4 py-3">Guru, Siswa, Programmer</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="space-y-4 text-lg leading-relaxed">
+                    <p>Ketiganya membentuk rantai kerja yang terus berputar:</p>
+                    <ol class="list-decimal list-outside pl-6 space-y-2">
+                        <li><strong>Brainware</strong> memberi perintah,</li>
+                        <li><strong>Software</strong> menerjemahkan perintah,</li>
+                        <li><strong>Hardware</strong> menjalankannya dan mengirim hasil kembali.</li>
+                    </ol>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_tabel_keterkaitan_hardware_software_brainware.jpg"
+                        alt="Tabel keterkaitan hardware, software, dan brainware."
+                        class="rounded-[32px] shadow-2xl border border-white/20 w-full max-w-3xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Contoh Nyata Keterkaitan -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="theme-panel-soft p-10 rounded-[40px] space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Contoh Nyata Keterkaitan</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Misalnya saat kamu mencetak dokumen di sekolah:
+                    </p>
+                    <ol class="list-decimal list-outside pl-6 space-y-3 text-lg leading-relaxed">
+                        <li><strong>Brainware (kamu)</strong> membuka file di komputer.</li>
+                        <li><strong>Software (Microsoft Word)</strong> mengirim instruksi ke printer.</li>
+                        <li><strong>Hardware (Printer)</strong> mencetak hasil di kertas.</li>
+                    </ol>
+                    <p class="text-lg leading-relaxed">
+                        Proses sederhana ini menunjukkan bagaimana ketiga elemen bekerja bersama untuk mencapai hasil yang diinginkan.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_proses_mencetak_dokumen_dengan_komputer_dan_printer.jpg"
+                        alt="Proses mencetak dokumen dengan komputer dan printer."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Kesimpulan Keterkaitan -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full relative overflow-hidden rounded-[40px] shadow-glow">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-500/20 via-brand-400/10 to-cyan-300/20"></div>
+                <div class="relative p-10 md:p-16 space-y-6 text-center">
+                    <h2 class="text-4xl md:text-5xl font-extrabold">
+                        <strong>Kesimpulan Keterkaitan</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed max-w-4xl mx-auto">
+                        Sistem komputasi hanya dapat berfungsi jika <strong>hardware, software, dan brainware</strong> berjalan <strong>selaras dan terkoordinasi</strong>.
+                        Setiap bagian memiliki peran vital: hardware memberi bentuk, software memberi logika, brainware memberi arah.
+                    </p>
+                    <p class="text-lg leading-relaxed max-w-4xl mx-auto">
+                        Tanpa salah satu dari ketiganya, sistem tidak akan hidup. Keseimbangan di antara ketiganya adalah kunci utama keberhasilan dunia digital.
+                    </p>
+                    <figure class="flex justify-center">
+                        <img
+                            src="assets/images/gambar_diagram_hardware_software_brainware_bekerja_bersama.jpg"
+                            alt="Diagram hardware, software, dan brainware bekerja bersama."
+                            class="rounded-[32px] shadow-2xl border border-white/20 w-full max-w-3xl"
+                        />
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tren Sistem Komputasi Tahun 2025 -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Tren Sistem Komputasi Tahun 2025</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Dunia teknologi terus berkembang pesat. Komputer kini bukan hanya alat kerja, tetapi bagian dari kehidupan sehari-hari.
+                        Tahun 2025 ditandai dengan kemajuan besar di bidang <strong>AI, Cloud, IoT, Edge, Quantum</strong>, dan <strong>Green Computing</strong>.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Tren-tren ini menjadikan sistem komputasi semakin <strong>cerdas, cepat, efisien, dan ramah lingkungan</strong>.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <div class="glass rounded-[32px] overflow-hidden border border-white/30 shadow-2xl">
+                        <img
+                            src="assets/images/gambar_ilustrasi_tren_teknologi_2025_ai_cloud_iot.jpg"
+                            alt="Ilustrasi tren teknologi 2025 AI, Cloud, IoT."
+                            class="w-full max-w-xl"
+                        />
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Kecerdasan Buatan (AI) -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel-soft p-10 rounded-[40px] grid grid-cols-1 xl:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Kecerdasan Buatan (Artificial Intelligence)</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        <strong>AI</strong> membuat komputer mampu <strong>berpikir dan belajar seperti manusia</strong>.
+                        AI digunakan di berbagai bidang, seperti chatbot, rekomendasi konten, mobil otonom, dan analisis data.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        AI membantu manusia mengambil keputusan lebih cepat dan akurat.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_ai_robot_dan_asisten_virtual.jpg"
+                        alt="AI robot dan asisten virtual."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Cara Kerja AI -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel p-10 rounded-[40px] grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Cara Kerja AI</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        AI bekerja dengan <strong>mengumpulkan data, mempelajarinya, lalu membuat prediksi atau keputusan</strong>.
+                    </p>
+                    <ul class="list-disc list-outside pl-6 space-y-3 text-lg leading-relaxed">
+                        <li><strong>Machine Learning</strong> (pembelajaran mesin)</li>
+                        <li><strong>Deep Learning</strong> (jaringan saraf tiruan)</li>
+                        <li><strong>Natural Language Processing (NLP)</strong> untuk memahami bahasa manusia</li>
+                    </ul>
+                    <p class="text-lg leading-relaxed">
+                        Semakin banyak data yang dipelajari, semakin “pintar” sistem AI tersebut.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_diagram_cara_kerja_ai_machine_learning_deep_learning.jpg"
+                        alt="Diagram cara kerja AI."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Cloud Computing -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Cloud Computing</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        <strong>Cloud Computing</strong> memungkinkan pengguna <strong>menyimpan dan mengakses data melalui internet</strong>, bukan di hard disk lokal.
+                        Layanan cloud menyediakan penyimpanan online, aplikasi berbasis web, dan server virtual.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Kelebihannya: fleksibel, hemat biaya, dan bisa diakses dari mana saja.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_cloud_storage_dan_server_virtual.jpg"
+                        alt="Cloud storage dan server virtual."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Internet of Things (IoT) -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel-soft p-10 rounded-[40px] grid grid-cols-1 xl:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Internet of Things (IoT)</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        <strong>IoT</strong> adalah konsep di mana <strong>perangkat elektronik saling terhubung melalui internet</strong> dan dapat berkomunikasi tanpa campur tangan manusia.
+                    </p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 text-lg leading-relaxed">
+                        <li>Lampu pintar yang menyala otomatis.</li>
+                        <li>CCTV online yang bisa dipantau lewat HP.</li>
+                        <li>Smartwatch yang merekam detak jantung.</li>
+                        <li>Mesin industri yang terhubung ke sistem monitoring.</li>
+                    </ul>
+                    <p class="text-lg leading-relaxed">
+                        IoT menjadikan hidup lebih praktis dan efisien.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_perangkat_iot_rumah_pintar_dan_smartwatch.jpg"
+                        alt="Perangkat IoT rumah pintar dan smartwatch."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Edge Computing -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Edge Computing</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        <strong>Edge Computing</strong> memproses data <strong>lebih dekat ke sumbernya</strong>, bukan di pusat server cloud.
+                        Tujuannya adalah mempercepat respon dan mengurangi beban jaringan.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Contoh: mobil otonom dan kamera keamanan yang memproses data langsung di perangkat.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Cocok untuk sistem real-time seperti kendaraan, robot, dan IoT industri.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_edge_computing_di_perangkat_terdekat.jpg"
+                        alt="Edge computing di perangkat terdekat."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Quantum Computing -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel p-10 rounded-[40px] grid grid-cols-1 xl:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Quantum Computing</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        <strong>Quantum Computing</strong> adalah komputasi super cepat yang menggunakan <strong>qubit</strong> yang bisa menjadi 0 dan 1 sekaligus.
+                        Teknologi ini mampu mengolah data sangat besar dengan kecepatan luar biasa.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Dipakai dalam penelitian ilmiah, AI tingkat lanjut, dan keamanan data. Masih dalam pengembangan, tetapi potensinya besar.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_chip_quantum_computer_dalam_ruangan_lab.jpg"
+                        alt="Chip quantum computer dalam ruangan lab."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Green Computing -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Green Computing</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        <strong>Green Computing</strong> bertujuan membuat teknologi <strong>lebih ramah lingkungan</strong>.
+                        Fokusnya pada penghematan energi, penggunaan bahan daur ulang, mengurangi e-waste, dan optimasi sistem.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Penting agar perkembangan teknologi tidak merusak lingkungan.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_data_center_hemat_energi_dan_daur_ulang_komputer.jpg"
+                        alt="Data center hemat energi dan daur ulang komputer."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Dampak Tren Komputasi 2025 -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel-soft p-10 rounded-[40px] grid grid-cols-1 xl:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Dampak Tren Komputasi 2025</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Perkembangan tren teknologi membawa banyak manfaat:
+                    </p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 text-lg leading-relaxed">
+                        <li>Proses kerja menjadi <strong>lebih cepat dan efisien</strong>.</li>
+                        <li>Muncul <strong>lapangan pekerjaan baru</strong> di bidang AI, cloud, dan data science.</li>
+                        <li>Peningkatan <strong>keamanan dan kenyamanan hidup</strong> melalui IoT dan komputasi cerdas.</li>
+                    </ul>
+                    <p class="text-lg leading-relaxed">
+                        Namun, ada tantangan baru seperti keamanan data, privasi, dan ketergantungan teknologi.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_dampak_ai_iot_terhadap_masyarakat_modern.jpg"
+                        alt="Dampak AI dan IoT terhadap masyarakat modern."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Kesimpulan Tren Sistem Komputasi 2025 -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full relative overflow-hidden rounded-[40px] shadow-glow">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-500/20 via-brand-400/10 to-cyan-300/20"></div>
+                <div class="relative p-10 md:p-16 space-y-6 text-center">
+                    <h2 class="text-4xl md:text-5xl font-extrabold">
+                        <strong>Kesimpulan Tren Sistem Komputasi 2025</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed max-w-4xl mx-auto">
+                        Tahun 2025 menjadi era di mana sistem komputasi semakin <strong>pintar, cepat, dan berkelanjutan</strong>.
+                        AI, Cloud, IoT, Edge, Quantum, dan Green Computing adalah fondasi masa depan teknologi.
+                    </p>
+                    <p class="text-lg leading-relaxed max-w-4xl mx-auto">
+                        Manusia tetap memegang peran penting untuk mengendalikan dan memanfaatkan teknologi secara bijak.
+                    </p>
+                    <figure class="flex justify-center">
+                        <img
+                            src="assets/images/gambar_ilustrasi_masa_depan_teknologi_ai_dan_manusia_bekerjasama.jpg"
+                            alt="Ilustrasi masa depan teknologi AI dan manusia."
+                            class="rounded-[32px] shadow-2xl border border-white/20 w-full max-w-3xl"
+                        />
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kesimpulan Umum -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Makna Sistem Komputasi Secara Keseluruhan</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Sistem komputasi adalah <strong>gabungan antara hardware, software, dan brainware</strong> yang bekerja bersama untuk mengolah data menjadi informasi berguna.
+                        Ketiganya saling bergantung dan membentuk satu kesatuan utuh.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Perkembangan komputer menunjukkan bagaimana manusia terus berinovasi agar sistem komputasi <strong>lebih cepat, cerdas, dan efisien</strong>.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <div class="glass rounded-[32px] overflow-hidden border border-white/30 shadow-2xl">
+                        <img
+                            src="assets/images/gambar_ringkasan_hardware_software_brainware_bekerja_bersama.jpg"
+                            alt="Ringkasan hardware, software, brainware bekerja bersama."
+                            class="w-full max-w-xl"
+                        />
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Pentingnya Sistem Komputasi di Era Modern -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full theme-panel-soft p-10 rounded-[40px] grid grid-cols-1 xl:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-extrabold theme-accent">
+                        <strong>Pentingnya Sistem Komputasi di Era Modern</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Sistem komputasi menjadi <strong>tulang punggung dunia digital</strong>. Semua hal di sekitar kita—sekolah, rumah, kantor, hiburan—bergantung padanya.
+                    </p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 text-lg leading-relaxed">
+                        <li>Guru mengajar dengan laptop dan proyektor.</li>
+                        <li>Siswa belajar lewat smartphone dan internet.</li>
+                        <li>Bisnis berjalan dengan sistem komputerisasi dan database.</li>
+                        <li>Rumah menggunakan perangkat IoT untuk otomatisasi.</li>
+                    </ul>
+                    <p class="text-lg leading-relaxed">
+                        Semua ini tidak berjalan tanpa kerja sama <strong>hardware, software, dan brainware</strong>.
+                    </p>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        src="assets/images/gambar_penerapan_sistem_komputasi_dalam_kehidupan_modern.jpg"
+                        alt="Penerapan sistem komputasi dalam kehidupan modern."
+                        class="rounded-3xl shadow-2xl border border-white/20 w-full max-w-xl"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Penutup & Refleksi -->
+        <div class="slide p-8 md:p-16 flex items-center">
+            <div class="w-full relative overflow-hidden rounded-[40px] shadow-glow">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-500/20 via-brand-400/10 to-cyan-300/20"></div>
+                <div class="relative p-10 md:p-16 space-y-6 text-center">
+                    <h2 class="text-4xl md:text-5xl font-extrabold">
+                        <strong>Penutup &amp; Refleksi</strong>
+                    </h2>
+                    <p class="text-lg leading-relaxed max-w-4xl mx-auto">
+                        Teknologi terus berkembang, tetapi peran manusia tetap menjadi pusat. Penting untuk tidak hanya menggunakan komputer, tetapi juga memahami cara kerjanya.
+                    </p>
+                    <p class="text-lg leading-relaxed max-w-4xl mx-auto">
+                        Dengan memahami sistem komputasi, kamu siap menghadapi masa depan digital sebagai pengguna yang cerdas, teknisi andal, atau pencipta teknologi baru.
+                    </p>
+                    <p class="text-lg italic max-w-4xl mx-auto">
+                        “Teknologi yang hebat hanya berguna di tangan manusia yang bijak.”
+                    </p>
+                    <figure class="flex justify-center">
+                        <img
+                            src="assets/images/gambar_ilustrasi_manusia_dan_teknologi_berjalan_bersama_menuju_masa_depan.jpg"
+                            alt="Manusia dan teknologi berjalan bersama menuju masa depan."
+                            class="rounded-[32px] shadow-2xl border border-white/20 w-full max-w-3xl"
+                        />
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="pointer-events-none fixed inset-0 overflow-hidden z-[-1]">
+            <div
+                class="absolute -top-24 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-gradient-to-br from-brand-400/40 to-cyan-300/30 blur-3xl"
+            ></div>
+            <div
+                class="absolute bottom-[-200px] right-[-200px] w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-pink-300/30 to-brand-400/30 blur-3xl"
+            ></div>
+            <div class="absolute inset-0 bg-grid opacity-40 dark:opacity-20"></div>
+        </div>
+
+        <!--
+            Catatan Gambar:
+            1. gambar_komputer_modern_dengan_label_hardware_software_brainware.jpg – ilustrasi komputer modern dengan label tiga komponen utama.
+            2. gambar_ilustrasi_interaksi_hardware_software_brainware.jpg – menunjukkan hubungan interaktif antara pengguna, software, dan hardware.
+            3. gambar_diagram_tiga_elemen_sistem_komputasi.jpg – diagram tiga lingkaran (hardware–software–brainware).
+            4. gambar_smart_device_dan_komputer_dalam_kehidupan_sehari_hari.jpg – contoh penerapan sistem komputasi di kehidupan modern (smartphone, laptop, kasir, dll).
+            5. gambar_evolusi_komputer_dari_tahun_1940_hingga_sekarang.jpg – garis waktu evolusi komputer.
+            6. gambar_komputer_ENIAC_dengan_tabung_vakum.jpg – komputer ENIAC asli.
+            7. gambar_ruangan_penuh_tabung_vakum_komputer_generasi_pertama.jpg – ukuran besar komputer generasi pertama.
+            8. gambar_transistor_dan_komputer_generasi_kedua.jpg – transistor dan komputer era 1950-an.
+            9. gambar_ic_integrated_circuit_pada_papan_sirkuit.jpg – IC pada motherboard.
+            10. gambar_mikroprosesor_dan_pc_generasi_keempat.jpg – chip mikroprosesor dan PC awal.
+            11. gambar_ibm_pc_dan_apple_ii_tahun_1980an.jpg – contoh komputer rumah tangga awal.
+            12. gambar_ai_cloud_smart_device_generasi_kelima.jpg – AI, cloud, dan perangkat pintar.
+            13. gambar_smartphone_laptop_dan_iot_modern.jpg – perangkat generasi kelima dalam kehidupan sehari-hari.
+            14. gambar_quantum_computer_dan_data_center_modern.jpg – komputer kuantum dan server cloud.
+            15. gambar_tabel_perbandingan_generasi_komputer.jpg – tabel ringkas perbandingan enam generasi.
+            16. gambar_ilustrasi_evolusi_teknologi_menuju_ai_dan_quantum.jpg – ilustrasi masa depan komputasi.
+            17. gambar_komponen_komputer_dari_luar_dan_dalam.jpg – tampilan PC luar dan dalam.
+            18. gambar_ilustrasi_proses_input_proses_output.jpg – diagram dasar input dan output.
+            19. gambar_siklus_kerja_komputer_input_proses_output_storage.jpg – alur kerja komputer.
+            20. gambar_kelompok_perangkat_keras_komputer.jpg – klasifikasi hardware.
+            21. gambar_keyboard_mouse_scanner_webcam.jpg – perangkat input umum.
+            22. gambar_joystick_barcode_scanner_fingerprint_stylus.jpg – perangkat input khusus.
+            23. gambar_diagram_komponen_cpu_alu_cu_register.jpg – struktur CPU.
+            24. gambar_motherboard_tahun_1999_dilihat_dari_atas.jpg – papan induk.
+            25. gambar_ram_dan_rom_di_papan_motherboard.jpg – RAM dan ROM.
+            26. gambar_vga_card_sound_card_network_card.jpg – kartu ekspansi.
+            27. gambar_monitor_printer_speaker_proyektor.jpg – perangkat output.
+            28. gambar_perbandingan_lcd_led_oled_monitor.jpg – tipe monitor.
+            29. gambar_harddisk_ssd_flashdisk_cloud_storage.jpg – perangkat penyimpanan.
+            30. gambar_ilustrasi_cloud_storage_dengan_ikon_filenya.jpg – penyimpanan awan.
+            31. gambar_router_modem_switch_access_point.jpg – perangkat jaringan.
+            32. gambar_bagan_alur_kerja_hardware_dalam_komputer.jpg – hubungan antar perangkat.
+            33. gambar_hardware_dalam_berbagai_bidang_pekerjaan.jpg – aplikasi nyata hardware.
+            34. gambar_keseluruhan_komponen_hardware_komputer.jpg – rangkuman visual hardware.
+            35. gambar_ilustrasi_manusia_mengendalikan_komputer_dengan_software_dan_hardware.jpg – konsep manusia sebagai pengendali sistem komputer.
+            36. gambar_pengguna_komputer_dari_siswa_guru_teknisi.jpg – berbagai peran manusia dalam sistem komputer.
+            37. gambar_programmer_network_engineer_technician_end_user.jpg – contoh lima jenis brainware.
+            38. gambar_diagram_interaksi_brainware_hardware_software.jpg – hubungan antara brainware, hardware, dan software.
+            39. gambar_guru_siswa_dan_teknisi_menggunakan_komputer.jpg – penerapan brainware di dunia nyata.
+            40. gambar_ilustrasi_brainware_mengendalikan_teknologi_modern.jpg – kesimpulan visual tentang peran brainware.
+            41. gambar_software_dan_hardware_diibaratkan_otak_dan_tubuh.jpg – ilustrasi hubungan tubuh dan otak antara hardware–software.
+            42. gambar_ilustrasi_lapisan_software_dalam_komputer.jpg – menunjukkan lapisan sistem software.
+            43. gambar_interaksi_hardware_software_user.jpg – proses interaksi tiga pihak (user, software, hardware).
+            44. gambar_diagram_tiga_jenis_perangkat_lunak.jpg – bagan system, application, dan programming software.
+            45. gambar_tampilan_operating_system_modern.jpg – tampilan OS masa kini.
+            46. gambar_perbandingan_windows_macos_linux_android_ios.jpg – perbandingan sistem operasi populer.
+            47. gambar_aplikasi_word_excel_powerpoint_photoshop_browser.jpg – contoh aplikasi umum.
+            48. gambar_visual_studio_code_dan_editor_kode_lain.jpg – contoh software pemrograman.
+            49. gambar_hubungan_hardware_software_brainware.jpg – diagram keterkaitan tiga komponen.
+            50. gambar_ilustrasi_software_sebagai_otak_komputer.jpg – representasi software sebagai pusat kendali komputer.
+            51. gambar_tiga_elemen_sistem_komputasi_terhubung_dalam_satu_siklus.jpg – visual tiga elemen saling terhubung.
+            52. gambar_ilustrasi_orchestra_hardware_software_brainware.jpg – analogi orkestra tiga komponen.
+            53. gambar_tabel_keterkaitan_hardware_software_brainware.jpg – tabel hubungan fungsi dan contoh.
+            54. gambar_proses_mencetak_dokumen_dengan_komputer_dan_printer.jpg – contoh nyata keterkaitan.
+            55. gambar_diagram_hardware_software_brainware_bekerja_bersama.jpg – rangkuman hubungan ketiganya.
+            56. gambar_ilustrasi_tren_teknologi_2025_ai_cloud_iot.jpg – visual gabungan tren teknologi 2025.
+            57. gambar_ai_robot_dan_asisten_virtual.jpg – ilustrasi AI dalam kehidupan sehari-hari.
+            58. gambar_diagram_cara_kerja_ai_machine_learning_deep_learning.jpg – proses pembelajaran mesin.
+            59. gambar_cloud_storage_dan_server_virtual.jpg – komputasi awan dan penyimpanan online.
+            60. gambar_perangkat_iot_rumah_pintar_dan_smartwatch.jpg – contoh perangkat IoT modern.
+            61. gambar_edge_computing_di_perangkat_terdekat.jpg – konsep edge computing.
+            62. gambar_chip_quantum_computer_dalam_ruangan_lab.jpg – komputer kuantum di laboratorium.
+            63. gambar_data_center_hemat_energi_dan_daur_ulang_komputer.jpg – praktik green computing.
+            64. gambar_dampak_ai_iot_terhadap_masyarakat_modern.jpg – pengaruh tren komputasi pada kehidupan.
+            65. gambar_ilustrasi_masa_depan_teknologi_ai_dan_manusia_bekerjasama.jpg – masa depan teknologi manusia dan AI.
+            66. gambar_ringkasan_hardware_software_brainware_bekerja_bersama.jpg – sinergi tiga komponen utama.
+            67. gambar_penerapan_sistem_komputasi_dalam_kehidupan_modern.jpg – contoh penerapan komputer di berbagai bidang.
+            68. gambar_ilustrasi_manusia_dan_teknologi_berjalan_bersama_menuju_masa_depan.jpg – penutup tentang peran manusia dalam teknologi masa depan.
+        -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="public/canvas.js"></script>
+        <script src="public/tools.js"></script>
+    </body>
+</html>
