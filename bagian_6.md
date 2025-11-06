@@ -1,4 +1,3 @@
----
 ## 🌐 **Slide 1 — Judul Bagian**
 
 ### **Keterkaitan Hardware, Software, dan Brainware**
@@ -8,8 +7,7 @@ Mereka bekerja secara **terpadu dan saling bergantung**, membentuk satu sistem y
 
 Tanpa salah satunya, komputer tidak akan dapat bekerja.
 
-{{gambar_tiga_elemen_sistem_komputasi_terhubung_dalam_satu_siklus.jpg}}
----
+## {{gambar_tiga_elemen_sistem_komputasi_terhubung_dalam_satu_siklus.jpg}}
 
 ## ⚙️ **Slide 2 — Konsep Hubungan Tiga Komponen**
 

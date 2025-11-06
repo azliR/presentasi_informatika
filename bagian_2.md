@@ -1,4 +1,3 @@
----
 ## 🕰️ **Slide 1 — Judul Bagian**
 
 ### **Sejarah Singkat Perkembangan Komputer**
@@ -8,8 +7,7 @@ Dari mesin berukuran ruangan penuh kabel hingga laptop tipis yang bisa dibawa ke
 
 Mari kita pelajari bagaimana komputer berkembang dari generasi ke generasi.
 
-{{gambar_evolusi_komputer_dari_tahun_1940_hingga_sekarang.jpg}}
----
+## {{gambar_evolusi_komputer_dari_tahun_1940_hingga_sekarang.jpg}}
 
 ## 💾 **Slide 2 — Generasi Pertama (1940–1956)**
 

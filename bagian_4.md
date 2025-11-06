@@ -1,4 +1,3 @@
----
 ## 💾 **Slide 1 — Judul Bagian**
 
 ### **Software (Perangkat Lunak)**
@@ -7,8 +6,7 @@ Jika hardware adalah tubuh dari komputer, maka software adalah **otaknya**.
 Software berisi **instruksi atau program** yang memberi tahu hardware apa yang harus dilakukan.
 Tanpa software, komputer hanyalah kumpulan komponen tanpa fungsi.
 
-{{gambar_software_dan_hardware_diibaratkan_otak_dan_tubuh.jpg}}
----
+## {{gambar_software_dan_hardware_diibaratkan_otak_dan_tubuh.jpg}}
 
 ## 📘 **Slide 2 — Pengertian Software**
 

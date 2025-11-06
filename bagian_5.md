@@ -1,4 +1,3 @@
----
 ## 👩‍💻 **Slide 1 — Judul Bagian**
 
 ### **Brainware (Pengguna Komputer)**
@@ -8,8 +7,7 @@ Tanpa manusia yang mengoperasikan, mengatur, dan mengendalikan komputer, semua p
 
 Brainware adalah **otak penggerak** seluruh sistem komputasi.
 
-{{gambar_ilustrasi_manusia_mengendalikan_komputer_dengan_software_dan_hardware.jpg}}
----
+## {{gambar_ilustrasi_manusia_mengendalikan_komputer_dengan_software_dan_hardware.jpg}}
 
 ## 🧠 **Slide 2 — Pengertian Brainware**
 

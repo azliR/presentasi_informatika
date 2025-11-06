@@ -1,4 +1,3 @@
----
 ## 💻 **Slide 1 — Judul Bagian**
 
 ### **Hardware (Perangkat Keras)**
@@ -7,8 +6,7 @@ Hardware adalah bagian fisik dari komputer yang bisa kita **lihat dan sentuh lan
 Semua komponen ini bekerja sama menjalankan perintah yang diberikan oleh pengguna melalui software.
 Tanpa hardware, komputer hanyalah konsep yang tidak bisa diwujudkan.
 
-{{gambar_komponen_komputer_dari_luar_dan_dalam.jpg}}
----
+## {{gambar_komponen_komputer_dari_luar_dan_dalam.jpg}}
 
 ## ⚙️ **Slide 2 — Pengertian Hardware**
 

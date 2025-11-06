@@ -1,5 +1,3 @@
----
-
 ## 🎬 **Slide 1 — Judul & Pembuka**
 
 ### 🧠 Pengantar Sistem Komputasi

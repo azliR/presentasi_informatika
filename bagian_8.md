@@ -1,4 +1,3 @@
----
 ## 🧭 **Slide 1 — Kesimpulan Umum**
 
 ### **Makna Sistem Komputasi Secara Keseluruhan**
@@ -8,8 +7,7 @@ Ketiganya saling bergantung dan membentuk satu kesatuan utuh — seperti tubuh m
 
 Perkembangan komputer dari masa ke masa menunjukkan bagaimana manusia terus berinovasi agar sistem komputasi **lebih cepat, cerdas, dan efisien**.
 
-{{gambar_ringkasan_hardware_software_brainware_bekerja_bersama.jpg}}
----
+## {{gambar_ringkasan_hardware_software_brainware_bekerja_bersama.jpg}}
 
 ## 💡 **Slide 2 — Pentingnya Sistem Komputasi di Era Modern**
 

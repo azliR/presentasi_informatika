@@ -1,4 +1,3 @@
----
 ## 🚀 **Slide 1 — Judul Bagian**
 
 ### **Tren Sistem Komputasi Tahun 2025**
@@ -8,8 +7,7 @@ Komputer kini bukan hanya alat kerja, tetapi bagian dari kehidupan sehari-hari.
 Tahun 2025 ditandai dengan kemajuan besar di bidang **AI, Cloud, IoT, Edge, Quantum**, dan **Green Computing**.
 Tren-tren ini menjadikan sistem komputasi semakin **cerdas, cepat, efisien, dan ramah lingkungan.**
 
-{{gambar_ilustrasi_tren_teknologi_2025_ai_cloud_iot.jpg}}
----
+## {{gambar_ilustrasi_tren_teknologi_2025_ai_cloud_iot.jpg}}
 
 ## 🤖 **Slide 2 — Kecerdasan Buatan (Artificial Intelligence / AI)**
 
