@@ -31,7 +31,7 @@ Purpose: help an AI agent work productively in this static presentation site. Ke
 
 ### Add a new session (pertemuan_X)
 
-1. Create `pertemuan_X.html` modeled after existing decks. Include in `<head>`: Tailwind CDN, fonts, highlight.js CSS, and `public/canvas.css`.
+34. Create `pertemuan_X.html` modeled after existing decks. Include in `<head>`: SEO meta tags (description, Open Graph, Twitter, canonical), Tailwind CDN, fonts, highlight.js CSS, and `public/canvas.css`.
 2. In `<body>`, add multiple top-level `<div class="slide">…</div>` blocks. Optionally mark the first with `class="slide active"`.
 3. Before `</body>`, include scripts in this order: highlight.js, `public/canvas.js`, then `public/tools.js`.
 4. Add a card link in `index.html` under `#cards` following the same structure, and include `data-keywords` for search.

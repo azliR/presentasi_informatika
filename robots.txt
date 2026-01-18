@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://azlir.github.io/presentasi_informatika/sitemap.xml
