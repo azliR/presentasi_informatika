@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Memvalidasi Fakta dan Mengevaluasi Informasi di Era Digital</title>
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./public/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./public/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./public/favicon-16x16.png"
+        />
+        <link rel="icon" href="./public/favicon.ico" sizes="any" />
+        <link rel="manifest" href="./site.webmanifest" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ["Inter", "ui-sans-serif", "system-ui"],
+                        },
+                        colors: {
+                            brand: {
+                                50: "#eef2ff",
+                                100: "#e0e7ff",
+                                200: "#c7d2fe",
+                                300: "#a5b4fc",
+                                400: "#818cf8",
+                                500: "#6366f1",
+                                600: "#4f46e5",
+                                700: "#4338ca",
+                                800: "#3730a3",
+                                900: "#312e81",
+                            },
+                        },
+                        boxShadow: {
+                            glow: "0 10px 40px rgba(99, 102, 241, 0.35)",
+                        },
+                    },
+                },
+                darkMode: "class",
+            };
+        </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+        />
+        <link rel="stylesheet" href="public/canvas.css" />
+        <style>
+            .bg-grid {
+                background-image: radial-gradient(
+                    rgba(99, 102, 241, 0.18) 1px,
+                    transparent 1px
+                );
+                background-size: 14px 14px;
+            }
+            .glass {
+                backdrop-filter: saturate(140%) blur(10px);
+                -webkit-backdrop-filter: saturate(140%) blur(10px);
+            }
+        </style>
+    </head>
+    <body
+        class="min-h-screen bg-gradient-to-b from-brand-50 via-white to-brand-50/40 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900 text-slate-800 dark:text-slate-100"
+    >
+        <!-- Slide 1: Judul -->
+        <div class="slide flex items-center active p-8 md:p-16">
+            <div class="theme-panel w-full max-w-5xl mx-auto p-12 rounded-[40px] shadow-glow text-center space-y-8">
+                <div class="inline-flex items-center gap-3 bg-brand-500/10 px-6 py-2 rounded-full text-brand-700 dark:text-brand-300 font-bold tracking-wider uppercase text-sm">
+                    Pertemuan 2
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black leading-tight">
+                    Memvalidasi Fakta dan Mengevaluasi Informasi di <span class="theme-accent">Era Digital</span>
+                </h1>
+                <p class="text-2xl md:text-3xl font-medium theme-muted">
+                    Strategi Melawan Hoaks melalui Lateral Reading dan Lateral Thinking
+                </p>
+                <div class="pt-8 flex flex-col items-center gap-4">
+                    <div class="h-1 w-24 bg-brand-500 rounded-full"></div>
+                    <p class="text-xl font-semibold opacity-80">Oleh: Rizal AzliR</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Pentingnya Memvalidasi Informasi -->
+        <div class="slide flex items-center p-8 md:p-16">
+            <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div class="space-y-8">
+                    <h2 class="text-4xl md:text-6xl font-black theme-accent">
+                        Pentingnya Memvalidasi Informasi
+                    </h2>
+                    <div class="theme-panel-soft p-10 rounded-3xl space-y-6">
+                        <p class="text-xl leading-relaxed">
+                            Di era digital saat ini, setiap individu memiliki kebebasan penuh untuk menulis, mengunggah, dan memublikasikan data menurut versi mereka sendiri.
+                        </p>
+                        <p class="text-xl leading-relaxed">
+                            Hal ini menuntut kita sebagai pengguna internet yang bertanggung jawab untuk tidak langsung mempercayai setiap informasi yang beredar, seperti berita mengenai keamanan produk kosmetik atau kebijakan pemerintah.
+                        </p>
+                        <div class="bg-brand-500/10 border-l-4 border-brand-500 p-6 rounded-r-xl italic text-lg">
+                            Kemampuan untuk menyaring informasi dengan cermat dan bijaksana sangat krusial guna memastikan apakah sebuah informasi merupakan fakta yang dapat dipertanggungjawabkan atau sekadar hoaks yang menyesatkan.
+                        </div>
+                    </div>
+                </div>
+                <figure class="flex justify-center">
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-brand-400/20 rounded-[40px] blur-2xl group-hover:bg-brand-400/30 transition-all"></div>
+                        <img
+                            loading="lazy"
+                            src="assets/images/pertemuan_2/2.png"
+                            alt="Seorang siswa sedang menatap layar laptop dengan ekspresi berpikir kritis"
+                            class="relative rounded-[32px] shadow-2xl border border-white/20 w-full max-w-lg"
+                        />
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Slide 3: Definisi Fakta dan Hoaks -->
+        <div class="slide flex items-center p-8 md:p-16">
+            <div class="w-full space-y-12">
+                <h2 class="text-4xl md:text-6xl font-black theme-accent text-center">Definisi Fakta dan Hoaks</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="theme-panel p-10 rounded-[32px] shadow-lg border-t-8 border-green-500 space-y-6">
+                        <div class="inline-block px-4 py-2 bg-green-500/10 text-green-600 dark:text-green-400 font-black rounded-lg text-2xl">FAKTA</div>
+                        <p class="text-xl leading-relaxed">
+                            Kejadian atau informasi yang dapat <strong>diverifikasi</strong> dan diterima secara umum sebagai kenyataan berdasarkan <strong>bukti yang objektif</strong>.
+                        </p>
+                    </div>
+                    <div class="theme-panel p-10 rounded-[32px] shadow-lg border-t-8 border-red-500 space-y-6">
+                        <div class="inline-block px-4 py-2 bg-red-500/10 text-red-600 dark:text-red-400 font-black rounded-lg text-2xl">HOAKS</div>
+                        <p class="text-xl leading-relaxed">
+                            Informasi yang dipresentasikan secara sengaja agar tidak sesuai dengan kenyataan (palsu) dengan maksud menyerupai realitas.
+                        </p>
+                        <p class="text-lg opacity-80">
+                            Tujuannya: menimbulkan kebingungan, kesesatan, memecah belah masyarakat, serta menciptakan ketidaknyamanan.
+                        </p>
+                    </div>
+                </div>
+                <div class="theme-panel-soft p-6 rounded-2xl text-center text-xl font-medium italic">
+                    Berbeda dengan fakta, hoaks tidak didukung oleh sumber kredibel dan sangat sulit untuk diverifikasi kebenarannya.
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Sejarah Singkat Fenomena Hoaks -->
+        <div class="slide flex items-center p-8 md:p-16">
+            <div class="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-12 items-center">
+                <div class="space-y-6 text-center lg:text-left">
+                    <h2 class="text-4xl md:text-6xl font-black theme-accent leading-tight">Sejarah Singkat Fenomena Hoaks</h2>
+                    <p class="text-xl theme-muted italic">Fenomena hoaks bukanlah hal baru dan telah tercatat sejak berabad-abad lalu.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="theme-panel p-6 rounded-2xl border-l-4 border-brand-400 transition-transform hover:-translate-y-2">
+                        <span class="text-2xl font-black text-brand-500 block mb-2">1661</span>
+                        <p class="text-lg">Kasus "Drummer of Tedworth".</p>
+                    </div>
+                    <div class="theme-panel p-6 rounded-2xl border-l-4 border-brand-400 transition-transform hover:-translate-y-2">
+                        <span class="text-2xl font-black text-brand-500 block mb-2">1745</span>
+                        <p class="text-lg">Benjamin Franklin menyebarkan hoaks tentang "Batu China".</p>
+                    </div>
+                    <div class="theme-panel p-6 rounded-2xl border-l-4 border-brand-400 transition-transform hover:-translate-y-2">
+                        <span class="text-2xl font-black text-brand-500 block mb-2">1835</span>
+                        <p class="text-lg">Peristiwa "Great Moon Hoax" yang menyesatkan publik.</p>
+                    </div>
+                    <div class="theme-panel p-6 rounded-2xl border-l-4 border-brand-400 transition-transform hover:-translate-y-2">
+                        <span class="text-2xl font-black text-brand-500 block mb-2">2006</span>
+                        <p class="text-lg">"Flemish Secession Hoax" di era modern.</p>
+                    </div>
+                </div>
+                <div class="col-span-full theme-panel-soft p-6 rounded-2xl mt-8">
+                    <p class="text-center text-xl">
+                        Istilah hoaks populer sekitar tahun <strong>1808</strong>, berasal dari kata <em>hocus</em> (mengelabui). Kini penyebarannya semakin masif berkat internet dan media sosial.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Cara Membedakan Hoaks dan Fakta -->
+        <div class="slide flex items-center p-8 md:p-16">
+            <div class="w-full space-y-10">
+                <h2 class="text-4xl md:text-6xl font-black theme-accent">Cara Membedakan Hoaks dan Fakta</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="space-y-6">
+                        <p class="text-xl leading-relaxed">
+                            Perbedaan paling signifikan antara hoaks dan fakta terletak pada <strong>sumber</strong> dan <strong>bahasa</strong> yang digunakan.
+                        </p>
+                        <div class="theme-panel p-8 rounded-3xl space-y-4 shadow-lg border-l-8 border-red-500">
+                            <h3 class="text-2xl font-black">Ciri Hoaks</h3>
+                            <ul class="list-disc list-outside ml-6 space-y-2 text-lg">
+                                <li>Bahasa bombastis & provokatif</li>
+                                <li>Tidak memiliki sumber yang jelas</li>
+                                <li>Tidak dapat dipertanggungjawabkan secara hukum/jurnalistik</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="theme-panel p-8 rounded-3xl space-y-4 shadow-lg border-l-8 border-green-500">
+                            <h3 class="text-2xl font-black">Ciri Fakta</h3>
+                            <ul class="list-disc list-outside ml-6 space-y-2 text-lg">
+                                <li>Dapat dipastikan melalui penelusuran mesin pencari</li>
+                                <li>Berasal dari akun/media resmi terpercaya</li>
+                                <li>Didukung bukti dan data objektif</li>
+                            </ul>
+                        </div>
+                        <div class="bg-amber-500/10 border-2 border-amber-500/50 p-6 rounded-2xl text-xl font-bold text-center">
+                            Selalu pemeriksaan ulang terhadap informasi yang mencurigakan sebelum membagikannya!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Jenis Kesalahan Informasi: Misinformasi -->
+        <div class="slide flex items-center p-8 md:p-16">
+            <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="inline-block px-6 py-2 bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 font-black rounded-full text-xl uppercase tracking-wider">TIPE 1</div>
+                    <h2 class="text-4xl md:text-7xl font-black">Misinformasi</h2>
+                    <div class="theme-panel-soft p-10 rounded-[32px] space-y-6">
+                        <p class="text-2xl leading-relaxed">
+                            Kesalahan dalam menyampaikan informasi yang terjadi karena <strong>kesalahan murni</strong> pada sumber data.
+                        </p>
+                        <div class="flex items-start gap-4 p-4 bg-white/40 dark:bg-slate-800/40 rounded-2xl">
+                            <span class="text-4xl">💡</span>
+                            <div>
+                                <h3 class="text-xl font-bold">Tanpa niat jahat</h3>
+                                <p class="text-lg opacity-80">Pengirim tidak bermaksud menipu atau menyesatkan.</p>
+                            </div>
+                        </div>
+                        <p class="text-xl leading-relaxed">
+                            <strong>Contoh:</strong> Salah memberikan jadwal pertemuan karena salah melihat kalender.
+                        </p>
+                    </div>
+                </div>
+                <figure class="flex justify-center">
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-yellow-400/20 rounded-[40px] blur-2xl group-hover:bg-yellow-400/30 transition-all"></div>
+                        <img
+                            loading="lazy"
+                            src="assets/images/pertemuan_2/6.png"
+                            alt="Ilustrasi seseorang salah melihat kalender (misinformasi)"
+                            class="relative rounded-[32px] shadow-2xl border border-white/20 w-full max-w-lg"
+                        />
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Slide 7: Jenis Kesalahan Informasi: Disinformasi -->
+        <div class="slide flex items-center p-8 md:p-16">
+            <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="inline-block px-6 py-2 bg-red-500/10 text-red-600 dark:text-red-400 font-black rounded-full text-xl uppercase tracking-wider">TIPE 2</div>
+                    <h2 class="text-4xl md:text-7xl font-black">Disinformasi</h2>
+                    <div class="theme-panel-soft p-10 rounded-[32px] space-y-6">
+                        <p class="text-2xl leading-relaxed italic">
+                            "Deliberated Lie to Mislead"
+                        </p>
+                        <p class="text-xl leading-relaxed font-medium">
+                            Tindakan <strong>sengaja</strong> memberikan informasi tidak benar dengan tujuan menyesatkan atau mengelabui orang lain.
+                        </p>
+                        <ul class="space-y-4 text-lg">
+                            <li class="flex items-center gap-3">
+                                <span class="w-3 h-3 bg-red-500 rounded-full"></span>
+                                Melibatkan perencanaan matang
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-3 h-3 bg-red-500 rounded-full"></span>
+                                Memengaruhi pemikiran & keputusan target
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-3 h-3 bg-red-500 rounded-full"></span>
+                                Mencari keuntungan atau merusak reputasi
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        loading="lazy"
+                        src="assets/images/pertemuan_2/7.png"
+                        alt="Aktor bayangan di balik komputer sedang menyusun berita palsu"
+                        class="rounded-[32px] shadow-glow border border-white/20 w-full max-w-lg"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Slide 8: Jenis Kesalahan Informasi: Malinformasi -->
+        <div class="slide flex items-center p-8 md:p-16">
+            <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="inline-block px-6 py-2 bg-slate-500/10 text-slate-600 dark:text-slate-400 font-black rounded-full text-xl uppercase tracking-wider">TIPE 3</div>
+                    <h2 class="text-4xl md:text-7xl font-black">Malinformasi</h2>
+                    <div class="theme-panel-soft p-10 rounded-[32px] space-y-6">
+                        <p class="text-2xl leading-relaxed">
+                            Berdasarkan <strong>fakta objektif</strong> atau data valid, namun digunakan untuk <strong>merugikan</strong> pihak tertentu.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-slate-500/10 p-4 rounded-xl text-center font-bold">Penyebaran Data Pribadi</div>
+                            <div class="bg-slate-500/10 p-4 rounded-xl text-center font-bold">Ujaran Kebencian</div>
+                            <div class="bg-slate-500/10 p-4 rounded-xl text-center font-bold">Pelecehan Verbal</div>
+                            <div class="bg-slate-500/10 p-4 rounded-xl text-center font-bold">Diskriminasi</div>
+                        </div>
+                        <p class="text-lg italic opacity-80">
+                            Digunakan sebagai senjata untuk menjatuhkan reputasi target dengan menggunakan fakta yang dipelintir atau disebarkan di waktu yang tidak tepat.
+                        </p>
+                    </div>
+                </div>
+                <figure class="flex justify-center">
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-slate-400/20 rounded-[40px] blur-2xl group-hover:bg-slate-400/30 transition-all"></div>
+                        <img
+                            loading="lazy"
+                            src="assets/images/pertemuan_2/8.png"
+                            alt="Ilustrasi data pribadi digunakan untuk merugikan (malinformasi)"
+                            class="relative rounded-[32px] shadow-2xl border border-white/20 w-full max-w-lg"
+                        />
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Slide 9: Ragam Konten Menyesatkan (Bagian 1) -->
+        <div class="slide flex items-center p-8 md:p-16">
+            <div class="w-full space-y-10">
+                <h2 class="text-4xl md:text-6xl font-black theme-accent">Ragam Konten Menyesatkan</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="theme-panel p-8 rounded-3xl hover:border-brand-500 border-2 border-transparent transition-all space-y-4">
+                        <div class="text-4xl">🎭</div>
+                        <h3 class="text-2xl font-black">Satir / Parodi</h3>
+                        <p class="text-lg opacity-80">
+                            Tanpa niat membahayakan, namun sering disalahartikan sebagai informasi serius.
+                        </p>
+                    </div>
+                    <div class="theme-panel p-8 rounded-3xl hover:border-brand-500 border-2 border-transparent transition-all space-y-4">
+                        <div class="text-4xl">💭</div>
+                        <h3 class="text-2xl font-black">Konten Dugaan</h3>
+                        <p class="text-lg opacity-80">
+                            Spekulasi atau opini yang disajikan seolah-olah fakta tanpa bukti konkret (gosip).
+                        </p>
+                    </div>
+                    <div class="theme-panel p-8 rounded-3xl hover:border-brand-500 border-2 border-transparent transition-all space-y-4">
+                        <div class="text-4xl">🚫</div>
+                        <h3 class="text-2xl font-black">Konten Palsu</h3>
+                        <p class="text-lg opacity-80">
+                            Informasi yang sepenuhnya dibuat-buat dengan tujuan murni untuk menipu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Ragam Konten Menyesatkan (Bagian 2) -->
+        <div class="slide flex items-center p-8 md:p-16">
+            <div class="w-full space-y-10">
+                <h2 class="text-4xl md:text-6xl font-black theme-accent">Lanjutan: Ragam Konten</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="theme-panel p-8 rounded-3xl hover:border-brand-500 border-2 border-transparent transition-all space-y-4">
+                        <div class="text-4xl">🔗</div>
+                        <h3 class="text-2xl font-black">False Connection</h3>
+                        <p class="text-lg opacity-80">
+                            Judul, gambar, atau deskripsi tidak sesuai isi (<em>clickbait</em>).
+                        </p>
+                    </div>
+                    <div class="theme-panel p-8 rounded-3xl hover:border-brand-500 border-2 border-transparent transition-all space-y-4">
+                        <div class="text-4xl">🌪️</div>
+                        <h3 class="text-2xl font-black">Misleading Content</h3>
+                        <p class="text-lg opacity-80">
+                            Informasi riil yang dipelintir atau dimodifikasi untuk menciptakan narasi berbeda.
+                        </p>
+                    </div>
+                    <div class="theme-panel p-8 rounded-3xl hover:border-brand-500 border-2 border-transparent transition-all space-y-4">
+                        <div class="text-4xl">🧤</div>
+                        <h3 class="text-2xl font-black">Imposter Content</h3>
+                        <p class="text-lg opacity-80">
+                            Memalsukan identitas lembaga atau individu terkenal guna meyakinkan pembaca.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 11: Ragam Konten Menyesatkan (Bagian 3) -->
+        <div class="slide flex items-center p-8 md:p-16">
+            <div class="w-full space-y-10">
+                <h2 class="text-4xl md:text-6xl font-black theme-accent">Lanjutan: Ragam Konten</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="theme-panel-soft p-10 rounded-[40px] space-y-6">
+                        <div class="text-5xl">📍</div>
+                        <h3 class="text-3xl font-black">False Context</h3>
+                        <p class="text-xl leading-relaxed">
+                            Informasi asli dikombinasikan dengan narasi atau konteks yang salah untuk menyesatkan.
+                        </p>
+                    </div>
+                    <div class="theme-panel-soft p-10 rounded-[40px] space-y-6">
+                        <div class="text-5xl">🛠️</div>
+                        <h3 class="text-3xl font-black">Manipulated Content</h3>
+                        <p class="text-xl leading-relaxed">
+                            Informasi atau gambar asli yang diubah secara teknis (editing ekstrim) untuk menipu audiens.
+                        </p>
+                    </div>
+                </div>
+                <div class="theme-panel p-6 rounded-2xl text-center text-2xl font-black theme-accent">
+                    Memahami jenis konten ini adalah langkah awal agar tidak mudah terjebak!
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 12: Alat Verifikasi: Hoax Buster Tools (HBT) -->
+        <div class="slide flex items-center p-8 md:p-16">
+            <div class="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 items-center w-full">
+                <div class="space-y-8">
+                    <h2 class="text-4xl md:text-6xl font-black theme-accent leading-tight">Hoax Buster Tools (HBT)</h2>
+                    <p class="text-2xl leading-relaxed">
+                        Menyediakan jasa pencarian dan validasi kebenaran konten digital.
+                    </p>
+                    <div class="theme-panel-soft p-8 rounded-3xl space-y-4">
+                        <h3 class="text-xl font-bold">Apa yang bisa dicek?</h3>
+                        <div class="flex flex-wrap gap-2 text-lg">
+                            <span class="px-4 py-2 bg-white/50 dark:bg-slate-800/50 rounded-lg">Teks</span>
+                            <span class="px-4 py-2 bg-white/50 dark:bg-slate-800/50 rounded-lg">Video</span>
+                            <span class="px-4 py-2 bg-white/50 dark:bg-slate-800/50 rounded-lg">Gambar</span>
+                            <span class="px-4 py-2 bg-white/50 dark:bg-slate-800/50 rounded-lg">Web</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="theme-panel p-10 rounded-[40px] space-y-6 shadow-glow">
+                    <p class="text-xl leading-relaxed italic">
+                        "HBT memberikan referensi daftar tautan (URL) dari media berita yang telah terdaftar dan diakui keabsahannya oleh Dewan Pers."
+                    </p>
+                    <p class="text-lg opacity-80">
+                        Pengguna dapat merujuk pada sumber yang kredibel secara langsung.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 13: Alat Verifikasi: Chatbot Kalimasada & Cekfakta.com -->
+        <div class="slide flex items-center p-8 md:p-16">
+            <div class="w-full space-y-12">
+                <h2 class="text-4xl md:text-6xl font-black theme-accent">Chatbot Kalimasada & Cekfakta.com</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="theme-panel p-10 rounded-[32px] space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 bg-brand-500 rounded-full flex items-center justify-center text-3xl">🤖</div>
+                            <h3 class="text-3xl font-black">Chatbot Kalimasada</h3>
+                        </div>
+                        <p class="text-xl leading-relaxed">
+                            Dikembangkan oleh Mafindo, memungkinkan pengguna berinteraksi langsung melalui pesan singkat dengan kata kunci tertentu.
+                        </p>
+                    </div>
+                    <div class="theme-panel p-10 rounded-[32px] space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 bg-brand-500 rounded-full flex items-center justify-center text-3xl">🌐</div>
+                            <h3 class="text-3xl font-black">Cekfakta.com</h3>
+                        </div>
+                        <p class="text-xl leading-relaxed">
+                            Kolaborasi Mafindo, AJI, dan AMSI. Cukup masukkan kata kunci di situs <a href="https://cekfakta.com" target="_blank" class="theme-accent underline">cekfakta.com</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 14: Alat Verifikasi: Google Images -->
+        <div class="slide flex items-center p-8 md:p-16">
+            <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div class="space-y-8">
+                    <h2 class="text-4xl md:text-7xl font-black theme-accent">Google Images</h2>
+                    <p class="text-2xl font-medium">Sangat efektif untuk mendeteksi manipulasi gambar.</p>
+                    <div class="theme-panel-soft p-8 rounded-3xl space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white/50 dark:bg-slate-800/50 rounded-lg flex items-center justify-center font-bold">1</div>
+                            <p class="text-lg">Kunjungi Google Images</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white/50 dark:bg-slate-800/50 rounded-lg flex items-center justify-center font-bold">2</div>
+                            <p class="text-lg">Drag and drop atau upload foto</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white/50 dark:bg-slate-800/50 rounded-lg flex items-center justify-center font-bold">3</div>
+                            <p class="text-lg">Lihat sumber asli, tanggal, dan editan</p>
+                        </div>
+                    </div>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        loading="lazy"
+                        src="assets/images/pertemuan_2/14.png"
+                        alt="Ilustrasi drag and drop foto ke dalam kolom pencarian google"
+                        class="rounded-[32px] shadow-glow border border-white/20 w-full max-w-lg"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Slide 15: Mengenal Teknik Lateral Reading -->
+        <div class="slide flex items-center p-8 md:p-16 text-center">
+            <div class="w-full max-w-4xl mx-auto space-y-10">
+                <h2 class="text-5xl md:text-8xl font-black">Mengenal Teknik <span class="theme-accent">Lateral Reading</span></h2>
+                <div class="theme-panel p-10 rounded-[40px] space-y-6 text-2xl leading-relaxed">
+                    <p>Proses memeriksa validitas data digital dengan cara <strong>"membaca ke samping"</strong>.</p>
+                    <p class="text-xl theme-muted">
+                        Alih-alih terpaku pada satu situs, buka tab baru untuk mencari informasi dari sumber lain.
+                    </p>
+                </div>
+                <div class="flex justify-center gap-8 pt-8">
+                    <div class="theme-panel-soft p-6 rounded-2xl w-full">
+                        <h4 class="text-xl font-bold mb-2">SHEG Research</h4>
+                        <p class="text-lg">Stanford History Education Group membuktikan metode ini jauh lebih efektif.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 16: Langkah-langkah Pembacaan Lateral -->
+        <div class="slide flex items-center p-8 md:p-16">
+            <div class="w-full space-y-12">
+                <h2 class="text-4xl md:text-6xl font-black theme-accent text-center">Langkah Pembacaan Lateral</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="theme-panel p-6 rounded-2xl space-y-4 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 p-4 text-4xl opacity-10 font-black">01</div>
+                        <h3 class="text-xl font-bold">Tinggalkan Sumber Awal</h3>
+                        <p class="text-lg opacity-80">Jangan terpaku pada satu artikel saja.</p>
+                    </div>
+                    <div class="theme-panel p-6 rounded-2xl space-y-4 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 p-4 text-4xl opacity-10 font-black">02</div>
+                        <h3 class="text-xl font-bold">Mesin Pencari</h3>
+                        <p class="text-lg opacity-80">Cari topik atau latar belakang sumber tersebut.</p>
+                    </div>
+                    <div class="theme-panel p-6 rounded-2xl space-y-4 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 p-4 text-4xl opacity-10 font-black">03</div>
+                        <h3 class="text-xl font-bold">Berbagai Sumber</h3>
+                        <p class="text-lg opacity-80">Dapatkan perspektif dari berbagai media.</p>
+                    </div>
+                    <div class="theme-panel p-6 rounded-2xl space-y-4 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 p-4 text-4xl opacity-10 font-black">04</div>
+                        <h3 class="text-xl font-bold">Bandingkan</h3>
+                        <p class="text-lg opacity-80">Kontraskan data asli dengan data sumber baru.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 17: Evaluasi Kebenaran Informasi -->
+        <div class="slide flex items-center p-8 md:p-16">
+            <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
+                <div class="space-y-10">
+                    <h2 class="text-4xl md:text-6xl font-black theme-accent">Evaluasi Kebenaran Informasi</h2>
+                    <p class="text-2xl leading-relaxed">
+                        Gunakan kata kunci relevan untuk menemukan pembahasan serupa di tempat lain.
+                    </p>
+                    <div class="theme-panel-soft p-10 rounded-[40px] border-l-8 border-brand-500">
+                        <p class="text-xl leading-relaxed italic mb-4">
+                            "Dengan membaca berbagai perspektif dan menganalisis perbedaan data, Anda mendapatkan perlindungan yang lebih kuat terhadap ancaman misinformasi."
+                        </p>
+                        <p class="text-lg font-bold">
+                            Tingkatkan literasi media digital Anda!
+                        </p>
+                    </div>
+                </div>
+                <figure class="flex justify-center">
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-brand-400/20 rounded-[40px] blur-2xl group-hover:bg-brand-400/30 transition-all"></div>
+                        <img
+                            loading="lazy"
+                            src="assets/images/pertemuan_2/17.png"
+                            alt="Ilustrasi verifikasi informasi dengan membandingkan sumber"
+                            class="relative rounded-[32px] shadow-2xl border border-white/20 w-full max-w-lg"
+                        />
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Slide 18: Konsep Lateral Thinking -->
+        <div class="slide flex items-center p-8 md:p-16">
+            <div class="w-full theme-panel p-12 rounded-[50px] shadow-glow grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 items-center">
+                <div class="space-y-8">
+                    <h2 class="text-4xl md:text-7xl font-black theme-accent">Lateral Thinking</h2>
+                    <p class="text-2xl font-bold">Edward de Bono (1967)</p>
+                    <p class="text-xl leading-relaxed">
+                        Strategi penyelesaian masalah yang mengutamakan pendekatan <strong>kreatif dan inovatif</strong> daripada logika linear tradisional.
+                    </p>
+                </div>
+                <div class="theme-panel-soft p-10 rounded-[40px] space-y-6">
+                    <p class="text-xl leading-relaxed">
+                        Jangan hanya terpaku pada satu sumber atau satu perspektif saja.
+                    </p>
+                    <p class="text-xl leading-relaxed font-bold">
+                        Ajak diri untuk melihat masalah dari berbagai sudut pandang dan temukan solusi baru yang tidak terduga.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 19: Menerapkan Lateral Thinking pada Data Digital -->
+        <div class="slide flex items-center p-8 md:p-16">
+            <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div class="space-y-8">
+                    <h2 class="text-4xl md:text-6xl font-black theme-accent leading-tight">Menerapkan Lateral Thinking</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="theme-panel-soft p-6 rounded-2xl flex items-start gap-4">
+                            <span class="text-3xl">🔑</span>
+                            <div>
+                                <h4 class="font-bold">Keyword</h4>
+                                <p class="opacity-80">Gunakan kata kunci tepat.</p>
+                            </div>
+                        </div>
+                        <div class="theme-panel-soft p-6 rounded-2xl flex items-start gap-4">
+                            <span class="text-3xl">🗺️</span>
+                            <div>
+                                <h4 class="font-bold">Mind Mapping</h4>
+                                <p class="opacity-80">Petakan sumber terpercaya.</p>
+                            </div>
+                        </div>
+                        <div class="theme-panel-soft p-6 rounded-2xl flex items-start gap-4">
+                            <span class="text-3xl">📚</span>
+                            <div>
+                                <h4 class="font-bold">Referensi</h4>
+                                <p class="opacity-80">Perbanyak literasi kredibel.</p>
+                            </div>
+                        </div>
+                        <div class="theme-panel-soft p-6 rounded-2xl flex items-start gap-4">
+                            <span class="text-3xl">🔄</span>
+                            <div>
+                                <h4 class="font-bold">Objek Transisi</h4>
+                                <p class="opacity-80">Rujuk kasus/metode standar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <figure class="flex justify-center">
+                    <img
+                        loading="lazy"
+                        src="assets/images/pertemuan_2/19.png"
+                        alt="Diagram mind map sumber informasi digital dengan ikon otak"
+                        class="rounded-[32px] shadow-glow border border-white/20 w-full max-w-lg"
+                    />
+                </figure>
+            </div>
+        </div>
+
+        <!-- Slide 20: Manfaat Lateral Thinking dalam Kehidupan -->
+        <div class="slide flex items-center p-8 md:p-16">
+            <div class="w-full theme-panel p-12 rounded-[50px] shadow-glow text-center space-y-10">
+                <h2 class="text-4xl md:text-7xl font-black theme-accent">Manfaat Jangka Panjang</h2>
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-6 bg-brand-500/10 rounded-3xl font-bold text-xl">Berpikir Ilmiah</div>
+                    <div class="p-6 bg-brand-500/10 rounded-3xl font-bold text-xl">Akademik</div>
+                    <div class="p-6 bg-brand-500/10 rounded-3xl font-bold text-xl">Kreatif</div>
+                    <div class="p-6 bg-brand-500/10 rounded-3xl font-bold text-xl">Kritis</div>
+                </div>
+                <div class="max-w-4xl mx-auto text-2xl leading-relaxed">
+                    Budaya verifikasi silang membantu kita mengambil <strong>keputusan yang tepat</strong>, baik dalam kehidupan pribadi maupun bisnis.
+                </div>
+                <p class="text-3xl font-black">Menciptakan ekosistem digital yang sehat & bebas hoaks!</p>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="public/canvas.js"></script>
+        <script src="public/tools.js"></script>
+    </body>
+</html>
