@@ -4,7 +4,7 @@
 
 *Informatika — Kelas X SMK Layanan Kesehatan*
 
-<<img: Indonesian healthcare worker using a digital tablet in a modern clinic, with traditional Indonesian batik pattern as background decoration. use flat illustration style. use aspect ratio 4:3>>
+<<img: create an image of Indonesian healthcare worker using a digital tablet in a modern clinic, with traditional Indonesian batik pattern as background decoration. use flat illustration style. use aspect ratio 4:3>>
 
 ---
 
@@ -52,7 +52,7 @@ Di bidang kesehatan, peran teknologi semakin besar. Mulai dari pencatatan data p
 
 > *"Di balik setiap rumah sakit modern, ada sistem digital yang bekerja diam-diam untuk menyelamatkan nyawa."*
 
-<<img: modern hospital with digital health records system on screen, doctor and nurse using tablet devices in clean Indonesian clinic environment. use flat illustration style. use aspect ratio 4:3>>
+<<img: create an image of modern hospital with digital health records system on screen, doctor and nurse using tablet devices in clean Indonesian clinic environment. use flat illustration style. use aspect ratio 4:3>>
 
 ---
 
@@ -87,7 +87,7 @@ Dinas kesehatan menggunakan analis data untuk melacak penyebaran penyakit, menge
 - Penguasaan tools seperti Excel, SQL, atau Tableau
 - Kemampuan membaca pola dari data
 
-<<img: health data analyst reviewing disease outbreak statistics and patient data charts on computer screens in a government health office. use flat illustration style. use aspect ratio 4:3>>
+<<img: create an image of health data analyst reviewing disease outbreak statistics and patient data charts on computer screens in a government health office. use flat illustration style. use aspect ratio 4:3>>
 
 ---
 
@@ -134,7 +134,7 @@ Melindungi sistem komputer, data, dan jaringan dari serangan hacker atau kebocor
 
 **Fakta:** Serangan siber terhadap sistem kesehatan meningkat drastis di seluruh dunia sejak pandemi COVID-19.
 
-<<img: cybersecurity specialist protecting hospital digital health records system, security shield protecting medical data visualization. use realistic illustration style. use aspect ratio 4:3>>
+<<img: create an image of cybersecurity specialist protecting hospital digital health records system, security shield protecting medical data visualization. use realistic illustration style. use aspect ratio 4:3>>
 
 ---
 
@@ -160,7 +160,7 @@ Teknologi informatika telah mengubah cara kerja layanan kesehatan secara menyelu
 - **Sistem Antrian Digital:** Pasien bisa ambil nomor antrian dari rumah tanpa harus datang pagi-pagi
 - **E-Resep:** Resep obat dikirim secara digital langsung ke apotek
 
-<<img: Indonesian patient using telemedicine app on smartphone to consult with doctor, split screen showing doctor on video call and patient at home. use flat illustration style. use aspect ratio 4:3>>
+<<img: create an image of Indonesian patient using telemedicine app on smartphone to consult with doctor, split screen showing doctor on video call and patient at home. use flat illustration style. use aspect ratio 4:3>>
 
 ---
 
@@ -176,7 +176,7 @@ Indonesia memiliki kekayaan **pengobatan tradisional** yang luar biasa — mulai
 - Video dokumentasi cara pembuatan jamu dan pengobatan tradisional
 - Katalog digital tanaman obat tradisional Indonesia
 
-<<img: traditional Indonesian jamu herbs and medicinal plants being documented digitally, researcher photographing traditional medicine ingredients with tablet. use realistic photo style. use aspect ratio 4:3>>
+<<img: create an image of traditional Indonesian jamu herbs and medicinal plants being documented digitally, researcher photographing traditional medicine ingredients with tablet. use realistic photo style. use aspect ratio 4:3>>
 
 ---
 
@@ -205,7 +205,7 @@ Indonesia memiliki **lebih dari 300 suku bangsa**, dan setiap suku memiliki peng
 | **YouTube & Media Sosial** | Kanal edukasi jamu dan herbal tradisional Indonesia |
 | **TOGA Digital** | Dokumentasi digital Tanaman Obat Keluarga berbasis komunitas |
 
-<<img: Indonesian researcher digitally cataloging traditional medicinal plants and herbal remedies, combining traditional and modern medical knowledge. use flat illustration style. use aspect ratio 4:3>>
+<<img: create an image of Indonesian researcher digitally cataloging traditional medicinal plants and herbal remedies, combining traditional and modern medical knowledge. use flat illustration style. use aspect ratio 4:3>>
 
 ---
 
@@ -298,4 +298,4 @@ Dengan memahami informatika, kamu tidak hanya siap menjadi tenaga layanan keseha
 **Terima kasih!**
 *Ada pertanyaan?* 🙋
 
-<<img: young Indonesian healthcare students smiling with laptops and medical tools, traditional Indonesian motifs in background, bright and inspiring atmosphere. use flat illustration style. use aspect ratio 4:3>>
+<<img: create an image of young Indonesian healthcare students smiling with laptops and medical tools, traditional Indonesian motifs in background, bright and inspiring atmosphere. use flat illustration style. use aspect ratio 4:3>>
