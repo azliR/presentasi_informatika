@@ -4,7 +4,7 @@ Purpose: help an AI agent work productively in this static presentation site. Ke
 
 ### Big picture
 
-- This is a static site with a landing page (`index.html`) and per-session slide decks (`pertemuan_3.html`, `pertemuan_4.html`). No build step, no bundlers.
+- This is a static site with a landing page (`index.html`) and per-session slide decks (`pertemuan_1.html`, `pertemuan_2.html`, `pertemuan_3.html`). No build step, no bundlers.
 - Slide decks are plain HTML sections (`div.slide`) rendered by a lightweight “canvas” runtime:
   - `public/canvas.js` wraps slides into `#canvas-container > #presentation-canvas` and ensures one `.slide.active`.
   - `public/tools.js` injects an overlay (Prev/Next, counter, fullscreen) plus zoom/pan, keyboard arrows, swipe, copy-to-clipboard, and highlight.js integration.

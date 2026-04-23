@@ -1,0 +1,914 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Profesi Informatika & Digitalisasi Budaya • Presentasi Informatika</title>
+        <meta name="description" content="Mengenal berbagai profesi informatika di bidang kesehatan dan pentingnya digitalisasi budaya pengobatan tradisional Indonesia." />
+        <link rel="canonical" href="https://azlir.github.io/presentasi_informatika/pertemuan_3.html" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://azlir.github.io/presentasi_informatika/pertemuan_3.html" />
+        <meta property="og:title" content="Profesi Informatika & Digitalisasi Budaya • Presentasi Informatika" />
+        <meta property="og:description" content="Mengenal berbagai profesi informatika di bidang kesehatan dan pentingnya digitalisasi budaya pengobatan tradisional Indonesia." />
+        <meta property="og:image" content="https://azlir.github.io/presentasi_informatika/assets/images/pertemuan_3/1.webp" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://azlir.github.io/presentasi_informatika/pertemuan_3.html" />
+        <meta property="twitter:title" content="Profesi Informatika & Digitalisasi Budaya • Presentasi Informatika" />
+        <meta property="twitter:description" content="Mengenal berbagai profesi informatika di bidang kesehatan dan pentingnya digitalisasi budaya pengobatan tradisional Indonesia." />
+        <meta property="twitter:image" content="https://azlir.github.io/presentasi_informatika/assets/images/pertemuan_3/1.webp" />
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="./public/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./public/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./public/favicon-16x16.png" />
+        <link rel="icon" href="./public/favicon.ico" sizes="any" />
+        <link rel="manifest" href="./site.webmanifest" />
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ["Inter", "ui-sans-serif", "system-ui"],
+                            display: ["Plus Jakarta Sans", "Inter", "sans-serif"],
+                        },
+                        colors: {
+                            brand: {
+                                50: "#f0fdfa",
+                                100: "#ccfbf1",
+                                200: "#99f6e4",
+                                300: "#5eead4",
+                                400: "#2dd4bf",
+                                500: "#14b8a6",
+                                600: "#0d9488",
+                                700: "#0f766e",
+                                800: "#115e59",
+                                900: "#134e4a",
+                            },
+                            ethnic: {
+                                gold: "#D4AF37",
+                                deep: "#064e3b",
+                            }
+                        },
+                        boxShadow: {
+                            glow: "0 10px 40px rgba(20, 184, 166, 0.35)",
+                            ethnic: "0 20px 50px -12px rgba(13, 148, 136, 0.5)",
+                        },
+                        animation: {
+                            'fade-up': 'fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                            'fade-in': 'fadeIn 0.6s ease-out forwards',
+                            'float': 'float 6s ease-in-out infinite',
+                            'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
+                        },
+                        keyframes: {
+                            fadeUp: {
+                                '0%': { opacity: '0', transform: 'translateY(30px)' },
+                                '100%': { opacity: '1', transform: 'translateY(0)' },
+                            },
+                            fadeIn: {
+                                '0%': { opacity: '0' },
+                                '100%': { opacity: '1' },
+                            },
+                            float: {
+                                '0%, 100%': { transform: 'translateY(0)' },
+                                '50%': { transform: 'translateY(-20px)' },
+                            },
+                            pulseSoft: {
+                                '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+                                '50%': { opacity: '0.8', transform: 'scale(1.02)' },
+                            }
+                        }
+                    },
+                },
+                darkMode: "class",
+            };
+        </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+        <link rel="stylesheet" href="public/canvas.css" />
+        <style>
+            :root {
+                --slide-transition: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .slide {
+                background: radial-gradient(circle at top right, rgba(20, 184, 166, 0.05), transparent),
+                            radial-gradient(circle at bottom left, rgba(212, 175, 55, 0.05), transparent);
+                transition: transform var(--slide-transition), opacity var(--slide-transition), filter var(--slide-transition);
+                transform: scale(0.95) translateY(20px);
+                filter: blur(10px);
+                opacity: 0;
+            }
+            .slide.active {
+                transform: scale(1) translateY(0);
+                filter: blur(0);
+                opacity: 1;
+            }
+            /* Staggered entrance animations for elements inside active slides */
+            .slide .animate-reveal {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+            .slide.active .animate-reveal {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .batik-overlay {
+                position: absolute;
+                inset: 0;
+                opacity: 0.03;
+                pointer-events: none;
+                background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3%3Cpath d='M50 50 L100 0 L100 100 Z' fill='%2314b8a6'/%3E%3Cpath d='M50 50 L0 0 L0 100 Z' fill='%23D4AF37'/%3E%3C/svg%3E");
+                background-size: 200px;
+                transition: transform 10s linear;
+            }
+            .slide.active .batik-overlay {
+                transform: scale(1.1) rotate(5deg);
+            }
+            .dark .batik-overlay {
+                opacity: 0.05;
+            }
+            .glass-card {
+                background: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(12px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .dark .glass-card {
+                background: rgba(30, 41, 59, 0.7);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            .glass-card:hover {
+                transform: translateY(-8px);
+                background: rgba(255, 255, 255, 0.9);
+                box-shadow: 0 25px 50px -12px rgba(20, 184, 166, 0.25);
+                border-color: rgba(20, 184, 166, 0.4);
+            }
+            .dark .glass-card:hover {
+                background: rgba(30, 41, 59, 0.85);
+                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+                border-color: rgba(20, 184, 166, 0.3);
+            }
+            .quiz-option {
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                position: relative;
+                overflow: hidden;
+            }
+            .quiz-option::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: currentColor;
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+            .quiz-option:active::after {
+                opacity: 0.1;
+            }
+            .quiz-option:hover:not(.selected) {
+                transform: scale(1.02) translateX(10px);
+                background: rgba(20, 184, 166, 0.1);
+                border-color: var(--brand-500);
+            }
+            .quiz-option.correct {
+                background: #10b981 !important;
+                color: white !important;
+                border-color: #059669 !important;
+                transform: scale(1.05);
+                box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
+            }
+            .quiz-option.wrong {
+                background: #ef4444 !important;
+                color: white !important;
+                border-color: #dc2626 !important;
+                animation: shake 0.4s ease-in-out;
+            }
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                20% { transform: translateX(-10px); }
+                40% { transform: translateX(10px); }
+                60% { transform: translateX(-10px); }
+                80% { transform: translateX(10px); }
+            }
+            .stagger-1 { transition-delay: 0.1s !important; }
+            .stagger-2 { transition-delay: 0.2s !important; }
+            .stagger-3 { transition-delay: 0.3s !important; }
+            .stagger-4 { transition-delay: 0.4s !important; }
+            .stagger-5 { transition-delay: 0.5s !important; }
+            .stagger-6 { transition-delay: 0.6s !important; }
+            
+            /* Hover glow effect for buttons */
+            .btn-glow {
+                position: relative;
+            }
+            .btn-glow::before {
+                content: '';
+                position: absolute;
+                inset: -2px;
+                background: linear-gradient(45deg, #14b8a6, #D4AF37, #14b8a6);
+                background-size: 200% 200%;
+                z-index: -1;
+                border-radius: inherit;
+                opacity: 0;
+                transition: opacity 0.3s;
+                animation: gradientShift 3s linear infinite;
+            }
+            .btn-glow:hover::before {
+                opacity: 1;
+            }
+            @keyframes gradientShift {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+        </style>
+    </head>
+    <body class="min-h-screen text-slate-800 dark:text-slate-100 font-sans">
+        
+        <!-- SLIDE 1 — JUDUL -->
+        <div class="slide flex items-center justify-center p-8 active">
+            <div class="batik-overlay"></div>
+            <div class="relative z-10 w-full max-w-6xl grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8 animate-reveal">
+                    <div class="inline-block px-4 py-2 rounded-full bg-brand-500/10 text-brand-700 dark:text-brand-300 font-bold tracking-wider uppercase text-sm border border-brand-500/20 shadow-sm">
+                        Informatika — Kelas X SMK Layanan Kesehatan
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-extrabold font-display leading-tight text-ethnic-deep dark:text-white">
+                        Mengenal <span class="text-brand-500 relative inline-block">Profesi<span class="absolute bottom-2 left-0 w-full h-3 bg-brand-500/20 -z-10"></span></span> di Bidang Informatika dan Digitalisasi Budaya Indonesia
+                    </h1>
+                    <div class="h-1.5 w-32 bg-ethnic-gold rounded-full transition-all duration-1000 slide-active:w-64"></div>
+                </div>
+                <div class="relative animate-reveal stagger-2 group">
+                    <div class="absolute -inset-4 bg-brand-500/20 blur-3xl rounded-full group-hover:bg-brand-500/40 transition-colors duration-700"></div>
+                    <img src="assets/images/pertemuan_3/1.webp" alt="Indonesian healthcare worker with digital tablet" class="relative rounded-[40px] shadow-ethnic border-4 border-white/50 dark:border-slate-700/50 w-full transform group-hover:scale-[1.02] transition-transform duration-700" />
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 2 — TUJUAN PEMBELAJARAN -->
+        <div class="slide flex items-center justify-center p-8">
+            <div class="batik-overlay"></div>
+            <div class="glass-card p-12 rounded-[40px] w-full max-w-5xl shadow-2xl relative overflow-hidden animate-reveal">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-ethnic-gold/10 rounded-full -mr-32 -mt-32 animate-pulse-soft"></div>
+                <h2 class="text-4xl md:text-5xl font-extrabold font-display mb-10 theme-accent flex items-center gap-4">
+                    <span class="bg-ethnic-gold p-3 rounded-2xl text-white">📌</span>
+                    Tujuan Pembelajaran
+                </h2>
+                <div class="grid md:grid-cols-2 gap-8 text-xl leading-relaxed">
+                    <div class="space-y-6">
+                        <p class="font-bold text-ethnic-deep dark:text-brand-200 opacity-80">Setelah mempelajari materi ini, kamu akan bisa:</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-4 animate-reveal stagger-1 group">
+                                <span class="h-8 w-8 rounded-lg bg-brand-500 text-white flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform">1</span>
+                                <span class="group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">Menyebutkan berbagai profesi di bidang informatika</span>
+                            </li>
+                            <li class="flex items-start gap-4 animate-reveal stagger-2 group">
+                                <span class="h-8 w-8 rounded-lg bg-brand-500 text-white flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform">2</span>
+                                <span class="group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">Memahami peran teknologi digital dalam dunia kesehatan</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4 pt-14">
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-4 animate-reveal stagger-3 group">
+                                <span class="h-8 w-8 rounded-lg bg-brand-500 text-white flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform">3</span>
+                                <span class="group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">Menjelaskan hubungan antara informatika dan pelestarian budaya Indonesia</span>
+                            </li>
+                            <li class="flex items-start gap-4 animate-reveal stagger-4 group">
+                                <span class="h-8 w-8 rounded-lg bg-brand-500 text-white flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform">4</span>
+                                <span class="group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">Mengenali peluang karier digital yang relevan bagi lulusan SMK Layanan Kesehatan</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 3 — PETA MATERI -->
+        <div class="slide flex items-center justify-center p-8">
+            <div class="batik-overlay"></div>
+            <div class="w-full max-w-6xl space-y-12">
+                <div class="text-center space-y-4 animate-reveal">
+                    <h2 class="text-4xl md:text-6xl font-extrabold font-display theme-accent">📋 Peta Materi</h2>
+                    <p class="text-2xl text-slate-500 dark:text-slate-400">Apa saja yang akan kita pelajari?</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="glass-card p-8 rounded-3xl border-t-8 border-brand-500 animate-reveal stagger-1 group">
+                        <div class="text-4xl mb-6 group-hover:scale-125 transition-transform duration-500">💻</div>
+                        <h3 class="text-2xl font-bold mb-6 text-brand-700 dark:text-brand-300">Profesi Informatika</h3>
+                        <ul class="space-y-3 text-lg opacity-80 group-hover:opacity-100 transition-opacity">
+                            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-500"></span> Pengembang Perangkat Lunak</li>
+                            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-500"></span> Analis Data</li>
+                            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-500"></span> Desainer UI/UX</li>
+                            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-500"></span> Administrator Jaringan</li>
+                            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-500"></span> Keamanan Siber</li>
+                        </ul>
+                    </div>
+                    <div class="glass-card p-8 rounded-3xl border-t-8 border-ethnic-gold animate-reveal stagger-2 group">
+                        <div class="text-4xl mb-6 group-hover:scale-125 transition-transform duration-500">🏥</div>
+                        <h3 class="text-2xl font-bold mb-6 text-ethnic-gold">Teknologi Kesehatan</h3>
+                        <ul class="space-y-3 text-lg opacity-80 group-hover:opacity-100 transition-opacity">
+                            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-ethnic-gold"></span> Rekam medis digital</li>
+                            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-ethnic-gold"></span> Telemedicine</li>
+                            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-ethnic-gold"></span> Profesi informatika kesehatan</li>
+                        </ul>
+                    </div>
+                    <div class="glass-card p-8 rounded-3xl border-t-8 border-brand-500 animate-reveal stagger-3 group">
+                        <div class="text-4xl mb-6 group-hover:scale-125 transition-transform duration-500">🏺</div>
+                        <h3 class="text-2xl font-bold mb-6 text-brand-700 dark:text-brand-300">Digitalisasi Budaya</h3>
+                        <ul class="space-y-3 text-lg opacity-80 group-hover:opacity-100 transition-opacity">
+                            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-500"></span> Apa itu digitalisasi budaya?</li>
+                            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-500"></span> Contoh nyata di Indonesia</li>
+                            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-500"></span> Kaitan pengobatan tradisional</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 4 — APA ITU PROFESI INFORMATIKA? -->
+        <div class="slide flex items-center justify-center p-8">
+            <div class="batik-overlay"></div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center w-full max-w-6xl">
+                <div class="space-y-8 animate-reveal">
+                    <h2 class="text-4xl md:text-5xl font-extrabold font-display theme-accent leading-tight">💼 Apa itu Profesi Informatika?</h2>
+                    <div class="text-xl leading-relaxed space-y-6">
+                        <p class="animate-reveal stagger-1">Profesi informatika adalah <strong class="text-brand-600 dark:text-brand-400 bg-brand-500/5 px-2 py-1 rounded-lg border border-brand-500/10">pekerjaan yang memanfaatkan ilmu komputer</strong> untuk menyelesaikan masalah di dunia nyata.</p>
+                        <p class="animate-reveal stagger-2">Di bidang kesehatan, peran teknologi semakin besar. Mulai dari data pasien hingga telemedicine — semuanya melibatkan tenaga ahli informatika.</p>
+                    </div>
+                    <div class="p-8 border-l-[12px] border-ethnic-gold bg-brand-50 dark:bg-slate-800/50 italic text-2xl rounded-r-3xl animate-reveal stagger-3 shadow-lg">
+                        "Di balik setiap rumah sakit modern, ada sistem digital yang bekerja diam-diam untuk menyelamatkan nyawa."
+                    </div>
+                </div>
+                <div class="animate-reveal stagger-3 group relative">
+                    <div class="absolute inset-0 bg-brand-500/10 blur-2xl group-hover:blur-3xl transition-all duration-700"></div>
+                    <img src="assets/images/pertemuan_3/4.webp" alt="Digital health system illustration" class="relative rounded-[40px] shadow-2xl w-full transform group-hover:rotate-1 transition-transform duration-700" />
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 5 — PROFESI 1: SOFTWARE DEVELOPER -->
+        <div class="slide flex items-center justify-center p-8">
+            <div class="batik-overlay"></div>
+            <div class="w-full max-w-6xl glass-card p-12 rounded-[40px] grid lg:grid-cols-[1fr_1.5fr] gap-12 items-center animate-reveal">
+                <div class="space-y-6 animate-reveal stagger-1">
+                    <div class="h-24 w-24 bg-brand-500 rounded-3xl flex items-center justify-center shadow-glow animate-float group">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-white group-hover:rotate-12 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <h2 class="text-4xl font-extrabold font-display theme-accent leading-tight">Pengembang Perangkat Lunak <span class="text-xl block font-medium opacity-60 italic mt-2">(Software Developer)</span></h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-6 animate-reveal stagger-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-brand-600 mb-2 flex items-center gap-2">
+                                <span class="h-2 w-8 bg-brand-500 rounded-full"></span> Tugasnya:
+                            </h3>
+                            <p class="text-lg leading-relaxed">Membuat aplikasi dan sistem yang digunakan di dunia kesehatan maupun kehidupan sehari-hari.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-ethnic-gold mb-2 flex items-center gap-2">
+                                <span class="h-2 w-8 bg-ethnic-gold rounded-full"></span> Contoh:
+                            </h3>
+                            <ul class="space-y-3 text-lg opacity-90">
+                                <li class="flex items-center gap-2 hover:translate-x-2 transition-transform">🚀 Aplikasi RME Puskesmas</li>
+                                <li class="flex items-center gap-2 hover:translate-x-2 transition-transform">🚀 Halodoc / Alodokter</li>
+                                <li class="flex items-center gap-2 hover:translate-x-2 transition-transform">🚀 Sistem antrian digital</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-brand-500/10 p-8 rounded-3xl border border-brand-500/20 shadow-inner animate-reveal stagger-3">
+                        <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                            <span class="animate-pulse">💎</span> Skill Utama:
+                        </h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 p-3 bg-white/50 dark:bg-slate-900/50 rounded-xl hover:bg-brand-500 hover:text-white transition-all duration-300">
+                                <span class="text-xl">🛠️</span>
+                                <span class="font-medium">Pemrograman (Python, Java)</span>
+                            </li>
+                            <li class="flex items-center gap-3 p-3 bg-white/50 dark:bg-slate-900/50 rounded-xl hover:bg-brand-500 hover:text-white transition-all duration-300 stagger-1">
+                                <span class="text-xl">🧠</span>
+                                <span class="font-medium">Logika berpikir kuat</span>
+                            </li>
+                            <li class="flex items-center gap-3 p-3 bg-white/50 dark:bg-slate-900/50 rounded-xl hover:bg-brand-500 hover:text-white transition-all duration-300 stagger-2">
+                                <span class="text-xl">👥</span>
+                                <span class="font-medium">Memahami kebutuhan user</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 6 — PROFESI 2: ANALIS DATA -->
+        <div class="slide flex items-center justify-center p-8">
+            <div class="batik-overlay"></div>
+            <div class="w-full max-w-6xl grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-last lg:order-first animate-reveal stagger-2 group">
+                    <div class="relative overflow-hidden rounded-[40px] shadow-2xl">
+                        <div class="absolute inset-0 bg-brand-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10"></div>
+                        <img src="assets/images/pertemuan_3/6.webp" alt="Data analyst illustration" class="w-full transform group-hover:scale-110 transition-transform duration-[2s]" />
+                    </div>
+                </div>
+                <div class="space-y-8 animate-reveal">
+                    <h2 class="text-4xl md:text-5xl font-extrabold font-display theme-accent leading-tight">📊 Profesi 2: Analis Data <span class="text-xl block font-medium opacity-60 italic mt-2">(Data Analyst)</span></h2>
+                    <div class="glass-card p-10 rounded-[40px] space-y-6 relative group overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-brand-500/5 -mr-16 -mt-16 rounded-full group-hover:scale-[3] transition-transform duration-[1s]"></div>
+                        <p class="text-2xl font-bold text-brand-600 italic relative z-10">"Mengolah angka menjadi penyelamat nyawa"</p>
+                        <p class="text-xl leading-relaxed opacity-80 relative z-10">Dinas kesehatan menggunakan analis data untuk melacak penyebaran penyakit dan menentukan pengiriman obat yang tepat sasaran.</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6 animate-reveal stagger-3">
+                        <div class="p-6 bg-ethnic-gold/10 rounded-3xl border-2 border-ethnic-gold/20 text-center group hover:bg-ethnic-gold hover:text-white transition-all duration-500">
+                            <p class="font-bold text-xl group-hover:scale-110 transition-transform">Matematika & Statistik</p>
+                        </div>
+                        <div class="p-6 bg-brand-500/10 rounded-3xl border-2 border-brand-500/20 text-center group hover:bg-brand-500 hover:text-white transition-all duration-500">
+                            <p class="font-bold text-xl group-hover:scale-110 transition-transform">Excel, SQL, Tableau</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 7 — PROFESI 3: DESAINER UI/UX -->
+        <div class="slide flex items-center justify-center p-8">
+            <div class="batik-overlay"></div>
+            <div class="w-full max-w-5xl space-y-12 animate-reveal">
+                <div class="text-center space-y-4">
+                    <h2 class="text-5xl font-extrabold font-display theme-accent">🎨 Profesi 3: Desainer UI/UX</h2>
+                    <p class="text-2xl opacity-70">Membuat teknologi terasa <span class="text-brand-500 font-bold">"manusiawi"</span> dan mudah digunakan.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div class="glass-card p-12 rounded-[50px] relative overflow-hidden group hover:border-brand-500 animate-reveal stagger-1">
+                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-brand-500/10 rounded-full group-hover:scale-[3] transition-transform duration-[1s]"></div>
+                        <div class="relative z-10">
+                            <h3 class="text-7xl font-black text-brand-500/20 mb-6 group-hover:text-brand-500 transition-colors">UI</h3>
+                            <h4 class="text-3xl font-bold mb-6 flex items-center gap-3">
+                                <span class="h-3 w-3 rounded-full bg-brand-500 animate-ping"></span>
+                                User Interface
+                            </h4>
+                            <p class="text-xl leading-relaxed opacity-80 group-hover:opacity-100">Fokus pada <strong>tampilan visual</strong> aplikasi seperti warna, tombol, dan ikon yang menarik perhatian pengguna.</p>
+                        </div>
+                    </div>
+                    <div class="glass-card p-12 rounded-[50px] relative overflow-hidden group hover:border-ethnic-gold animate-reveal stagger-2">
+                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-ethnic-gold/10 rounded-full group-hover:scale-[3] transition-transform duration-[1s]"></div>
+                        <div class="relative z-10">
+                            <h3 class="text-7xl font-black text-ethnic-gold/20 mb-6 group-hover:text-ethnic-gold transition-colors">UX</h3>
+                            <h4 class="text-3xl font-bold mb-6 flex items-center gap-3">
+                                <span class="h-3 w-3 rounded-full bg-ethnic-gold animate-ping"></span>
+                                User Experience
+                            </h4>
+                            <p class="text-xl leading-relaxed opacity-80 group-hover:opacity-100">Fokus pada <strong>kenyamanan</strong> pengguna. Bagaimana agar aplikasi mudah dipahami oleh siapa saja tanpa perlu belajar lama.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 8 — PROFESI 4: ADMINISTRATOR JARINGAN -->
+        <div class="slide flex items-center justify-center p-8">
+            <div class="batik-overlay"></div>
+            <div class="w-full max-w-6xl glass-card p-16 rounded-[60px] space-y-12 animate-reveal">
+                <h2 class="text-4xl md:text-6xl font-extrabold font-display theme-accent text-center leading-tight">🌐 Administrator Jaringan <span class="text-2xl block font-medium opacity-60 italic mt-4">(Network Administrator)</span></h2>
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="bg-red-500/5 p-10 rounded-[40px] border-2 border-red-500/20 space-y-6 group hover:bg-red-500/10 transition-all duration-500 animate-reveal stagger-1">
+                        <div class="flex items-center gap-4">
+                            <div class="h-16 w-16 bg-red-500 rounded-2xl flex items-center justify-center text-white shadow-lg animate-pulse">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 15c-.77 1.333.192 3 1.732 3z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-3xl font-bold text-red-600">Skenario Kritis:</h3>
+                        </div>
+                        <p class="text-2xl leading-relaxed font-medium italic opacity-80">"Bayangkan jika jaringan RS mati: Data rekam medis tak bisa diakses, alat medis terganggu, antrian lumpuh total."</p>
+                    </div>
+                    <div class="space-y-8 animate-reveal stagger-2">
+                        <p class="text-2xl leading-relaxed"><strong>Tugas Utama:</strong> Mengelola dan memastikan <span class="text-brand-500 font-bold border-b-4 border-brand-500/20">jaringan komputer</span> di organisasi berjalan lancar tanpa hambatan sedikitpun.</p>
+                        <div class="p-8 bg-brand-500/5 rounded-[32px] border-2 border-brand-500/10 shadow-lg group hover:bg-brand-500 transition-all duration-500">
+                            <h4 class="font-bold text-2xl mb-4 group-hover:text-white transition-colors">🏥 Tempat Kerja:</h4>
+                            <p class="text-xl opacity-80 group-hover:text-white transition-colors">Rumah Sakit, Puskesmas, Klinik, BPJS Kesehatan, Kementerian Kesehatan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 9 — PROFESI 5: PAKAR KEAMANAN SIBER -->
+        <div class="slide flex items-center justify-center p-8">
+            <div class="batik-overlay"></div>
+            <div class="w-full max-w-6xl grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-10 animate-reveal">
+                    <h2 class="text-4xl md:text-5xl font-extrabold font-display theme-accent leading-tight">🔐 Pakar Keamanan Siber <span class="text-xl block font-medium opacity-60 italic mt-4">(Cybersecurity Specialist)</span></h2>
+                    <div class="space-y-8">
+                        <p class="text-2xl font-bold text-ethnic-deep dark:text-brand-300">Kenapa sangat penting di dunia kesehatan?</p>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-5 p-6 glass-card rounded-3xl animate-reveal stagger-1 group hover:border-brand-500">
+                                <div class="h-12 w-12 bg-brand-500 rounded-2xl flex items-center justify-center text-white flex-shrink-0 group-hover:rotate-[360deg] transition-transform duration-[1s]">
+                                    <span class="text-2xl">🛡️</span>
+                                </div>
+                                <p class="text-xl leading-relaxed">Data rekam medis pasien bersifat <strong class="text-brand-600 font-black uppercase tracking-tighter">sangat rahasia</strong> dan dilindungi ketat oleh hukum.</p>
+                            </div>
+                            <div class="flex items-start gap-5 p-6 glass-card rounded-3xl animate-reveal stagger-2 group hover:border-red-500">
+                                <div class="h-12 w-12 bg-red-500 rounded-2xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-125 transition-transform">
+                                    <span class="text-2xl">⚠️</span>
+                                </div>
+                                <p class="text-xl leading-relaxed">Serangan siber kesehatan meningkat drastis sejak pandemi COVID-19, mengancam privasi jutaan orang.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="animate-reveal stagger-3 group">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-ethnic-gold/10 blur-3xl rounded-full group-hover:bg-ethnic-gold/30 transition-colors duration-1000"></div>
+                        <img src="assets/images/pertemuan_3/9.webp" alt="Cybersecurity illustration" class="relative rounded-[50px] shadow-ethnic w-full transform group-hover:scale-95 transition-transform duration-[1s]" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 10 — PROFESI LAIN -->
+        <div class="slide flex items-center justify-center p-8">
+            <div class="batik-overlay"></div>
+            <div class="w-full max-w-6xl space-y-12 animate-reveal">
+                <div class="text-center space-y-4">
+                    <h2 class="text-4xl md:text-6xl font-extrabold font-display theme-accent">📱 Profesi Lain yang Perlu Diketahui</h2>
+                    <p class="text-2xl opacity-60">Dunia digital luas, pilih peranmu!</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="glass-card p-10 rounded-[40px] hover:border-brand-500 animate-reveal stagger-1 group">
+                        <div class="h-16 w-16 bg-brand-500/10 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-brand-500 group-hover:text-white transition-all duration-500">🏥</div>
+                        <h3 class="font-black text-2xl mb-4 text-brand-700 dark:text-brand-300">Health Informatics</h3>
+                        <p class="text-lg opacity-80 leading-relaxed">Mengelola sistem informasi khusus di fasilitas kesehatan agar data mengalir lancar.</p>
+                    </div>
+                    <div class="glass-card p-10 rounded-[40px] hover:border-brand-500 animate-reveal stagger-2 group">
+                        <div class="h-16 w-16 bg-brand-500/10 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-brand-500 group-hover:text-white transition-all duration-500">📈</div>
+                        <h3 class="font-black text-2xl mb-4 text-brand-700 dark:text-brand-300">Digital Marketer</h3>
+                        <p class="text-lg opacity-80 leading-relaxed">Mempromosikan layanan kesehatan secara online agar menjangkau lebih banyak orang.</p>
+                    </div>
+                    <div class="glass-card p-10 rounded-[40px] hover:border-brand-500 animate-reveal stagger-3 group">
+                        <div class="h-16 w-16 bg-brand-500/10 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-brand-500 group-hover:text-white transition-all duration-500">🎥</div>
+                        <h3 class="font-black text-2xl mb-4 text-brand-700 dark:text-brand-300">Content Creator</h3>
+                        <p class="text-lg opacity-80 leading-relaxed">Membuat konten edukasi kesehatan kreatif di media sosial untuk literasi masyarakat.</p>
+                    </div>
+                    <div class="glass-card p-10 rounded-[40px] hover:border-brand-500 animate-reveal stagger-4 group">
+                        <div class="h-16 w-16 bg-brand-500/10 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-brand-500 group-hover:text-white transition-all duration-500">🔧</div>
+                        <h3 class="font-black text-2xl mb-4 text-brand-700 dark:text-brand-300">IT Support</h3>
+                        <p class="text-lg opacity-80 leading-relaxed">Membantu staf medis menyelesaikan kendala teknis perangkat setiap hari.</p>
+                    </div>
+                    <div class="glass-card p-10 rounded-[40px] hover:border-brand-500 animate-reveal stagger-5 group">
+                        <div class="h-16 w-16 bg-brand-500/10 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-brand-500 group-hover:text-white transition-all duration-500">☁️</div>
+                        <h3 class="font-black text-2xl mb-4 text-brand-700 dark:text-brand-300">Cloud Engineer</h3>
+                        <p class="text-lg opacity-80 leading-relaxed">Mengelola penyimpanan data medis berbasis cloud agar aman dan bisa diakses dari mana saja.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 11 — TEKNOLOGI DIGITAL DI DUNIA KESEHATAN -->
+        <div class="slide flex items-center justify-center p-8">
+            <div class="batik-overlay"></div>
+            <div class="w-full max-w-6xl grid lg:grid-cols-[1.2fr_1fr] gap-20 items-center">
+                <div class="space-y-12 animate-reveal">
+                    <h2 class="text-4xl md:text-6xl font-extrabold font-display theme-accent leading-tight">🏥 Teknologi Digital di Kesehatan</h2>
+                    <div class="grid gap-6">
+                        <div class="p-6 rounded-[32px] bg-brand-500/5 border-2 border-brand-500/10 hover:border-brand-500 hover:bg-brand-500 hover:text-white hover:scale-105 transition-all duration-500 group animate-reveal stagger-1">
+                            <div class="flex items-center gap-5">
+                                <span class="text-4xl group-hover:rotate-12 transition-transform">📋</span>
+                                <div>
+                                    <h3 class="text-2xl font-black">RME</h3>
+                                    <p class="text-lg opacity-70 group-hover:opacity-100 transition-opacity">Rekam Medis Elektronik: Data digital aman dan efisien.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 rounded-[32px] bg-brand-500/5 border-2 border-brand-500/10 hover:border-brand-500 hover:bg-brand-500 hover:text-white hover:scale-105 transition-all duration-500 group animate-reveal stagger-2">
+                            <div class="flex items-center gap-5">
+                                <span class="text-4xl group-hover:rotate-12 transition-transform">📱</span>
+                                <div>
+                                    <h3 class="text-2xl font-black">Telemedicine</h3>
+                                    <p class="text-lg opacity-70 group-hover:opacity-100 transition-opacity">Konsultasi dokter jarak jauh dari mana saja (Halodoc, dsb).</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 rounded-[32px] bg-brand-500/5 border-2 border-brand-500/10 hover:border-brand-500 hover:bg-brand-500 hover:text-white hover:scale-105 transition-all duration-500 group animate-reveal stagger-3">
+                            <div class="flex items-center gap-5">
+                                <span class="text-4xl group-hover:rotate-12 transition-transform">🔢</span>
+                                <div>
+                                    <h3 class="text-2xl font-black">Antrian Digital</h3>
+                                    <p class="text-lg opacity-70 group-hover:opacity-100 transition-opacity">Ambil nomor dari rumah, tak perlu antre lama di RS.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 rounded-[32px] bg-brand-500/5 border-2 border-brand-500/10 hover:border-brand-500 hover:bg-brand-500 hover:text-white hover:scale-105 transition-all duration-500 group animate-reveal stagger-4">
+                            <div class="flex items-center gap-5">
+                                <span class="text-4xl group-hover:rotate-12 transition-transform">💊</span>
+                                <div>
+                                    <h3 class="text-2xl font-black">E-Resep</h3>
+                                    <p class="text-lg opacity-70 group-hover:opacity-100 transition-opacity">Resep digital dikirim langsung ke apotek pilihanmu.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="animate-reveal stagger-4 group">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-brand-500/10 blur-3xl rounded-full group-hover:scale-110 transition-transform duration-1000"></div>
+                        <img src="assets/images/pertemuan_3/11.webp" alt="Telemedicine app illustration" class="relative rounded-[60px] shadow-2xl w-full transform group-hover:rotate-3 transition-transform duration-700" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 12 — APA ITU DIGITALISASI BUDAYA? -->
+        <div class="slide flex items-center justify-center p-8">
+            <div class="batik-overlay"></div>
+            <div class="w-full max-w-6xl glass-card p-16 rounded-[60px] grid lg:grid-cols-2 gap-16 items-center animate-reveal">
+                <div class="space-y-10">
+                    <h2 class="text-4xl md:text-6xl font-extrabold font-display text-ethnic-gold leading-tight">🏛️ Digitalisasi Budaya</h2>
+                    <p class="text-3xl leading-relaxed animate-reveal stagger-1">Proses <strong class="text-ethnic-gold bg-ethnic-gold/5 px-3 py-1 rounded-xl">mengubah warisan budaya</strong> ke dalam format digital agar abadi, bisa disebarkan, dan dinikmati siapa saja.</p>
+                    <div class="p-10 bg-ethnic-gold/5 border-l-[16px] border-ethnic-gold rounded-r-[40px] shadow-xl animate-reveal stagger-2">
+                        <p class="text-2xl italic font-medium leading-relaxed opacity-80">"Indonesia memiliki kekayaan pengobatan tradisional (jamu, herbal, pijat) yang luar biasa dan perlu dilestarikan secara digital untuk generasi mendatang."</p>
+                    </div>
+                </div>
+                <div class="animate-reveal stagger-3 group">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-ethnic-gold/20 blur-3xl rounded-full group-hover:blur-2xl transition-all duration-700"></div>
+                        <img src="assets/images/pertemuan_3/12.webp" alt="Digitalizing traditional medicine" class="relative rounded-[50px] shadow-ethnic w-full transform group-hover:scale-105 transition-transform duration-700" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 13 — MENGAPA PENTING? -->
+        <div class="slide flex items-center justify-center p-8">
+            <div class="batik-overlay"></div>
+            <div class="w-full max-w-5xl space-y-16 animate-reveal">
+                <div class="text-center space-y-4">
+                    <h2 class="text-5xl md:text-7xl font-extrabold font-display theme-accent">🇮🇩 Mengapa Penting untuk Indonesia?</h2>
+                    <p class="text-3xl opacity-60">Melindungi Pengetahuan Tradisional dari Kepunahan.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-10">
+                    <div class="p-10 bg-white dark:bg-slate-800/80 rounded-[40px] shadow-2xl border-2 border-slate-100 dark:border-slate-700 text-center animate-reveal stagger-1 group hover:border-brand-500 transition-all duration-500">
+                        <div class="text-6xl mb-8 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500">💾</div>
+                        <h3 class="text-2xl font-black mb-4">Penyimpanan Permanen</h3>
+                        <p class="text-lg opacity-80 leading-relaxed">Menjaga data pengobatan leluhur agar tidak hilang ditelan zaman atau rusak secara fisik.</p>
+                    </div>
+                    <div class="p-10 bg-white dark:bg-slate-800/80 rounded-[40px] shadow-2xl border-2 border-slate-100 dark:border-slate-700 text-center animate-reveal stagger-2 group hover:border-ethnic-gold transition-all duration-500">
+                        <div class="text-6xl mb-8 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500">🔬</div>
+                        <h3 class="text-2xl font-black mb-4">Riset Medis</h3>
+                        <p class="text-lg opacity-80 leading-relaxed">Memudahkan peneliti mempelajari khasiat ilmiah tanaman obat lokal Nusantara secara luas.</p>
+                    </div>
+                    <div class="p-10 bg-white dark:bg-slate-800/80 rounded-[40px] shadow-2xl border-2 border-slate-100 dark:border-slate-700 text-center animate-reveal stagger-3 group hover:border-brand-500 transition-all duration-500">
+                        <div class="text-6xl mb-8 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500">🌍</div>
+                        <h3 class="text-2xl font-black mb-4">Promosi Global</h3>
+                        <p class="text-lg opacity-80 leading-relaxed">Memperkenalkan kekayaan budaya sehat Indonesia ke panggung dunia sebagai identitas bangsa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 14 — CONTOH NYATA -->
+        <div class="slide flex items-center justify-center p-8">
+            <div class="batik-overlay"></div>
+            <div class="w-full max-w-6xl grid lg:grid-cols-2 gap-20 items-center">
+                <div class="order-last lg:order-first animate-reveal stagger-3 group">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-brand-500/10 blur-3xl rounded-full"></div>
+                        <img src="assets/images/pertemuan_3/14.webp" alt="Indonesian researcher illustration" class="relative rounded-[60px] shadow-ethnic w-full transform group-hover:rotate-2 transition-transform duration-700" />
+                    </div>
+                </div>
+                <div class="space-y-10 animate-reveal">
+                    <h2 class="text-4xl md:text-6xl font-extrabold font-display theme-accent leading-tight">🔗 Contoh Nyata di Indonesia</h2>
+                    <div class="grid gap-6">
+                        <div class="flex items-center gap-6 p-6 glass-card rounded-[32px] group animate-reveal stagger-1">
+                            <div class="h-16 w-32 bg-brand-500/10 rounded-2xl flex items-center justify-center font-black text-brand-600 text-xl group-hover:bg-brand-500 group-hover:text-white transition-all duration-500">RISTOJA</div>
+                            <p class="text-xl opacity-80 group-hover:opacity-100 transition-opacity">Dokumentasi ribuan tanaman obat oleh Kemenkes.</p>
+                        </div>
+                        <div class="flex items-center gap-6 p-6 glass-card rounded-[32px] group animate-reveal stagger-2">
+                            <div class="h-16 w-32 bg-brand-500/10 rounded-2xl flex items-center justify-center font-black text-brand-600 text-xl group-hover:bg-brand-500 group-hover:text-white transition-all duration-500">Perpusnas</div>
+                            <p class="text-xl opacity-80 group-hover:opacity-100 transition-opacity">Digitalisasi naskah kuno pengobatan tradisional.</p>
+                        </div>
+                        <div class="flex items-center gap-6 p-6 glass-card rounded-[32px] group animate-reveal stagger-3">
+                            <div class="h-16 w-32 bg-brand-500/10 rounded-2xl flex items-center justify-center font-black text-brand-600 text-xl group-hover:bg-brand-500 group-hover:text-white transition-all duration-500">Budaya.id</div>
+                            <p class="text-xl opacity-80 group-hover:opacity-100 transition-opacity">Portal budaya tradisi pengobatan lokal Nusantara.</p>
+                        </div>
+                        <div class="flex items-center gap-6 p-6 glass-card rounded-[32px] group animate-reveal stagger-4">
+                            <div class="h-16 w-32 bg-brand-500/10 rounded-2xl flex items-center justify-center font-black text-brand-600 text-xl group-hover:bg-brand-500 group-hover:text-white transition-all duration-500">TOGA</div>
+                            <p class="text-xl opacity-80 group-hover:opacity-100 transition-opacity">Database Tanaman Obat Keluarga seluruh Indonesia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 15 — PELUANG KARIER -->
+        <div class="slide flex items-center justify-center p-8">
+            <div class="batik-overlay"></div>
+            <div class="w-full max-w-6xl space-y-16 animate-reveal">
+                <div class="text-center space-y-6">
+                    <h2 class="text-4xl md:text-7xl font-extrabold font-display theme-accent">👨‍💻 Peluang Karier Digital</h2>
+                    <div class="inline-block p-6 bg-ethnic-gold text-white rounded-[40px] shadow-glow transform hover:scale-105 transition-transform cursor-default">
+                        <p class="text-3xl font-black">Layanan Kesehatan + Teknologi = Masa Depan Cerah!</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div class="p-10 bg-brand-500 text-white rounded-[40px] shadow-2xl transform hover:-translate-y-4 hover:rotate-2 transition-all duration-500 animate-reveal stagger-1">
+                        <div class="text-5xl mb-6">📄</div>
+                        <h3 class="text-2xl font-black mb-3">Operator RME</h3>
+                        <p class="text-lg opacity-80">Rumah Sakit, Puskesmas, & Klinik Modern</p>
+                    </div>
+                    <div class="p-10 bg-brand-600 text-white rounded-[40px] shadow-2xl transform hover:-translate-y-4 hover:-rotate-2 transition-all duration-500 animate-reveal stagger-2">
+                        <div class="text-5xl mb-6">🏥</div>
+                        <h3 class="text-2xl font-black mb-3">Admin SIK</h3>
+                        <p class="text-lg opacity-80">BPJS, Klinik Mandiri, & Instansi Kesehatan</p>
+                    </div>
+                    <div class="p-10 bg-brand-700 text-white rounded-[40px] shadow-2xl transform hover:-translate-y-4 hover:rotate-2 transition-all duration-500 animate-reveal stagger-3">
+                        <div class="text-5xl mb-6">📹</div>
+                        <h3 class="text-2xl font-black mb-3">Content Creator</h3>
+                        <p class="text-lg opacity-80">Edukasi Kesehatan Digital & Social Media</p>
+                    </div>
+                    <div class="p-10 bg-brand-800 text-white rounded-[40px] shadow-2xl transform hover:-translate-y-4 hover:-rotate-2 transition-all duration-500 animate-reveal stagger-4">
+                        <div class="text-5xl mb-6">🏛️</div>
+                        <h3 class="text-2xl font-black mb-3">Dokumentator</h3>
+                        <p class="text-lg opacity-80">Pelestarian Warisan Budaya Sehat Indonesia</p>
+                    </div>
+                    <div class="p-10 bg-brand-900 text-white rounded-[40px] shadow-2xl transform hover:-translate-y-4 hover:rotate-2 transition-all duration-500 animate-reveal stagger-5">
+                        <div class="text-5xl mb-6">🛠️</div>
+                        <h3 class="text-2xl font-black mb-3">IT Support</h3>
+                        <p class="text-lg opacity-80">Garda Depan Fasilitas Kesehatan Digital</p>
+                    </div>
+                    <div class="p-10 bg-slate-900 text-white rounded-[40px] shadow-2xl transform hover:-translate-y-4 hover:-rotate-2 transition-all duration-500 animate-reveal stagger-6">
+                        <div class="text-5xl mb-6">📊</div>
+                        <h3 class="text-2xl font-black mb-3">Asisten Analis</h3>
+                        <p class="text-lg opacity-80">Dinas Kesehatan & Riset Epidemiologi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 16 — KUIS SINGKAT 1 -->
+        <div class="slide flex items-center justify-center p-8">
+            <div class="batik-overlay"></div>
+            <div class="w-full max-w-5xl glass-card p-16 rounded-[60px] space-y-12 animate-reveal relative overflow-hidden group">
+                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-brand-500/5 rounded-full group-hover:scale-150 transition-transform duration-[2s]"></div>
+                <div class="flex items-center gap-8 mb-4">
+                    <div class="h-20 w-20 bg-ethnic-gold rounded-full flex items-center justify-center text-white text-4xl font-black shadow-xl animate-float">1</div>
+                    <h2 class="text-5xl font-extrabold font-display theme-accent">Kuis Singkat</h2>
+                </div>
+                <p class="text-3xl leading-relaxed mb-12 font-medium">Puskesmas di kotamu ingin membuat sistem agar pasien bisa <span class="text-brand-500 font-bold">mengambil nomor antrian</span> dari rumah menggunakan ponsel. Profesi informatika mana yang paling berperan?</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="quiz-1">
+                    <button class="quiz-option p-8 rounded-[32px] border-4 border-slate-100 dark:border-slate-800 text-left text-2xl font-bold btn-glow" onclick="checkAnswer(this, 'wrong', 'quiz-1')">A. Analis Data</button>
+                    <button class="quiz-option p-8 rounded-[32px] border-4 border-slate-100 dark:border-slate-800 text-left text-2xl font-bold btn-glow" onclick="checkAnswer(this, 'correct', 'quiz-1')">B. Pengembang Perangkat Lunak</button>
+                    <button class="quiz-option p-8 rounded-[32px] border-4 border-slate-100 dark:border-slate-800 text-left text-2xl font-bold btn-glow" onclick="checkAnswer(this, 'wrong', 'quiz-1')">C. Pakar Keamanan Siber</button>
+                    <button class="quiz-option p-8 rounded-[32px] border-4 border-slate-100 dark:border-slate-800 text-left text-2xl font-bold btn-glow" onclick="checkAnswer(this, 'wrong', 'quiz-1')">D. Content Creator Digital</button>
+                </div>
+                <div class="quiz-feedback hidden mt-10 p-8 rounded-[32px] bg-brand-500/10 border-2 border-brand-500/20 text-2xl italic font-medium animate-reveal">
+                    🎯 Jawaban Benar: <span class="text-brand-600 font-black">B</span> — Software Developer bertugas merancang dan membangun aplikasi, termasuk sistem antrian online.
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 17 — KUIS SINGKAT 2 -->
+        <div class="slide flex items-center justify-center p-8">
+            <div class="batik-overlay"></div>
+            <div class="w-full max-w-5xl glass-card p-16 rounded-[60px] space-y-12 animate-reveal relative group overflow-hidden">
+                <div class="absolute -left-20 -top-20 w-80 h-80 bg-ethnic-gold/5 rounded-full group-hover:scale-150 transition-transform duration-[2s]"></div>
+                <div class="flex items-center gap-8 mb-4">
+                    <div class="h-20 w-20 bg-ethnic-gold rounded-full flex items-center justify-center text-white text-4xl font-black shadow-xl animate-float">2</div>
+                    <h2 class="text-5xl font-extrabold font-display theme-accent">Kuis Singkat</h2>
+                </div>
+                <p class="text-3xl leading-relaxed mb-12 font-medium">Kementerian Kesehatan mendokumentasikan ribuan <span class="text-ethnic-gold font-bold">tanaman obat tradisional</span> ke dalam database digital agar tidak punah. Ini contoh nyata dari...?</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="quiz-2">
+                    <button class="quiz-option p-8 rounded-[32px] border-4 border-slate-100 dark:border-slate-800 text-left text-2xl font-bold btn-glow" onclick="checkAnswer(this, 'wrong', 'quiz-2')">A. Otomatisasi Kesehatan</button>
+                    <button class="quiz-option p-8 rounded-[32px] border-4 border-slate-100 dark:border-slate-800 text-left text-2xl font-bold btn-glow" onclick="checkAnswer(this, 'wrong', 'quiz-2')">B. Komputerisasi RS</button>
+                    <button class="quiz-option p-8 rounded-[32px] border-4 border-slate-100 dark:border-slate-800 text-left text-2xl font-bold btn-glow" onclick="checkAnswer(this, 'correct', 'quiz-2')">C. Digitalisasi Budaya</button>
+                    <button class="quiz-option p-8 rounded-[32px] border-4 border-slate-100 dark:border-slate-800 text-left text-2xl font-bold btn-glow" onclick="checkAnswer(this, 'wrong', 'quiz-2')">D. Pemrograman Medis</button>
+                </div>
+                <div class="quiz-feedback hidden mt-10 p-8 rounded-[32px] bg-ethnic-gold/10 border-2 border-ethnic-gold/20 text-2xl italic font-medium animate-reveal">
+                    🎯 Jawaban Benar: <span class="text-ethnic-gold font-black">C</span> — Digitalisasi budaya mencakup upaya melestarikan warisan tradisional dalam format digital agar abadi.
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 18 — KUIS SINGKAT 3 -->
+        <div class="slide flex items-center justify-center p-8">
+            <div class="batik-overlay"></div>
+            <div class="w-full max-w-5xl glass-card p-16 rounded-[60px] space-y-12 animate-reveal relative group overflow-hidden">
+                <div class="absolute -right-20 -top-20 w-80 h-80 bg-red-500/5 rounded-full group-hover:scale-150 transition-transform duration-[2s]"></div>
+                <div class="flex items-center gap-8 mb-4">
+                    <div class="h-20 w-20 bg-ethnic-gold rounded-full flex items-center justify-center text-white text-4xl font-black shadow-xl animate-float">3</div>
+                    <h2 class="text-5xl font-extrabold font-display theme-accent">Kuis Singkat</h2>
+                </div>
+                <p class="text-3xl leading-relaxed mb-12 font-medium">Data rekam medis ribuan pasien <span class="text-red-500 font-bold">bocor ke internet</span> karena sistem keamanan lemah. Profesi mana yang bertanggung jawab mencegah hal ini?</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="quiz-3">
+                    <button class="quiz-option p-8 rounded-[32px] border-4 border-slate-100 dark:border-slate-800 text-left text-2xl font-bold btn-glow" onclick="checkAnswer(this, 'wrong', 'quiz-3')">A. Desainer UI/UX</button>
+                    <button class="quiz-option p-8 rounded-[32px] border-4 border-slate-100 dark:border-slate-800 text-left text-2xl font-bold btn-glow" onclick="checkAnswer(this, 'wrong', 'quiz-3')">B. Admin Jaringan</button>
+                    <button class="quiz-option p-8 rounded-[32px] border-4 border-slate-100 dark:border-slate-800 text-left text-2xl font-bold btn-glow" onclick="checkAnswer(this, 'wrong', 'quiz-3')">C. Analis Data</button>
+                    <button class="quiz-option p-8 rounded-[32px] border-4 border-slate-100 dark:border-slate-800 text-left text-2xl font-bold btn-glow" onclick="checkAnswer(this, 'correct', 'quiz-3')">D. Pakar Keamanan Siber</button>
+                </div>
+                <div class="quiz-feedback hidden mt-10 p-8 rounded-[32px] bg-red-500/10 border-2 border-red-500/20 text-2xl italic font-medium animate-reveal">
+                    🎯 Jawaban Benar: <span class="text-red-600 font-black">D</span> — Pakar Keamanan Siber bertugas membangun benteng pertahanan digital untuk melindungi data sensitif.
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 19 — RANGKUMAN -->
+        <div class="slide flex items-center justify-center p-8">
+            <div class="batik-overlay"></div>
+            <div class="w-full max-w-6xl glass-card p-16 rounded-[60px] space-y-12 border-l-[32px] border-brand-500 animate-reveal">
+                <h2 class="text-4xl md:text-8xl font-extrabold font-display theme-accent tracking-tighter">📝 Rangkuman Materi</h2>
+                <div class="grid md:grid-cols-2 gap-16 text-2xl leading-relaxed">
+                    <div class="space-y-10">
+                        <div class="flex gap-6 animate-reveal stagger-1">
+                            <span class="h-12 w-12 bg-brand-500 text-white rounded-2xl flex items-center justify-center font-black flex-shrink-0 shadow-lg">01</span>
+                            <p><strong>Profesi Informatika</strong> Utama: Developer, Analis, Desainer, Admin Jaringan, & Keamanan Siber.</p>
+                        </div>
+                        <div class="flex gap-6 animate-reveal stagger-2">
+                            <span class="h-12 w-12 bg-brand-500 text-white rounded-2xl flex items-center justify-center font-black flex-shrink-0 shadow-lg">02</span>
+                            <p><strong>Teknologi Digital</strong> di dunia kesehatan mencakup RME, telemedicine, e-resep, dan antrian online.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-10">
+                        <div class="flex gap-6 animate-reveal stagger-3">
+                            <span class="h-12 w-12 bg-brand-500 text-white rounded-2xl flex items-center justify-center font-black flex-shrink-0 shadow-lg">03</span>
+                            <p><strong>Digitalisasi Budaya</strong> krusial untuk melestarikan kearifan pengobatan tradisional Nusantara.</p>
+                        </div>
+                        <div class="flex gap-6 animate-reveal stagger-4">
+                            <span class="h-12 w-12 bg-brand-500 text-white rounded-2xl flex items-center justify-center font-black flex-shrink-0 shadow-lg">04</span>
+                            <p><strong>Peluang Karier Besar</strong> bagi lulusan SMK Kesehatan yang mampu beradaptasi dengan teknologi digital.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 20 — PENUTUP -->
+        <div class="slide flex items-center justify-center p-8">
+            <div class="batik-overlay"></div>
+            <div class="w-full max-w-6xl grid lg:grid-cols-2 gap-20 items-center">
+                <div class="space-y-16 animate-reveal text-center lg:text-left">
+                    <h2 class="text-5xl md:text-8xl font-extrabold font-display theme-accent tracking-tighter">Terima kasih! 🎓</h2>
+                    <div class="p-12 glass-card rounded-[50px] border-l-[24px] border-ethnic-gold italic text-3xl leading-relaxed shadow-2xl animate-reveal stagger-2">
+                        "Teknologi adalah jembatan emas antara ilmu kesehatan modern dan kearifan luhur tradisional nenek moyang kita."
+                    </div>
+                    <div class="animate-reveal stagger-4">
+                        <p class="text-4xl font-black text-ethnic-deep dark:text-brand-200 flex items-center justify-center lg:justify-start gap-4">
+                            <span class="animate-bounce">🙋</span> Ada pertanyaan?
+                        </p>
+                    </div>
+                </div>
+                <div class="animate-reveal stagger-3">
+                    <div class="relative animate-float">
+                        <div class="absolute -inset-10 bg-brand-500/10 blur-3xl rounded-full"></div>
+                        <img src="assets/images/pertemuan_3/20.webp" alt="Healthcare students" class="relative rounded-[60px] shadow-ethnic border-8 border-white dark:border-slate-800 w-full transform -rotate-3 hover:rotate-0 transition-transform duration-1000" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="public/canvas.js"></script>
+        <script src="public/tools.js"></script>
+        <script>
+            function checkAnswer(button, status, containerId) {
+                const container = document.getElementById(containerId);
+                const options = container.querySelectorAll('.quiz-option');
+                const feedback = container.parentElement.querySelector('.quiz-feedback');
+                
+                options.forEach(opt => {
+                    opt.disabled = true;
+                    opt.classList.add('opacity-50');
+                });
+                
+                button.classList.remove('opacity-50');
+                button.classList.add('selected');
+                
+                if (status === 'correct') {
+                    button.classList.add('correct');
+                    confetti();
+                } else {
+                    button.classList.add('wrong');
+                    const correctBtn = Array.from(options).find(opt => opt.getAttribute('onclick').includes('correct'));
+                    correctBtn.classList.remove('opacity-50');
+                    correctBtn.classList.add('correct');
+                }
+                
+                feedback.classList.remove('hidden');
+            }
+
+            function confetti() {
+                // Simple visual feedback if no library
+                const duration = 15 * 1000;
+                const animationEnd = Date.now() + duration;
+                // You could add a real confetti library here if desired
+                console.log("Correct answer!");
+            }
+        </script>
+    </body>
+</html>
