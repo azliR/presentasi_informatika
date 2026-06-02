@@ -1,0 +1,1997 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Aplikasi Presentasi (Microsoft PowerPoint) • Presentasi Informatika
+    </title>
+    <meta
+      name="description"
+      content="Materi Informatika X: Menguasai Microsoft PowerPoint, mulai dari fitur dasar hingga membuat presentasi yang interaktif dan menarik."
+    />
+    <link
+      rel="canonical"
+      href="https://azlir.github.io/presentasi_informatika/pertemuan_4.html"
+    />
+
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://azlir.github.io/presentasi_informatika/pertemuan_4.html"
+    />
+    <meta
+      property="og:title"
+      content="Aplikasi Presentasi (Microsoft PowerPoint) • Presentasi Informatika"
+    />
+    <meta
+      property="og:description"
+      content="Materi Informatika X: Menguasai Microsoft PowerPoint, mulai dari fitur dasar hingga membuat presentasi yang interaktif dan menarik."
+    />
+    <meta
+      property="og:image"
+      content="https://azlir.github.io/presentasi_informatika/assets/images/pertemuan_4/1.webp"
+    />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://azlir.github.io/presentasi_informatika/pertemuan_4.html"
+    />
+    <meta
+      property="twitter:title"
+      content="Aplikasi Presentasi (Microsoft PowerPoint) • Presentasi Informatika"
+    />
+    <meta
+      property="twitter:description"
+      content="Materi Informatika X: Menguasai Microsoft PowerPoint, mulai dari fitur dasar hingga membuat presentasi yang interaktif dan menarik."
+    />
+    <meta
+      property="twitter:image"
+      content="https://azlir.github.io/presentasi_informatika/assets/images/pertemuan_4/1.webp"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./public/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./public/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./public/favicon-16x16.png"
+    />
+    <link rel="icon" href="./public/favicon.ico" sizes="any" />
+    <link rel="manifest" href="./site.webmanifest" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui"],
+              display: ["Plus Jakarta Sans", "Inter", "sans-serif"],
+            },
+            colors: {
+              brand: {
+                50: "#fff5f2",
+                100: "#ffe5df",
+                200: "#fecdc2",
+                300: "#fda796",
+                400: "#fb755b",
+                500: "#d04728",
+                600: "#b83b1d",
+                700: "#992e16",
+                800: "#7f2511",
+                900: "#4a1207",
+              },
+              ethnic: {
+                gold: "#f97316",
+                deep: "#4a1207",
+              },
+            },
+            boxShadow: {
+              glow: "0 10px 40px rgba(208, 71, 40, 0.35)",
+              ethnic: "0 20px 50px -12px rgba(184, 59, 29, 0.5)",
+            },
+            animation: {
+              "fade-up": "fadeUp 1.2s cubic-bezier(0.2, 1, 0.2, 1) forwards",
+              "fade-in": "fadeIn 1s ease-out forwards",
+              float: "float 8s ease-in-out infinite",
+              "pulse-soft": "pulseSoft 4s ease-in-out infinite",
+              shimmer: "shimmer 3s linear infinite",
+            },
+            keyframes: {
+              fadeUp: {
+                "0%": {
+                  opacity: "0",
+                  transform: "translateY(50px) scale(0.95)",
+                },
+                "100%": { opacity: "1", transform: "translateY(0) scale(1)" },
+              },
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
+                "33%": { transform: "translateY(-20px) rotate(2deg)" },
+                "66%": { transform: "translateY(10px) rotate(-1deg)" },
+              },
+              pulseSoft: {
+                "0%, 100%": { opacity: "1", transform: "scale(1)" },
+                "50%": { opacity: "0.7", transform: "scale(1.05)" },
+              },
+              shimmer: {
+                "0%": { backgroundPosition: "-200% 0" },
+                "100%": { backgroundPosition: "200% 0" },
+              },
+            },
+          },
+        },
+        darkMode: "class",
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="public/canvas.css" />
+    <style>
+      :root {
+        --slide-transition: 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .slide {
+        background:
+          radial-gradient(
+            circle at top right,
+            rgba(208, 71, 40, 0.05),
+            transparent
+          ),
+          radial-gradient(
+            circle at bottom left,
+            rgba(249, 115, 22, 0.05),
+            transparent
+          );
+        transition:
+          transform var(--slide-transition),
+          opacity var(--slide-transition),
+          filter var(--slide-transition);
+        transform: scale(1.1) translateY(40px);
+        filter: blur(20px);
+        opacity: 0;
+      }
+      .slide.active {
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+        opacity: 1;
+      }
+      .slide .animate-reveal {
+        opacity: 0;
+        transform: translateY(60px) scale(0.9);
+        filter: blur(10px);
+        transition: all 1.5s cubic-bezier(0.2, 1, 0.2, 1);
+      }
+      .slide.active .animate-reveal {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+      }
+      .batik-overlay {
+        position: absolute;
+        inset: 0;
+        opacity: 0.02;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3%3Cpath d='M40 0 L80 40 L40 80 L0 40 Z' fill='%23d04728'/%3E%3C/svg%3E");
+        background-size: 160px;
+        transition: transform 20s cubic-bezier(0.2, 0, 0.8, 1);
+      }
+      .slide.active .batik-overlay {
+        transform: scale(1.2) rotate(15deg);
+      }
+      .dark .batik-overlay {
+        opacity: 0.04;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        transition: all 0.6s cubic-bezier(0.2, 1, 0.2, 1);
+      }
+      .dark .glass-card {
+        background: rgba(15, 23, 42, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .glass-card:hover {
+        transform: translateY(-15px) scale(1.02);
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 40px 80px -15px rgba(208, 71, 40, 0.3);
+        border-color: rgba(208, 71, 40, 0.5);
+      }
+      .dark .glass-card:hover {
+        background: rgba(30, 41, 59, 0.85);
+        box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.6);
+        border-color: rgba(208, 71, 40, 0.4);
+      }
+      .quiz-option {
+        transition: all 0.4s cubic-bezier(0.2, 1, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+      }
+      .quiz-option:hover:not(.selected) {
+        transform: scale(1.05) translateX(15px);
+        background: rgba(208, 71, 40, 0.15);
+        border-color: var(--brand-500);
+      }
+      .stagger-1 {
+        transition-delay: 0.2s !important;
+      }
+      .stagger-2 {
+        transition-delay: 0.4s !important;
+      }
+      .stagger-3 {
+        transition-delay: 0.6s !important;
+      }
+      .stagger-4 {
+        transition-delay: 0.8s !important;
+      }
+      .stagger-5 {
+        transition-delay: 1s !important;
+      }
+      .stagger-6 {
+        transition-delay: 1.2s !important;
+      }
+
+      .btn-glow::before {
+        content: "";
+        position: absolute;
+        inset: -4px;
+        background: linear-gradient(90deg, #d04728, #f97316, #d04728);
+        background-size: 300% 100%;
+        z-index: -1;
+        border-radius: inherit;
+        opacity: 0;
+        transition:
+          opacity 0.5s,
+          filter 0.5s;
+        filter: blur(10px);
+        animation: shimmer 4s linear infinite;
+      }
+      .btn-glow:hover::before {
+        opacity: 0.6;
+        filter: blur(20px);
+      }
+      .slide img {
+        transform: scale(1);
+        transition: all 1s cubic-bezier(0.2, 1, 0.2, 1);
+      }
+      .slide img.rotate-left {
+        transform: scale(1.1) rotate(-3deg);
+      }
+      .slide img.rotate-right {
+        transform: scale(1.1) rotate(3deg);
+      }
+
+      .group:hover .slide-img-hover {
+        transform: scale(1.1) !important;
+      }
+      .group:hover .slide-img-hover.rotate-left {
+        transform: scale(1.1) rotate(0deg) !important;
+      }
+      .group:hover .slide-img-hover.rotate-right {
+        transform: scale(1.1) rotate(5deg) !important;
+      }
+
+      .img-corner-blur {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(60px);
+        -webkit-backdrop-filter: blur(60px);
+        border-top-left-radius: 20px;
+        pointer-events: none;
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen text-slate-800 dark:text-slate-100 font-sans">
+    <div class="slide flex items-center justify-center p-8 active">
+      <div class="batik-overlay"></div>
+      <div
+        class="relative z-10 w-full max-w-6xl grid grid-cols-2 gap-12 items-center"
+      >
+        <div class="space-y-8 animate-reveal">
+          <div
+            class="inline-block px-4 py-2 rounded-full bg-brand-500/10 text-brand-700 dark:text-brand-300 font-bold tracking-wider uppercase text-sm border border-brand-500/20 shadow-sm"
+          >
+            TIK Dasar – Informatika SMK Kelas X
+          </div>
+          <h1
+            class="text-7xl font-extrabold font-display leading-tight text-ethnic-deep dark:text-white"
+          >
+            APLIKASI PRESENTASI
+          </h1>
+          <p class="text-4xl font-semibold text-brand-500">
+            Microsoft PowerPoint
+          </p>
+          <div class="h-1.5 w-32 bg-ethnic-gold rounded-full"></div>
+        </div>
+        <div class="relative animate-reveal stagger-2 group">
+          <div
+            class="absolute -inset-4 bg-brand-500/20 blur-3xl rounded-full group-hover:bg-brand-500/40 transition-colors duration-700"
+          ></div>
+          <div
+            class="relative overflow-hidden rounded-[40px] shadow-ethnic border-4 border-white/50 dark:border-slate-700/50"
+          >
+            <img
+              src="assets/images/pertemuan_4/1.webp"
+              alt="Microsoft PowerPoint Presentation Layout"
+              class="w-full slide-img-hover"
+            />
+            <div class="img-corner-blur"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide flex items-center justify-center p-8">
+      <div class="batik-overlay"></div>
+      <div
+        class="glass-card p-12 rounded-[40px] w-full max-w-5xl shadow-2xl relative overflow-hidden animate-reveal"
+      >
+        <div
+          class="absolute top-0 right-0 w-64 h-64 bg-ethnic-gold/10 rounded-full -mr-32 -mt-32 animate-pulse-soft"
+        ></div>
+        <h2
+          class="text-5xl font-extrabold font-display mb-10 theme-accent flex items-center gap-4"
+        >
+          <span class="bg-ethnic-gold p-3 rounded-2xl text-white">📌</span>
+          Capaian Pembelajaran
+        </h2>
+        <div class="grid grid-cols-2 gap-8 text-xl leading-relaxed">
+          <div class="space-y-6">
+            <p
+              class="font-bold text-ethnic-deep dark:text-brand-200 opacity-80"
+            >
+              Setelah mempelajari materi ini, peserta didik diharapkan mampu:
+            </p>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-4 animate-reveal stagger-1 group">
+                <span
+                  class="h-8 w-8 rounded-lg bg-brand-500 text-white flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform"
+                  >1</span
+                >
+                <span
+                  class="group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors"
+                  ><strong>Menjelaskan</strong> pengertian dan kegunaan
+                  Microsoft PowerPoint dalam kehidupan sehari-hari.</span
+                >
+              </li>
+              <li class="flex items-start gap-4 animate-reveal stagger-2 group">
+                <span
+                  class="h-8 w-8 rounded-lg bg-brand-500 text-white flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform"
+                  >2</span
+                >
+                <span
+                  class="group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors"
+                  ><strong>Mengidentifikasi</strong> fitur-fitur dasar yang
+                  terdapat pada tampilan PowerPoint.</span
+                >
+              </li>
+              <li class="flex items-start gap-4 animate-reveal stagger-3 group">
+                <span
+                  class="h-8 w-8 rounded-lg bg-brand-500 text-white flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform"
+                  >3</span
+                >
+                <span
+                  class="group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors"
+                  ><strong>Menggunakan</strong> fitur membuat slide baru dan
+                  menerapkan desain (tema) pada slide.</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="space-y-4 pt-14">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-4 animate-reveal stagger-4 group">
+                <span
+                  class="h-8 w-8 rounded-lg bg-brand-500 text-white flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform"
+                  >4</span
+                >
+                <span
+                  class="group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors"
+                  ><strong>Menerapkan</strong> efek transisi dan animasi pada
+                  slide presentasi.</span
+                >
+              </li>
+              <li class="flex items-start gap-4 animate-reveal stagger-5 group">
+                <span
+                  class="h-8 w-8 rounded-lg bg-brand-500 text-white flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform"
+                  >5</span
+                >
+                <span
+                  class="group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors"
+                  ><strong>Membuat</strong> hyperlink dan mengatur tampilan
+                  Slide Show.</span
+                >
+              </li>
+              <li class="flex items-start gap-4 animate-reveal stagger-6 group">
+                <span
+                  class="h-8 w-8 rounded-lg bg-brand-500 text-white flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform"
+                  >6</span
+                >
+                <span
+                  class="group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors"
+                  ><strong>Membuat</strong> presentasi yang menarik dan
+                  komunikatif sesuai kebutuhan.</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide flex items-center justify-center p-8">
+      <div class="batik-overlay"></div>
+      <div
+        class="grid grid-cols-[1.2fr_1fr] gap-12 items-center w-full max-w-6xl"
+      >
+        <div class="space-y-6 animate-reveal">
+          <h2
+            class="text-5xl font-extrabold font-display theme-accent leading-tight"
+          >
+            Mengenal Microsoft PowerPoint
+          </h2>
+          <div class="text-xl leading-relaxed space-y-4">
+            <p class="animate-reveal stagger-1">
+              Microsoft PowerPoint adalah salah satu aplikasi dari Microsoft
+              Office yang digunakan untuk membuat dan menampilkan presentasi.
+              Dengan PowerPoint, kita bisa menyampaikan informasi kepada orang
+              lain secara menarik melalui slide yang berisi teks, gambar,
+              grafik, dan animasi.
+            </p>
+            <p class="animate-reveal stagger-2">
+              Menurut <strong>KBBI</strong>, presentasi berarti menyampaikan,
+              menyajikan, dan mengemukakan informasi kepada seseorang.
+            </p>
+            <div
+              class="p-4 bg-brand-500/5 rounded-2xl border-l-4 border-brand-500 font-medium"
+            >
+              PowerPoint digunakan di berbagai bidang:
+            </div>
+            <ul class="space-y-2 text-lg">
+              <li
+                class="flex items-center gap-2 hover:translate-x-2 transition-transform"
+              >
+                🏢 <strong>Perkantoran</strong> — laporan kerja, rapat, proposal
+              </li>
+              <li
+                class="flex items-center gap-2 hover:translate-x-2 transition-transform stagger-1"
+              >
+                🏛️ <strong>Pemerintahan</strong> — sosialisasi program,
+                kebijakan publik
+              </li>
+              <li
+                class="flex items-center gap-2 hover:translate-x-2 transition-transform stagger-2"
+              >
+                🎓 <strong>Pendidikan</strong> — materi ajar, seminar, sidang
+                tugas akhir
+              </li>
+            </ul>
+          </div>
+          <div
+            class="p-6 border-l-[8px] border-ethnic-gold bg-brand-50 dark:bg-slate-800/50 italic text-xl rounded-r-2xl animate-reveal stagger-3 shadow-sm"
+          >
+            PowerPoint membantu kita menyampaikan informasi dengan cara yang
+            lebih menarik dan mudah dipahami!
+          </div>
+        </div>
+        <div class="animate-reveal stagger-3 group relative">
+          <div
+            class="absolute inset-0 bg-brand-500/10 blur-2xl group-hover:blur-3xl transition-all duration-700"
+          ></div>
+          <div class="relative overflow-hidden rounded-[40px] shadow-2xl">
+            <img
+              src="assets/images/pertemuan_4/3.webp"
+              alt="Mengenal Microsoft PowerPoint"
+              class="w-full slide-img-hover"
+            />
+            <div class="img-corner-blur"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide flex items-center justify-center p-8">
+      <div class="batik-overlay"></div>
+      <div class="w-full max-w-6xl space-y-6 animate-reveal">
+        <div class="text-left space-y-2">
+          <h2 class="text-5xl font-extrabold font-display theme-accent">
+            Tampilan Utama PowerPoint
+          </h2>
+          <p class="text-lg opacity-80">
+            Berikut ini adalah bagian-bagian utama yang tampak saat kamu membuka
+            PowerPoint:
+          </p>
+        </div>
+        <div class="grid grid-cols-[1.2fr_1fr] gap-8 items-center">
+          <div
+            class="glass-card rounded-3xl overflow-hidden border border-brand-500/20 shadow-lg"
+          >
+            <table
+              class="w-full text-left text-base leading-normal border-collapse"
+            >
+              <thead>
+                <tr class="bg-brand-500 text-white font-bold">
+                  <th class="py-3 px-4">Bagian</th>
+                  <th class="py-3 px-4">Lokasi</th>
+                  <th class="py-3 px-4">Kegunaan Singkat</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-brand-500/10">
+                <tr class="hover:bg-brand-500/5 transition-colors duration-150">
+                  <td class="py-2.5 px-4 font-bold">Title Bar</td>
+                  <td class="py-2.5 px-4">Atas tengah</td>
+                  <td class="py-2.5 px-4">Menampilkan nama file</td>
+                </tr>
+                <tr
+                  class="hover:bg-brand-500/5 transition-colors duration-150 bg-brand-500/5"
+                >
+                  <td class="py-2.5 px-4 font-bold">Quick Access Toolbar</td>
+                  <td class="py-2.5 px-4">Pojok kiri atas</td>
+                  <td class="py-2.5 px-4">Simpan, Undo, Redo</td>
+                </tr>
+                <tr class="hover:bg-brand-500/5 transition-colors duration-150">
+                  <td class="py-2.5 px-4 font-bold">Ribbon</td>
+                  <td class="py-2.5 px-4">Bawah title bar</td>
+                  <td class="py-2.5 px-4">
+                    Tab menu utama (Home, Insert, dll.)
+                  </td>
+                </tr>
+                <tr
+                  class="hover:bg-brand-500/5 transition-colors duration-150 bg-brand-500/5"
+                >
+                  <td class="py-2.5 px-4 font-bold">Slide Panel</td>
+                  <td class="py-2.5 px-4">Kiri</td>
+                  <td class="py-2.5 px-4">Navigasi antar slide</td>
+                </tr>
+                <tr class="hover:bg-brand-500/5 transition-colors duration-150">
+                  <td class="py-2.5 px-4 font-bold">Area Slide</td>
+                  <td class="py-2.5 px-4">Tengah</td>
+                  <td class="py-2.5 px-4">Tempat membuat & mengedit slide</td>
+                </tr>
+                <tr
+                  class="hover:bg-brand-500/5 transition-colors duration-150 bg-brand-500/5"
+                >
+                  <td class="py-2.5 px-4 font-bold">Scroll Bar</td>
+                  <td class="py-2.5 px-4">Kanan/bawah</td>
+                  <td class="py-2.5 px-4">Menggeser tampilan</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="relative group">
+            <div
+              class="absolute -inset-4 bg-brand-500/10 blur-2xl rounded-full group-hover:bg-brand-500/20 transition-all duration-700"
+            ></div>
+            <div
+              class="relative overflow-hidden rounded-[30px] shadow-lg border border-brand-500/20"
+            >
+              <img
+                src="assets/images/pertemuan_4/layout-powerpoint.webp"
+                alt="Tampilan antarmuka Microsoft PowerPoint"
+                class="w-full slide-img-hover"
+              />
+              <div class="img-corner-blur"></div>
+            </div>
+            <p class="text-center text-sm italic opacity-60 mt-3">
+              Tampilan antarmuka Microsoft PowerPoint
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide flex items-center justify-center p-8">
+      <div class="batik-overlay"></div>
+      <div class="w-full max-w-5xl space-y-6 animate-reveal">
+        <h2
+          class="text-5xl font-extrabold font-display theme-accent text-center"
+        >
+          Fitur-Fitur Penting PowerPoint (1)
+        </h2>
+        <div
+          class="glass-card rounded-[32px] overflow-hidden border border-brand-500/20 shadow-xl"
+        >
+          <table
+            class="w-full text-left text-lg leading-relaxed border-collapse"
+          >
+            <thead>
+              <tr class="bg-brand-500 text-white font-bold">
+                <th class="py-4 px-6 w-16">No</th>
+                <th class="py-4 px-6 w-1/4">Nama Fitur</th>
+                <th class="py-4 px-6">Fungsinya</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-brand-500/10">
+              <tr class="hover:bg-brand-500/5 transition-colors duration-150">
+                <td class="py-3 px-6 font-bold">1</td>
+                <td class="py-3 px-6 font-bold text-brand-600">Title</td>
+                <td class="py-3 px-6">
+                  Menampilkan nama dokumen yang sedang dibuka
+                </td>
+              </tr>
+              <tr
+                class="hover:bg-brand-500/5 transition-colors duration-150 bg-brand-500/5"
+              >
+                <td class="py-3 px-6 font-bold">2</td>
+                <td class="py-3 px-6 font-bold text-brand-600">
+                  Quick Access Toolbar
+                </td>
+                <td class="py-3 px-6">
+                  Berisi tombol cepat: Simpan, Undo (batal), dan Redo (ulangi)
+                </td>
+              </tr>
+              <tr class="hover:bg-brand-500/5 transition-colors duration-150">
+                <td class="py-3 px-6 font-bold">3</td>
+                <td class="py-3 px-6 font-bold text-brand-600">
+                  Window Management
+                </td>
+                <td class="py-3 px-6">
+                  Tombol untuk memperkecil, memperbesar, atau menutup jendela
+                </td>
+              </tr>
+              <tr
+                class="hover:bg-brand-500/5 transition-colors duration-150 bg-brand-500/5"
+              >
+                <td class="py-3 px-6 font-bold">4</td>
+                <td class="py-3 px-6 font-bold text-brand-600">Ribbon</td>
+                <td class="py-3 px-6">
+                  Kumpulan tab menu utama: Home, Insert, Design, Transition,
+                  Animations, Slide Show, dll.
+                </td>
+              </tr>
+              <tr class="hover:bg-brand-500/5 transition-colors duration-150">
+                <td class="py-3 px-6 font-bold">5</td>
+                <td class="py-3 px-6 font-bold text-brand-600">Group Ribbon</td>
+                <td class="py-3 px-6">
+                  Kelompok perintah di dalam tab, seperti: Slide, Font,
+                  Paragraph, Drawing
+                </td>
+              </tr>
+              <tr
+                class="hover:bg-brand-500/5 transition-colors duration-150 bg-brand-500/5"
+              >
+                <td class="py-3 px-6 font-bold">6</td>
+                <td class="py-3 px-6 font-bold text-brand-600">Slide Area</td>
+                <td class="py-3 px-6">
+                  Area utama untuk membuat dan mengedit isi slide
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide flex items-center justify-center p-8">
+      <div class="batik-overlay"></div>
+      <div class="w-full max-w-5xl space-y-6 animate-reveal">
+        <h2
+          class="text-5xl font-extrabold font-display theme-accent text-center"
+        >
+          Fitur-Fitur Penting PowerPoint (2)
+        </h2>
+        <div
+          class="glass-card rounded-[32px] overflow-hidden border border-brand-500/20 shadow-xl"
+        >
+          <table
+            class="w-full text-left text-lg leading-relaxed border-collapse"
+          >
+            <thead>
+              <tr class="bg-brand-500 text-white font-bold">
+                <th class="py-4 px-6 w-16">No</th>
+                <th class="py-4 px-6 w-1/4">Nama Fitur</th>
+                <th class="py-4 px-6">Fungsinya</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-brand-500/10">
+              <tr class="hover:bg-brand-500/5 transition-colors duration-150">
+                <td class="py-3.5 px-6 font-bold">7</td>
+                <td class="py-3.5 px-6 font-bold text-brand-600">Scroll Bar</td>
+                <td class="py-3.5 px-6">
+                  Menggeser tampilan layar ke atas, bawah, kiri, atau kanan
+                </td>
+              </tr>
+              <tr
+                class="hover:bg-brand-500/5 transition-colors duration-150 bg-brand-500/5"
+              >
+                <td class="py-3.5 px-6 font-bold">8</td>
+                <td class="py-3.5 px-6 font-bold text-brand-600">Ruler</td>
+                <td class="py-3.5 px-6">
+                  Penggaris digital untuk menyesuaikan posisi objek secara
+                  presisi
+                </td>
+              </tr>
+              <tr class="hover:bg-brand-500/5 transition-colors duration-150">
+                <td class="py-3.5 px-6 font-bold">9</td>
+                <td class="py-3.5 px-6 font-bold text-brand-600">
+                  Slide Navigation
+                </td>
+                <td class="py-3.5 px-6">
+                  Menunjukkan slide mana yang sedang aktif/dipilih
+                </td>
+              </tr>
+              <tr
+                class="hover:bg-brand-500/5 transition-colors duration-150 bg-brand-500/5"
+              >
+                <td class="py-3.5 px-6 font-bold">10</td>
+                <td class="py-3.5 px-6 font-bold text-brand-600">
+                  Slide Number
+                </td>
+                <td class="py-3.5 px-6">
+                  Menampilkan jumlah total slide yang sudah dibuat
+                </td>
+              </tr>
+              <tr class="hover:bg-brand-500/5 transition-colors duration-150">
+                <td class="py-3.5 px-6 font-bold">11</td>
+                <td class="py-3.5 px-6 font-bold text-brand-600">Page View</td>
+                <td class="py-3.5 px-6">
+                  Tombol untuk mengubah tampilan: Normal, Baca, atau Zoom
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div
+          class="p-5 bg-orange-500/10 border-l-4 border-orange-500 text-xl italic font-medium rounded-r-2xl shadow-sm animate-reveal stagger-2"
+        >
+          💡 <strong>Tips:</strong> Kenali setiap fitur ini agar kamu bisa
+          bekerja lebih cepat dan efisien saat membuat presentasi!
+        </div>
+      </div>
+    </div>
+
+    <div class="slide flex items-center justify-center p-8">
+      <div class="batik-overlay"></div>
+      <div
+        class="w-full max-w-6xl grid grid-cols-[1.2fr_1fr] gap-12 items-center animate-reveal"
+      >
+        <div class="space-y-6">
+          <h2 class="text-5xl font-extrabold font-display theme-accent">
+            Cara Membuat Slide Baru
+          </h2>
+          <div class="text-xl leading-relaxed space-y-4">
+            <p class="font-bold text-brand-700 dark:text-brand-300">
+              Langkah-langkah membuat slide baru:
+            </p>
+            <ol class="space-y-3">
+              <li class="flex items-start gap-4 group">
+                <span
+                  class="h-8 w-8 rounded-lg bg-brand-500 text-white flex items-center justify-center flex-shrink-0 font-bold group-hover:scale-115 transition-transform"
+                  >1</span
+                >
+                <span
+                  class="group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors"
+                  >Klik tab <strong>Home</strong> pada Ribbon di bagian atas
+                  layar.</span
+                >
+              </li>
+              <li class="flex items-start gap-4 group">
+                <span
+                  class="h-8 w-8 rounded-lg bg-brand-500 text-white flex items-center justify-center flex-shrink-0 font-bold group-hover:scale-115 transition-transform"
+                  >2</span
+                >
+                <span
+                  class="group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors"
+                  >Pilih tombol <strong>New Slide</strong> pada grup
+                  "Slides".</span
+                >
+              </li>
+              <li class="flex items-start gap-4 group">
+                <span
+                  class="h-8 w-8 rounded-lg bg-brand-500 text-white flex items-center justify-center flex-shrink-0 font-bold group-hover:scale-115 transition-transform"
+                  >3</span
+                >
+                <span
+                  class="group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors"
+                  >Pilih <strong>layout slide</strong> yang sesuai kebutuhan
+                  (misal: Title Slide, Blank, Two Content, dll.).</span
+                >
+              </li>
+              <li class="flex items-start gap-4 group">
+                <span
+                  class="h-8 w-8 rounded-lg bg-brand-500 text-white flex items-center justify-center flex-shrink-0 font-bold group-hover:scale-115 transition-transform"
+                  >4</span
+                >
+                <span
+                  class="group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors"
+                  >Ketikkan <strong>judul</strong> dan
+                  <strong>isi presentasi</strong> pada area yang tersedia.</span
+                >
+              </li>
+            </ol>
+          </div>
+          <div
+            class="p-4 bg-brand-500/10 border-l-4 border-brand-500 text-lg rounded-r-xl shadow-sm"
+          >
+            📌 Kamu juga bisa menekan tombol <strong>Ctrl + M</strong> pada
+            keyboard sebagai cara cepat membuat slide baru!
+          </div>
+        </div>
+        <div class="relative group">
+          <div
+            class="absolute -inset-4 bg-brand-500/10 blur-2xl rounded-full group-hover:bg-brand-500/20 transition-all duration-700"
+          ></div>
+          <div
+            class="relative overflow-hidden rounded-[30px] shadow-lg border border-brand-500/20 max-h-[500px] flex items-center justify-center bg-white dark:bg-slate-900"
+          >
+            <img
+              src="assets/images/pertemuan_4/new-slide.webp"
+              alt="Tampilan menu New Slide di PowerPoint"
+              class="h-full object-contain slide-img-hover"
+            />
+            <div class="img-corner-blur"></div>
+          </div>
+          <p class="text-center text-sm italic opacity-60 mt-3">
+            Tampilan menu New Slide di PowerPoint
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide flex items-center justify-center p-8">
+      <div class="batik-overlay"></div>
+      <div class="w-full max-w-5xl space-y-6 animate-reveal">
+        <h2
+          class="text-5xl font-extrabold font-display theme-accent text-center"
+        >
+          Menggunakan Fitur Design
+        </h2>
+        <div class="text-xl leading-relaxed text-center max-w-4xl mx-auto">
+          <p>
+            Design pada PowerPoint digunakan untuk memperindah tampilan slide
+            dengan memilih tema atau latar belakang yang menarik. Setelah
+            selesai mengetik isi presentasi, kamu bisa langsung memilih design
+            yang diinginkan.
+          </p>
+        </div>
+        <div class="grid grid-cols-[1fr_1.2fr] gap-8 items-start">
+          <div class="space-y-4">
+            <p class="font-bold text-brand-700 dark:text-brand-300 text-lg">
+              Cara menerapkan Design:
+            </p>
+            <ol class="space-y-3 text-lg">
+              <li class="flex items-start gap-3">
+                <span
+                  class="h-7 w-7 rounded bg-brand-500 text-white flex items-center justify-center flex-shrink-0 font-bold"
+                  >1</span
+                >
+                <span>Klik tab <strong>Design</strong> pada Ribbon.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span
+                  class="h-7 w-7 rounded bg-brand-500 text-white flex items-center justify-center flex-shrink-0 font-bold"
+                  >2</span
+                >
+                <span
+                  >Pilih tema yang diinginkan dari galeri tema yang
+                  tersedia.</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <span
+                  class="h-7 w-7 rounded bg-brand-500 text-white flex items-center justify-center flex-shrink-0 font-bold"
+                  >3</span
+                >
+                <span>Tema akan otomatis diterapkan ke semua slide.</span>
+              </li>
+            </ol>
+          </div>
+          <div
+            class="glass-card rounded-2xl overflow-hidden border border-brand-500/20 shadow-lg text-lg"
+          >
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-brand-500 text-white font-bold">
+                  <th class="py-3 px-4">Kondisi</th>
+                  <th class="py-3 px-4">Tampilan Slide</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-brand-500/10">
+                <tr class="hover:bg-brand-500/5 transition-colors duration-150">
+                  <td class="py-4 px-4 font-bold text-red-500">
+                    Sebelum Design
+                  </td>
+                  <td class="py-4 px-4">
+                    Latar putih polos, teks biasa, kurang menarik
+                  </td>
+                </tr>
+                <tr
+                  class="hover:bg-brand-500/5 transition-colors duration-150 bg-brand-500/5"
+                >
+                  <td class="py-4 px-4 font-bold text-green-500">
+                    Sesudah Design
+                  </td>
+                  <td class="py-4 px-4">
+                    Ada tema warna, latar belakang dekoratif, lebih profesional
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide flex items-center justify-center p-8">
+      <div class="batik-overlay"></div>
+      <div class="w-full max-w-6xl space-y-6 animate-reveal">
+        <h2
+          class="text-5xl font-extrabold font-display theme-accent text-center"
+        >
+          Sebelum & Sesudah Menerapkan Design
+        </h2>
+        <div class="grid grid-cols-2 gap-8">
+          <div class="space-y-3 text-center">
+            <p
+              class="font-bold text-slate-500 text-lg uppercase tracking-wider"
+            >
+              SEBELUM DESIGN:
+            </p>
+            <div
+              class="relative overflow-hidden rounded-[24px] border border-slate-300 dark:border-slate-700 shadow-md"
+            >
+              <img
+                src="assets/images/pertemuan_4/slide-sebelum-di-design.webp"
+                alt="Slide tampak polos tanpa tema"
+                class="w-full slide-img-hover"
+              />
+              <div class="img-corner-blur"></div>
+            </div>
+            <p class="text-sm italic opacity-60">
+              Slide tampak polos tanpa tema
+            </p>
+          </div>
+          <div class="space-y-3 text-center group">
+            <p
+              class="font-bold text-brand-500 text-lg uppercase tracking-wider"
+            >
+              SESUDAH DESIGN:
+            </p>
+            <div
+              class="relative overflow-hidden rounded-[24px] border-4 border-brand-500 shadow-glow"
+            >
+              <img
+                src="assets/images/pertemuan_4/hasil-design.webp"
+                alt="Slide tampak lebih menarik setelah diberi tema"
+                class="w-full slide-img-hover"
+              />
+              <div class="img-corner-blur"></div>
+            </div>
+            <p class="text-sm italic opacity-60">
+              Slide tampak lebih menarik setelah diberi tema
+            </p>
+          </div>
+        </div>
+        <div
+          class="p-4 bg-brand-500/10 border-l-4 border-brand-500 text-xl italic font-medium rounded-r-2xl shadow-sm text-center max-w-4xl mx-auto"
+        >
+          Memilih design yang tepat membuat presentasi lebih profesional,
+          menarik perhatian audiens, dan enak dipandang!
+        </div>
+      </div>
+    </div>
+
+    <div class="slide flex items-center justify-center p-8">
+      <div class="batik-overlay"></div>
+      <div class="w-full max-w-6xl space-y-6 animate-reveal">
+        <h2
+          class="text-5xl font-extrabold font-display theme-accent text-center"
+        >
+          Tampilan Menu Design di PowerPoint
+        </h2>
+        <div class="relative group max-w-4xl mx-auto">
+          <div
+            class="absolute -inset-2 bg-brand-500/10 blur-xl rounded-full group-hover:bg-brand-500/20 transition-all duration-75"
+          ></div>
+          <div
+            class="relative overflow-hidden rounded-2xl border border-brand-500/20 shadow-md bg-white dark:bg-slate-900"
+          >
+            <img
+              src="assets/images/pertemuan_4/menu-design.webp"
+              alt="Tampilan tab Design pada Ribbon PowerPoint"
+              class="w-full slide-img-hover"
+            />
+            <div class="img-corner-blur"></div>
+          </div>
+          <p class="text-center text-sm italic opacity-60 mt-2">
+            Tampilan tab Design pada Ribbon PowerPoint
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p class="font-bold text-lg text-brand-700 dark:text-brand-300">
+            Yang bisa kamu lakukan di tab Design:
+          </p>
+          <div class="grid grid-cols-3 gap-6">
+            <div
+              class="glass-card p-5 rounded-2xl border border-brand-500/10 shadow-sm hover:border-brand-500"
+            >
+              <h3 class="font-bold text-xl text-brand-600 mb-2">Themes</h3>
+              <p class="text-base opacity-80">
+                Pilih tema tampilan slide (warna, font, gaya)
+              </p>
+            </div>
+            <div
+              class="glass-card p-5 rounded-2xl border border-brand-500/10 shadow-sm hover:border-brand-500 stagger-1"
+            >
+              <h3 class="font-bold text-xl text-brand-600 mb-2">Variants</h3>
+              <p class="text-base opacity-80">
+                Variasi warna dari tema yang sudah dipilih
+              </p>
+            </div>
+            <div
+              class="glass-card p-5 rounded-2xl border border-brand-500/10 shadow-sm hover:border-brand-500 stagger-2"
+            >
+              <h3 class="font-bold text-xl text-brand-600 mb-2">Customize</h3>
+              <p class="text-base opacity-80">
+                Atur ukuran slide dan format latar belakang sendiri
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="p-4 bg-orange-500/10 border-l-4 border-orange-500 text-lg italic font-medium rounded-r-2xl shadow-sm text-center max-w-4xl mx-auto stagger-3"
+        >
+          💡 Pilih tema yang sesuai dengan topik presentasimu. Misalnya: tema
+          formal untuk laporan bisnis, tema cerah untuk materi edukasi.
+        </div>
+      </div>
+    </div>
+
+    <div class="slide flex items-center justify-center p-8">
+      <div class="batik-overlay"></div>
+      <div
+        class="w-full max-w-6xl grid grid-cols-[1.2fr_1fr] gap-12 items-center animate-reveal"
+      >
+        <div class="space-y-6">
+          <h2 class="text-5xl font-extrabold font-display theme-accent">
+            Menambahkan Transisi pada Slide
+          </h2>
+          <div class="space-y-4">
+            <div>
+              <p class="font-bold text-brand-700 dark:text-brand-300 text-xl">
+                Apa itu Transisi?
+              </p>
+              <p class="text-lg leading-relaxed opacity-90">
+                Transisi adalah animasi yang muncul saat perpindahan dari satu
+                slide ke slide berikutnya. Tujuannya agar presentasi tidak
+                terlihat kaku dan membosankan.
+              </p>
+            </div>
+            <div class="space-y-3">
+              <p class="font-bold text-brand-700 dark:text-brand-300 text-lg">
+                Cara menambahkan transisi:
+              </p>
+              <ol class="space-y-2 text-lg">
+                <li class="flex items-start gap-3">
+                  <span
+                    class="h-7 w-7 rounded bg-brand-500 text-white flex items-center justify-center flex-shrink-0 font-bold"
+                    >1</span
+                  >
+                  <span
+                    >Klik tab <strong>Transitions</strong> pada Ribbon.</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="h-7 w-7 rounded bg-brand-500 text-white flex items-center justify-center flex-shrink-0 font-bold"
+                    >2</span
+                  >
+                  <span
+                    >Pilih efek transisi yang diinginkan (misal: Fade, Push,
+                    Wipe, dll.).</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="h-7 w-7 rounded bg-brand-500 text-white flex items-center justify-center flex-shrink-0 font-bold"
+                    >3</span
+                  >
+                  <span
+                    >Gunakan <strong>Effect Options</strong> untuk mengatur arah
+                    datangnya efek.</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="h-7 w-7 rounded bg-brand-500 text-white flex items-center justify-center flex-shrink-0 font-bold"
+                    >4</span
+                  >
+                  <span
+                    >Klik <strong>Apply to All</strong> jika ingin diterapkan ke
+                    semua slide.</span
+                  >
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="relative group">
+          <div
+            class="absolute -inset-4 bg-brand-500/10 blur-2xl rounded-full group-hover:bg-brand-500/20 transition-all duration-700"
+          ></div>
+          <div
+            class="relative overflow-hidden rounded-[30px] shadow-lg border border-brand-500/20 bg-white dark:bg-slate-900"
+          >
+            <img
+              src="assets/images/pertemuan_4/menu-transition.webp"
+              alt="Tampilan tab Transition pada Ribbon"
+              class="w-full slide-img-hover"
+            />
+            <div class="img-corner-blur"></div>
+          </div>
+          <p class="text-center text-sm italic opacity-60 mt-3">
+            Tampilan tab Transition pada Ribbon
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide flex items-center justify-center p-8">
+      <div class="batik-overlay"></div>
+      <div class="w-full max-w-6xl space-y-6 animate-reveal">
+        <h2
+          class="text-5xl font-extrabold font-display theme-accent text-center"
+        >
+          Pengaturan Effect Options dan Timing
+        </h2>
+        <div class="grid grid-cols-[1fr_1.2fr] gap-8 items-center">
+          <div class="space-y-6">
+            <p class="font-bold text-brand-700 dark:text-brand-300 text-xl">
+              Effect Options & Timing:
+            </p>
+            <div class="space-y-4">
+              <div
+                class="relative overflow-hidden rounded-xl border border-brand-500/20 shadow-sm bg-white dark:bg-slate-900"
+              >
+                <img
+                  src="assets/images/pertemuan_4/effect-transisi.webp"
+                  alt="Pilihan arah efek transisi"
+                  class="w-full"
+                />
+              </div>
+              <p class="text-sm italic opacity-60">
+                Pilihan arah efek transisi
+              </p>
+              <div
+                class="relative overflow-hidden rounded-xl border border-brand-500/20 shadow-sm bg-white dark:bg-slate-900 max-w-[280px]"
+              >
+                <img
+                  src="assets/images/pertemuan_4/pengaturan-durasi-effect.webp"
+                  alt="Grup Timing untuk mengatur durasi"
+                  class="w-full"
+                />
+              </div>
+              <p class="text-sm italic opacity-60">
+                Grup Timing untuk mengatur durasi
+              </p>
+            </div>
+          </div>
+          <div
+            class="glass-card rounded-[32px] overflow-hidden border border-brand-500/20 shadow-xl"
+          >
+            <table
+              class="w-full text-left text-base leading-relaxed border-collapse"
+            >
+              <thead>
+                <tr class="bg-brand-500 text-white font-bold">
+                  <th class="py-4 px-5 w-1/3">Pengaturan</th>
+                  <th class="py-4 px-5">Fungsi</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-brand-500/10">
+                <tr class="hover:bg-brand-500/5 transition-colors duration-150">
+                  <td class="py-3 px-5 font-bold text-brand-600">
+                    Effect Options
+                  </td>
+                  <td class="py-3 px-5">
+                    Mengatur arah datangnya efek transisi (kiri, kanan, atas,
+                    bawah)
+                  </td>
+                </tr>
+                <tr
+                  class="hover:bg-brand-500/5 transition-colors duration-150 bg-brand-500/5"
+                >
+                  <td class="py-3 px-5 font-bold text-brand-600">Sound</td>
+                  <td class="py-3 px-5">
+                    Memilih efek suara yang muncul saat transisi berjalan
+                  </td>
+                </tr>
+                <tr class="hover:bg-brand-500/5 transition-colors duration-150">
+                  <td class="py-3 px-5 font-bold text-brand-600">Duration</td>
+                  <td class="py-3 px-5">
+                    Mengatur berapa lama efek transisi berlangsung (dalam detik)
+                  </td>
+                </tr>
+                <tr
+                  class="hover:bg-brand-500/5 transition-colors duration-150 bg-brand-500/5"
+                >
+                  <td class="py-3 px-5 font-bold text-brand-600">
+                    Apply to All
+                  </td>
+                  <td class="py-3 px-5">
+                    Menerapkan pengaturan transisi ke semua slide sekaligus
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide flex items-center justify-center p-8">
+      <div class="batik-overlay"></div>
+      <div
+        class="w-full max-w-6xl grid grid-cols-[1.2fr_1fr] gap-12 items-center animate-reveal"
+      >
+        <div class="space-y-6">
+          <h2 class="text-5xl font-extrabold font-display theme-accent">
+            Menambahkan Animasi pada Teks dan Gambar
+          </h2>
+          <div class="space-y-4">
+            <div>
+              <p class="font-bold text-brand-700 dark:text-brand-300 text-xl">
+                Apa itu Animasi?
+              </p>
+              <p class="text-lg leading-relaxed opacity-95">
+                Animasi adalah efek gerak yang diberikan pada elemen di dalam
+                slide — bisa berupa teks, gambar, atau bentuk — agar muncul atau
+                bergerak dengan cara tertentu saat presentasi berlangsung.
+              </p>
+            </div>
+            <div
+              class="glass-card rounded-2xl overflow-hidden border border-brand-500/20 shadow-lg"
+            >
+              <table
+                class="w-full text-left text-base leading-normal border-collapse"
+              >
+                <thead>
+                  <tr class="bg-brand-500 text-white font-bold">
+                    <th class="py-3 px-4"></th>
+                    <th class="py-3 px-4">Transisi</th>
+                    <th class="py-3 px-4">Animasi</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-brand-500/10">
+                  <tr
+                    class="hover:bg-brand-500/5 transition-colors duration-150"
+                  >
+                    <td
+                      class="py-3 px-4 font-bold text-brand-700 dark:text-brand-300"
+                    >
+                      Efeknya pada...
+                    </td>
+                    <td class="py-3 px-4 text-slate-600 dark:text-slate-300">
+                      Perpindahan antar slide
+                    </td>
+                    <td class="py-3 px-4 text-slate-600 dark:text-slate-300">
+                      Objek di dalam slide (teks, gambar)
+                    </td>
+                  </tr>
+                  <tr
+                    class="hover:bg-brand-500/5 transition-colors duration-150 bg-brand-500/5"
+                  >
+                    <td
+                      class="py-3 px-4 font-bold text-brand-700 dark:text-brand-300"
+                    >
+                      Contoh
+                    </td>
+                    <td class="py-3 px-4 text-slate-600 dark:text-slate-300">
+                      Slide baru muncul dari kiri
+                    </td>
+                    <td class="py-3 px-4 text-slate-600 dark:text-slate-300">
+                      Judul muncul melayang dari atas
+                    </td>
+                  </tr>
+                  <tr
+                    class="hover:bg-brand-500/5 transition-colors duration-150"
+                  >
+                    <td
+                      class="py-3 px-4 font-bold text-brand-700 dark:text-brand-300"
+                    >
+                      Letaknya di tab
+                    </td>
+                    <td class="py-3 px-4 text-slate-600 dark:text-slate-300">
+                      Transitions
+                    </td>
+                    <td class="py-3 px-4 text-slate-600 dark:text-slate-300">
+                      Animations
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="relative group">
+          <div
+            class="absolute -inset-4 bg-brand-500/10 blur-2xl rounded-full group-hover:bg-brand-500/20 transition-all duration-700"
+          ></div>
+          <div
+            class="relative overflow-hidden rounded-[30px] shadow-lg border border-brand-500/20 max-h-[460px] flex items-center justify-center bg-white dark:bg-slate-900"
+          >
+            <img
+              src="assets/images/pertemuan_4/menu-animasi.webp"
+              alt="Tampilan tab Animations pada Ribbon"
+              class="h-full object-contain slide-img-hover"
+            />
+            <div class="img-corner-blur"></div>
+          </div>
+          <p class="text-center text-sm italic opacity-60 mt-2">
+            Tampilan tab Animations pada Ribbon
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide flex items-center justify-center p-8">
+      <div class="batik-overlay"></div>
+      <div
+        class="w-full max-w-6xl grid grid-cols-[1.1fr_1.3fr] gap-10 items-center animate-reveal"
+      >
+        <div class="space-y-5">
+          <h2 class="text-5xl font-extrabold font-display theme-accent">
+            Membuat Hyperlink di PowerPoint
+          </h2>
+          <div class="text-lg leading-relaxed space-y-3">
+            <div>
+              <p class="font-bold text-brand-700 dark:text-brand-300">
+                Apa itu Hyperlink?
+              </p>
+              <p class="opacity-90">
+                Hyperlink adalah tautan yang bisa diklik saat presentasi
+                berjalan, untuk membuka file lain, halaman website, atau
+                berpindah ke slide tertentu. Sangat berguna agar presenter tidak
+                perlu mencari-cari file secara manual.
+              </p>
+            </div>
+            <div class="space-y-2">
+              <p class="font-bold text-brand-700 dark:text-brand-300">
+                Cara membuat Hyperlink:
+              </p>
+              <ol class="space-y-1">
+                <li class="flex items-start gap-2">
+                  <span
+                    class="h-6 w-6 rounded bg-brand-500 text-white flex items-center justify-center flex-shrink-0 font-bold text-sm"
+                    >1</span
+                  >
+                  <span
+                    >Sorot atau klik teks/gambar yang akan dijadikan
+                    tautan.</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span
+                    class="h-6 w-6 rounded bg-brand-500 text-white flex items-center justify-center flex-shrink-0 font-bold text-sm"
+                    >2</span
+                  >
+                  <span
+                    >Klik tab <strong>Insert</strong>, lalu pilih
+                    <strong>Hyperlink</strong>.</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span
+                    class="h-6 w-6 rounded bg-brand-500 text-white flex items-center justify-center flex-shrink-0 font-bold text-sm"
+                    >3</span
+                  >
+                  <span>Pilih jenis tautan yang diinginkan.</span>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="relative group max-w-[420px]">
+            <div
+              class="relative overflow-hidden rounded-xl border border-brand-500/20 shadow-md bg-white dark:bg-slate-900"
+            >
+              <img
+                src="assets/images/pertemuan_4/memasukkan-hyperlink.webp"
+                alt="Tampilan kotak dialog Insert Hyperlink"
+                class="w-full"
+              />
+            </div>
+            <p class="text-sm italic opacity-60 mt-1">
+              Tampilan kotak dialog Insert Hyperlink
+            </p>
+          </div>
+        </div>
+        <div
+          class="glass-card rounded-[32px] overflow-hidden border border-brand-500/20 shadow-xl"
+        >
+          <table
+            class="w-full text-left text-base leading-relaxed border-collapse"
+          >
+            <thead>
+              <tr class="bg-brand-500 text-white font-bold">
+                <th class="py-3.5 px-4 w-1/3">Jenis</th>
+                <th class="py-3.5 px-4">Kegunaannya</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-brand-500/10">
+              <tr class="hover:bg-brand-500/5 transition-colors duration-150">
+                <td class="py-3 px-4 font-bold text-brand-600">
+                  Existing File or Web Page
+                </td>
+                <td class="py-3 px-4">
+                  Membuka file di komputer atau website di internet
+                </td>
+              </tr>
+              <tr
+                class="hover:bg-brand-500/5 transition-colors duration-150 bg-brand-500/5"
+              >
+                <td class="py-3 px-4 font-bold text-brand-600">
+                  Place in This Document
+                </td>
+                <td class="py-3 px-4">
+                  Berpindah ke slide lain dalam file yang sama
+                </td>
+              </tr>
+              <tr class="hover:bg-brand-500/5 transition-colors duration-150">
+                <td class="py-3 px-4 font-bold text-brand-600">
+                  Create New Document
+                </td>
+                <td class="py-3 px-4">
+                  Membuat dan membuka dokumen baru yang terhubung
+                </td>
+              </tr>
+              <tr
+                class="hover:bg-brand-500/5 transition-colors duration-150 bg-brand-500/5"
+              >
+                <td class="py-3 px-4 font-bold text-brand-600">
+                  E-mail Address
+                </td>
+                <td class="py-3 px-4">
+                  Membuka aplikasi email dengan alamat yang sudah diisi
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide flex items-center justify-center p-8">
+      <div class="batik-overlay"></div>
+      <div class="w-full max-w-6xl space-y-6 animate-reveal">
+        <div class="text-center space-y-3">
+          <h2 class="text-5xl font-extrabold font-display theme-accent">
+            Mengatur Tampilan Slide Show
+          </h2>
+          <p class="text-xl max-w-4xl mx-auto">
+            <strong>Apa itu Slide Show?</strong> Slide Show adalah fitur untuk
+            menjalankan presentasi dalam mode layar penuh. Melalui fitur ini,
+            kamu bisa mengatur dari slide mana presentasi dimulai dan bagaimana
+            layarnya ditampilkan.
+          </p>
+        </div>
+        <div class="relative group max-w-3xl mx-auto">
+          <div
+            class="absolute -inset-2 bg-brand-500/10 blur-xl rounded-full group-hover:bg-brand-500/20 transition-all duration-75"
+          ></div>
+          <div
+            class="relative overflow-hidden rounded-xl border border-brand-500/20 shadow-md bg-white dark:bg-slate-900"
+          >
+            <img
+              src="assets/images/pertemuan_4/menu-slide-show.webp"
+              alt="Tampilan tab Slide Show pada Ribbon"
+              class="w-full slide-img-hover"
+            />
+            <div class="img-corner-blur"></div>
+          </div>
+          <p class="text-center text-sm italic opacity-60 mt-1">
+            Tampilan tab Slide Show pada Ribbon
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-8 text-lg">
+          <div
+            class="glass-card p-6 rounded-2xl border border-brand-500/10 shadow-sm hover:border-brand-500"
+          >
+            <h3
+              class="font-bold text-2xl text-brand-600 mb-3 flex items-center gap-2"
+            >
+              🖥️ Start Slide Show
+            </h3>
+            <p class="opacity-90 mb-3">
+              Mengatur dari slide mana presentasi akan dimulai:
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-brand-500"></span>
+                <em>From Beginning</em> → mulai dari slide pertama
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-brand-500"></span>
+                <em>From Current Slide</em> → mulai dari slide yang sedang aktif
+              </li>
+            </ul>
+          </div>
+          <div
+            class="glass-card p-6 rounded-2xl border border-brand-500/10 shadow-sm hover:border-brand-500 stagger-1"
+          >
+            <h3
+              class="font-bold text-2xl text-brand-600 mb-3 flex items-center gap-2"
+            >
+              ⚙️ Set Up
+            </h3>
+            <p class="opacity-90 mb-3">Digunakan untuk:</p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-brand-500"></span> Mengatur
+                lebar layar presentasi
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-brand-500"></span> Merekam
+                narasi dan waktu presentasi
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-brand-500"></span>
+                Menyembunyikan slide tertentu
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide flex items-center justify-center p-8">
+      <div class="batik-overlay"></div>
+      <div
+        class="w-full max-w-6xl grid grid-cols-[1.2fr_1fr] gap-10 items-center animate-reveal"
+      >
+        <div class="space-y-6">
+          <h2 class="text-5xl font-extrabold font-display theme-accent">
+            Ringkasan: Fitur-Fitur Microsoft PowerPoint
+          </h2>
+          <div
+            class="glass-card rounded-[32px] overflow-hidden border border-brand-500/20 shadow-xl"
+          >
+            <table
+              class="w-full text-left text-base leading-normal border-collapse"
+            >
+              <thead>
+                <tr class="bg-brand-500 text-white font-bold">
+                  <th class="py-3 px-4">Fitur</th>
+                  <th class="py-3 px-4">Fungsi Utama</th>
+                  <th class="py-3 px-4 w-32">Letaknya di Tab</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-brand-500/10">
+                <tr class="hover:bg-brand-500/5 transition-colors duration-150">
+                  <td class="py-2.5 px-4 font-bold text-brand-600">
+                    New Slide
+                  </td>
+                  <td class="py-2.5 px-4">Menambah slide baru</td>
+                  <td class="py-2.5 px-4">Home</td>
+                </tr>
+                <tr
+                  class="hover:bg-brand-500/5 transition-colors duration-150 bg-brand-500/5"
+                >
+                  <td class="py-2.5 px-4 font-bold text-brand-600">
+                    Design / Themes
+                  </td>
+                  <td class="py-2.5 px-4">
+                    Memperindah tampilan slide dengan tema
+                  </td>
+                  <td class="py-2.5 px-4">Design</td>
+                </tr>
+                <tr class="hover:bg-brand-500/5 transition-colors duration-150">
+                  <td class="py-2.5 px-4 font-bold text-brand-600">
+                    Transition
+                  </td>
+                  <td class="py-2.5 px-4">Animasi perpindahan antar slide</td>
+                  <td class="py-2.5 px-4">Transitions</td>
+                </tr>
+                <tr
+                  class="hover:bg-brand-500/5 transition-colors duration-150 bg-brand-500/5"
+                >
+                  <td class="py-2.5 px-4 font-bold text-brand-600">
+                    Animations
+                  </td>
+                  <td class="py-2.5 px-4">Efek gerak pada objek dalam slide</td>
+                  <td class="py-2.5 px-4">Animations</td>
+                </tr>
+                <tr class="hover:bg-brand-500/5 transition-colors duration-150">
+                  <td class="py-2.5 px-4 font-bold text-brand-600">
+                    Hyperlink
+                  </td>
+                  <td class="py-2.5 px-4">
+                    Menghubungkan ke file, web, atau slide lain
+                  </td>
+                  <td class="py-2.5 px-4">Insert</td>
+                </tr>
+                <tr
+                  class="hover:bg-brand-500/5 transition-colors duration-150 bg-brand-500/5"
+                >
+                  <td class="py-2.5 px-4 font-bold text-brand-600">
+                    Slide Show
+                  </td>
+                  <td class="py-2.5 px-4">
+                    Menjalankan dan mengatur presentasi
+                  </td>
+                  <td class="py-2.5 px-4">Slide Show</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            class="p-4 bg-brand-500/10 border-l-4 border-brand-500 text-lg rounded-r-xl shadow-sm"
+          >
+            ✅ Dengan menguasai keenam fitur ini, kamu sudah bisa membuat
+            presentasi yang menarik, profesional, dan interaktif!
+          </div>
+        </div>
+        <div class="relative group">
+          <div
+            class="absolute -inset-4 bg-brand-500/10 blur-2xl rounded-full group-hover:bg-brand-500/20 transition-all duration-700"
+          ></div>
+          <div
+            class="relative overflow-hidden rounded-[30px] shadow-lg border border-brand-500/20 bg-white dark:bg-slate-900 aspect-square flex items-center justify-center p-4"
+          >
+            <img
+              src="assets/images/pertemuan_4/16.webp"
+              alt="Ringkasan: Fitur-Fitur Microsoft PowerPoint"
+              class="w-full slide-img-hover"
+            />
+            <div class="img-corner-blur"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide flex items-center justify-center p-8">
+      <div class="batik-overlay"></div>
+      <div class="w-full max-w-5xl space-y-6 animate-reveal">
+        <h2
+          class="text-5xl font-extrabold font-display theme-accent text-center"
+        >
+          🧠 Kuis Singkat — Soal 1 (Interaktif)
+        </h2>
+        <div
+          class="glass-card p-8 rounded-3xl border border-brand-500/20 shadow-lg text-center max-w-3xl mx-auto"
+        >
+          <p class="text-2xl leading-relaxed font-semibold">
+            Bagian pada tampilan PowerPoint yang berfungsi sebagai
+            <strong>tempat membuat dan mengedit isi slide</strong> disebut...
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-2 gap-4 max-w-3xl mx-auto text-lg"
+          id="quiz-1"
+        >
+          <button
+            class="quiz-option p-4 rounded-xl border border-slate-200 dark:border-slate-800 text-left font-bold btn-glow"
+            onclick="checkAnswer(this, 'wrong', 'quiz-1')"
+          >
+            A. Ribbon
+          </button>
+          <button
+            class="quiz-option p-4 rounded-xl border border-slate-200 dark:border-slate-800 text-left font-bold btn-glow"
+            onclick="checkAnswer(this, 'wrong', 'quiz-1')"
+          >
+            B. Slide Navigation
+          </button>
+          <button
+            class="quiz-option p-4 rounded-xl border border-slate-200 dark:border-slate-800 text-left font-bold btn-glow"
+            onclick="checkAnswer(this, 'correct', 'quiz-1')"
+          >
+            C. Slide Area
+          </button>
+          <button
+            class="quiz-option p-4 rounded-xl border border-slate-200 dark:border-slate-800 text-left font-bold btn-glow"
+            onclick="checkAnswer(this, 'wrong', 'quiz-1')"
+          >
+            D. Quick Access Toolbar
+          </button>
+        </div>
+        <div
+          class="quiz-feedback hidden mt-4 p-5 rounded-2xl bg-brand-500/10 border border-brand-500/20 text-xl italic font-medium text-center max-w-3xl mx-auto"
+        >
+          🎯 Jawaban Benar:
+          <span class="text-brand-500 font-bold">C. Slide Area</span> — Slide
+          Area adalah area tengah di tampilan PowerPoint yang digunakan untuk
+          membuat dan mengedit isi slide.
+        </div>
+        <p class="text-center text-sm italic opacity-60">
+          Tuliskan jawabanmu di selembar kertas sebelum melihat jawaban dari
+          gurumu!
+        </p>
+      </div>
+    </div>
+
+    <div class="slide flex items-center justify-center p-8">
+      <div class="batik-overlay"></div>
+      <div class="w-full max-w-5xl space-y-6 animate-reveal">
+        <h2
+          class="text-5xl font-extrabold font-display theme-accent text-center"
+        >
+          🧠 Kuis Singkat — Soal 2 (Interaktif)
+        </h2>
+        <div
+          class="glass-card p-8 rounded-3xl border border-brand-500/20 shadow-lg text-center max-w-3xl mx-auto"
+        >
+          <p class="text-2xl leading-relaxed font-semibold">
+            Riko ingin membuat teks judulnya "terbang masuk" dari sisi kiri saat
+            slide ditampilkan. Fitur apakah yang harus Riko gunakan?
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-2 gap-4 max-w-3xl mx-auto text-lg"
+          id="quiz-2"
+        >
+          <button
+            class="quiz-option p-4 rounded-xl border border-slate-200 dark:border-slate-800 text-left font-bold btn-glow"
+            onclick="checkAnswer(this, 'wrong', 'quiz-2')"
+          >
+            A. Transition
+          </button>
+          <button
+            class="quiz-option p-4 rounded-xl border border-slate-200 dark:border-slate-800 text-left font-bold btn-glow"
+            onclick="checkAnswer(this, 'wrong', 'quiz-2')"
+          >
+            B. Slide Show
+          </button>
+          <button
+            class="quiz-option p-4 rounded-xl border border-slate-200 dark:border-slate-800 text-left font-bold btn-glow"
+            onclick="checkAnswer(this, 'wrong', 'quiz-2')"
+          >
+            C. Hyperlink
+          </button>
+          <button
+            class="quiz-option p-4 rounded-xl border border-slate-200 dark:border-slate-800 text-left font-bold btn-glow"
+            onclick="checkAnswer(this, 'correct', 'quiz-2')"
+          >
+            D. Animations
+          </button>
+        </div>
+        <div
+          class="quiz-feedback hidden mt-4 p-5 rounded-2xl bg-brand-500/10 border border-brand-500/20 text-xl italic font-medium text-center max-w-3xl mx-auto"
+        >
+          🎯 Jawaban Benar:
+          <span class="text-brand-500 font-bold">D. Animations</span> — Fitur
+          Animations digunakan untuk memberikan efek gerak pada objek (teks,
+          gambar) di dalam slide. Berbeda dengan Transition yang digunakan untuk
+          animasi perpindahan antar slide.
+        </div>
+        <p class="text-center text-sm italic opacity-60">
+          Tuliskan jawabanmu di selembar kertas sebelum melihat jawaban dari
+          gurumu!
+        </p>
+      </div>
+    </div>
+
+    <div class="slide flex items-center justify-center p-8">
+      <div class="batik-overlay"></div>
+      <div class="w-full max-w-5xl space-y-6 animate-reveal">
+        <h2
+          class="text-5xl font-extrabold font-display theme-accent text-center"
+        >
+          🧠 Kuis Singkat — Soal 3 (Interaktif)
+        </h2>
+        <div
+          class="glass-card p-8 rounded-3xl border border-brand-500/20 shadow-lg text-center max-w-3xl mx-auto"
+        >
+          <p class="text-2xl leading-relaxed font-semibold">
+            Dina ingin menghubungkan teks "Klik di sini" pada slide-nya agar
+            langsung membuka sebuah website saat diklik. Langkah yang tepat
+            adalah...
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 gap-3 max-w-3xl mx-auto text-lg"
+          id="quiz-3"
+        >
+          <button
+            class="quiz-option p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 text-left font-bold btn-glow"
+            onclick="checkAnswer(this, 'wrong', 'quiz-3')"
+          >
+            A. Klik tab <strong>Design</strong>, lalu pilih
+            <strong>Themes</strong>
+          </button>
+          <button
+            class="quiz-option p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 text-left font-bold btn-glow"
+            onclick="checkAnswer(this, 'correct', 'quiz-3')"
+          >
+            B. Klik tab <strong>Insert</strong>, lalu pilih
+            <strong>Hyperlink</strong>, kemudian pilih
+            <strong>Existing File or Web Page</strong>
+          </button>
+          <button
+            class="quiz-option p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 text-left font-bold btn-glow"
+            onclick="checkAnswer(this, 'wrong', 'quiz-3')"
+          >
+            C. Klik tab <strong>Transitions</strong>, lalu pilih
+            <strong>Apply to All</strong>
+          </button>
+          <button
+            class="quiz-option p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 text-left font-bold btn-glow"
+            onclick="checkAnswer(this, 'wrong', 'quiz-3')"
+          >
+            D. Klik tab <strong>Slide Show</strong>, lalu pilih
+            <strong>From Beginning</strong>
+          </button>
+        </div>
+        <div
+          class="quiz-feedback hidden mt-4 p-5 rounded-2xl bg-brand-500/10 border border-brand-500/20 text-xl italic font-medium text-center max-w-3xl mx-auto"
+        >
+          🎯 Jawaban Benar:
+          <span class="text-brand-500 font-bold"
+            >B. Klik tab Insert → Hyperlink → Existing File or Web Page</span
+          >
+          — Untuk menghubungkan teks ke website, digunakan fitur Hyperlink
+          melalui tab Insert, kemudian memilih opsi "Existing File or Web Page".
+        </div>
+        <p class="text-center text-sm italic opacity-60">
+          Tuliskan jawabanmu di selembar kertas sebelum melihat jawaban dari
+          gurumu!
+        </p>
+      </div>
+    </div>
+
+    <div class="slide flex items-center justify-center p-8">
+      <div class="batik-overlay"></div>
+      <div
+        class="w-full max-w-6xl grid grid-cols-[1.2fr_1fr] gap-10 items-center animate-reveal"
+      >
+        <div class="space-y-6">
+          <h2 class="text-5xl font-extrabold font-display theme-accent">
+            Kesimpulan & Penutup
+          </h2>
+          <div class="text-base leading-relaxed space-y-3">
+            <p class="font-bold text-brand-700 dark:text-brand-300 text-lg">
+              Apa yang sudah kita pelajari hari ini?
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2">
+                <span class="text-green-500">✅</span>
+                <span
+                  >Microsoft PowerPoint adalah aplikasi untuk membuat presentasi
+                  yang menarik dan informatif.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500">✅</span>
+                <span
+                  >PowerPoint memiliki banyak <strong>fitur dasar</strong> (New
+                  Slide, Design, Layout) dan
+                  <strong>fitur lanjut</strong> (Transition, Animations,
+                  Hyperlink, Slide Show).</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500">✅</span>
+                <span
+                  >Setiap fitur memiliki fungsi berbeda yang saling melengkapi
+                  untuk menghasilkan presentasi yang profesional.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500">✅</span>
+                <span
+                  >Presentasi yang baik bukan hanya soal tampilan, tapi juga
+                  konten yang
+                  <strong>jelas, ringkas, dan komunikatif</strong>.</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="glass-card p-5 rounded-2xl border border-brand-500/20 shadow-md"
+          >
+            <p class="font-bold text-brand-700 dark:text-brand-300 mb-2">
+              Tugas Praktik:
+            </p>
+            <p class="opacity-90 mb-2">
+              Buat presentasi dari laporan MS. Word dan MS. Excel yang sudah
+              kamu buat sebelumnya. Terapkan minimal:
+            </p>
+            <ul class="space-y-1 pl-4 list-disc">
+              <li>1 tema Design</li>
+              <li>Efek Transisi</li>
+              <li>1 Animasi</li>
+              <li>1 Hyperlink</li>
+            </ul>
+          </div>
+          <div
+            class="p-4 border-l-[8px] border-ethnic-gold bg-brand-50 dark:bg-slate-800/50 italic text-lg rounded-r-2xl shadow-sm"
+          >
+            "Presentasi yang baik bukan hanya soal slide yang cantik, tapi
+            tentang pesan yang tersampaikan dengan jelas."
+          </div>
+        </div>
+        <div class="relative group">
+          <div
+            class="absolute -inset-4 bg-brand-500/10 blur-3xl rounded-full group-hover:bg-brand-500/25 transition-all duration-700"
+          ></div>
+          <div
+            class="relative overflow-hidden rounded-[30px] shadow-lg border border-brand-500/20"
+          >
+            <img
+              src="assets/images/pertemuan_4/20.webp"
+              alt="Student confidently presenting PowerPoint slides"
+              class="w-full slide-img-hover"
+            />
+            <div class="img-corner-blur"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="public/canvas.js"></script>
+    <script src="public/tools.js"></script>
+    <script>
+      function checkAnswer(button, status, containerId) {
+        const container = document.getElementById(containerId);
+        const options = container.querySelectorAll(".quiz-option");
+        const feedback =
+          container.parentElement.querySelector(".quiz-feedback");
+
+        options.forEach((opt) => {
+          opt.disabled = true;
+          opt.classList.add("opacity-50");
+        });
+
+        button.classList.remove("opacity-50");
+        button.classList.add("selected");
+
+        if (status === "correct") {
+          button.classList.add(
+            "bg-green-500/20",
+            "border-green-500",
+            "text-green-700",
+            "dark:text-green-300",
+          );
+        } else {
+          button.classList.add(
+            "bg-red-500/20",
+            "border-red-500",
+            "text-red-700",
+            "dark:text-red-300",
+          );
+          const correctBtn = Array.from(options).find((opt) =>
+            opt.getAttribute("onclick").includes("correct"),
+          );
+          correctBtn.classList.remove("opacity-50");
+          correctBtn.classList.add(
+            "bg-green-500/20",
+            "border-green-500",
+            "text-green-700",
+            "dark:text-green-300",
+          );
+        }
+
+        feedback.classList.remove("hidden");
+      }
+    </script>
+  </body>
+</html>
